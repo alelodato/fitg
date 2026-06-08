@@ -22,18 +22,95 @@ export default function ContattiPage() {
                 </div>
             </section>
 
-            <section className="bg-[#1A1A1A] px-5 md:px-16 py-12 md:py-16 border-b border-gold/20">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-                    {[
-                        { label: 'Email', valore: 'info@federtacticalgames.it' },
-                        { label: 'Telefono', valore: '+39 000 000 0000' },
-                        { label: 'Sede', valore: 'Indirizzo sede — fornito dal cliente' },
-                    ].map((c) => (
-                        <div key={c.label} className="border-l-2 border-gold pl-5">
-                            <div className="font-oswald text-[9px] tracking-[3px] text-gold mb-1">{c.label.toUpperCase()}</div>
-                            <div className="font-oswald font-bold text-white text-[15px] md:text-[17px]">{c.valore}</div>
+            {/* FORM CONTATTO */}
+            <section className="bg-[#111] px-5 md:px-16 py-12 md:py-20 border-t border-gold/20">
+                <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
+
+                    {/* TESTO */}
+                    <div>
+                        <SectionLabel>Scrivici</SectionLabel>
+                        <h2 className="font-oswald font-bold text-[24px] md:text-[36px] mb-4">
+                            <span className="text-white">Entra in contatto </span>
+                            <span className="text-gold">con la federazione</span>
+                        </h2>
+                        <div className="w-10 h-0.5 bg-gold mb-5" />
+                        <p className="font-inter text-[13px] md:text-[15px] text-[#ccc] leading-relaxed">
+                            Per informazioni sulla federazione, tesseramento, organizzazione eventi e collaborazioni istituzionali. Ti risponderemo nel più breve tempo possibile.
+                        </p>
+                        <div className="mt-8 flex flex-col gap-3">
+                            <div className="flex items-center gap-3">
+                                <div className="w-px h-8 bg-gold" />
+                                <span className="font-inter text-[13px] text-[#ccc]">info@federtacticalgames.it</span>
+                            </div>
+                            <div className="flex items-center gap-3">
+                                <div className="w-px h-8 bg-gold" />
+                                <span className="font-inter text-[13px] text-[#ccc]">+39 000 000 0000</span>
+                            </div>
                         </div>
-                    ))}
+                    </div>
+
+                    {/* FORM */}
+                    <form
+                        action="https://api.web3forms.com/submit"
+                        method="POST"
+                        className="flex flex-col gap-4"
+                    >
+                        <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_KEY" />
+                        <input type="hidden" name="subject" value="Nuovo messaggio da FITG website" />
+                        <input type="hidden" name="redirect" value="https://federtacticalgames.it" />
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label className="font-oswald text-[9px] tracking-[2px] text-gold block mb-2">NOME *</label>
+                                <input
+                                    type="text"
+                                    name="nome"
+                                    required
+                                    placeholder="Il tuo nome"
+                                    className="w-full bg-[#1A1A1A] border border-gold/20 focus:border-gold text-white font-inter text-[13px] px-4 py-3 outline-none transition-colors placeholder:text-[#444]"
+                                />
+                            </div>
+                            <div>
+                                <label className="font-oswald text-[9px] tracking-[2px] text-gold block mb-2">EMAIL *</label>
+                                <input
+                                    type="email"
+                                    name="email"
+                                    required
+                                    placeholder="La tua email"
+                                    className="w-full bg-[#1A1A1A] border border-gold/20 focus:border-gold text-white font-inter text-[13px] px-4 py-3 outline-none transition-colors placeholder:text-[#444]"
+                                />
+                            </div>
+                        </div>
+
+                        <div>
+                            <label className="font-oswald text-[9px] tracking-[2px] text-gold block mb-2">OGGETTO</label>
+                            <input
+                                type="text"
+                                name="oggetto"
+                                placeholder="Oggetto del messaggio"
+                                className="w-full bg-[#1A1A1A] border border-gold/20 focus:border-gold text-white font-inter text-[13px] px-4 py-3 outline-none transition-colors placeholder:text-[#444]"
+                            />
+                        </div>
+
+                        <div>
+                            <label className="font-oswald text-[9px] tracking-[2px] text-gold block mb-2">MESSAGGIO *</label>
+                            <textarea
+                                name="messaggio"
+                                required
+                                rows={4}
+                                placeholder="Il tuo messaggio..."
+                                className="w-full bg-[#1A1A1A] border border-gold/20 focus:border-gold text-white font-inter text-[13px] px-4 py-3 outline-none transition-colors placeholder:text-[#444] resize-none"
+                            />
+                        </div>
+
+                        <button
+                            type="submit"
+                            className="bg-gold text-black font-oswald font-bold text-[12px] tracking-[4px] px-10 py-4 hover:bg-gold-light transition-colors self-start"
+                        >
+                            INVIA MESSAGGIO
+                        </button>
+                    </form>
+
                 </div>
             </section>
 
@@ -54,45 +131,6 @@ export default function ContattiPage() {
                         </a>
                     ))}
                 </div>
-            </section>
-
-            <section className="bg-[#1A1A1A] px-5 md:px-16 py-12 md:py-16">
-                <SectionLabel>Scrivici</SectionLabel>
-                <h2 className="font-oswald font-bold text-[24px] md:text-[32px] mb-8">Invia un messaggio</h2>
-                <form action="https://api.web3forms.com/submit" method="POST" className="max-w-2xl">
-                    <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_KEY" />
-                    <input type="hidden" name="subject" value="Nuovo messaggio da FITG website" />
-                    <input type="hidden" name="redirect" value="https://federtacticalgames.it/contatti" />
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                        <div>
-                            <label className="font-oswald text-[9px] tracking-[2px] text-gold block mb-2">NOME *</label>
-                            <input type="text" name="nome" required placeholder="Il tuo nome"
-                                className="w-full bg-[#111] border border-gold/20 focus:border-gold text-white font-inter text-[13px] px-4 py-3 outline-none transition-colors placeholder:text-[#444]" />
-                        </div>
-                        <div>
-                            <label className="font-oswald text-[9px] tracking-[2px] text-gold block mb-2">EMAIL *</label>
-                            <input type="email" name="email" required placeholder="La tua email"
-                                className="w-full bg-[#111] border border-gold/20 focus:border-gold text-white font-inter text-[13px] px-4 py-3 outline-none transition-colors placeholder:text-[#444]" />
-                        </div>
-                    </div>
-
-                    <div className="mb-4">
-                        <label className="font-oswald text-[9px] tracking-[2px] text-gold block mb-2">OGGETTO</label>
-                        <input type="text" name="oggetto" placeholder="Oggetto del messaggio"
-                            className="w-full bg-[#111] border border-gold/20 focus:border-gold text-white font-inter text-[13px] px-4 py-3 outline-none transition-colors placeholder:text-[#444]" />
-                    </div>
-
-                    <div className="mb-6">
-                        <label className="font-oswald text-[9px] tracking-[2px] text-gold block mb-2">MESSAGGIO *</label>
-                        <textarea name="messaggio" required rows={5} placeholder="Il tuo messaggio..."
-                            className="w-full bg-[#111] border border-gold/20 focus:border-gold text-white font-inter text-[13px] px-4 py-3 outline-none transition-colors placeholder:text-[#444] resize-none" />
-                    </div>
-
-                    <button type="submit" className="bg-gold text-black font-oswald font-bold text-[12px] tracking-[4px] px-10 py-4 hover:bg-gold-light transition-colors">
-                        INVIA MESSAGGIO
-                    </button>
-                </form>
             </section>
         </>
     )
