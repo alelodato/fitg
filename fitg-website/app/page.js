@@ -3,6 +3,7 @@ import Image from 'next/image'
 import SectionLabel from '@/components/SectionLabel'
 import SponsorsStrip from '@/components/SponsorsStrip'
 import StatsCounter from '@/components/StatsCounter'
+import FAQ from '@/components/FAQ'
 
 const sezioni = [
   {
@@ -202,6 +203,7 @@ export default function HomePage() {
       </section>
 
       <SponsorsStrip />
+      <FAQ />
 
       {/* FORM CONTATTO */}
       <section className="bg-[#111] px-5 md:px-16 py-12 md:py-20 border-t border-gold/20">

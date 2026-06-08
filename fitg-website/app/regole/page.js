@@ -4,16 +4,16 @@ import SectionLabel from '@/components/SectionLabel'
 export const metadata = { title: 'Regole — FITG' }
 
 const categorie = [
-    { nome: 'Categoria 1', desc: 'Descrizione — fornita dal cliente.' },
-    { nome: 'Categoria 2', desc: 'Descrizione — fornita dal cliente.' },
-    { nome: 'Categoria 3', desc: 'Descrizione — fornita dal cliente.' },
+    { nome: 'Categoria 1', desc: 'Descrizione' },
+    { nome: 'Categoria 2', desc: 'Descrizione' },
+    { nome: 'Categoria 3', desc: 'Descrizione' },
 ]
 
 const prove = [
-    { nome: 'Prova 1', desc: 'Descrizione della prova — fornita dal cliente.' },
-    { nome: 'Prova 2', desc: 'Descrizione della prova — fornita dal cliente.' },
-    { nome: 'Prova 3', desc: 'Descrizione della prova — fornita dal cliente.' },
-    { nome: 'Prova 4', desc: 'Descrizione della prova — fornita dal cliente.' },
+    { nome: 'Prova 1', desc: 'Descrizione della prova' },
+    { nome: 'Prova 2', desc: 'Descrizione della prova' },
+    { nome: 'Prova 3', desc: 'Descrizione della prova' },
+    { nome: 'Prova 4', desc: 'Descrizione della prova' },
 ]
 
 export default function RegolePage() {
@@ -38,10 +38,10 @@ export default function RegolePage() {
             <section className="bg-[#1A1A1A] px-5 md:px-16 py-12 md:py-16 border-b border-gold/20">
                 <div className="max-w-3xl">
                     <p className="font-inter text-[14px] md:text-[15px] text-[#ccc] leading-relaxed">
-                        Testo introduttivo al regolamento — fornito dal cliente.
+                        Testo introduttivo al regolamento
                     </p>
                     <p className="font-inter text-[14px] md:text-[15px] text-[#ccc] leading-relaxed mt-4">
-                        Secondo paragrafo introduttivo — fornito dal cliente.
+                        Secondo paragrafo introduttivo
                     </p>
                 </div>
             </section>
@@ -83,10 +83,10 @@ export default function RegolePage() {
                 <h2 className="font-oswald font-bold text-[24px] md:text-[32px] mb-6">Sistema di punteggio</h2>
                 <div className="max-w-3xl">
                     <p className="font-inter text-[14px] md:text-[15px] text-[#ccc] leading-relaxed">
-                        Descrizione del sistema di punteggio — fornita dal cliente.
+                        Descrizione del sistema di punteggio
                     </p>
                     <p className="font-inter text-[14px] md:text-[15px] text-[#ccc] leading-relaxed mt-4">
-                        Ulteriori dettagli sul sistema di punteggio — forniti dal cliente.
+                        Ulteriori dettagli sul sistema di punteggio
                     </p>
                 </div>
             </section>

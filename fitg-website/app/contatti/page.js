@@ -119,9 +119,9 @@ export default function ContattiPage() {
                 <h2 className="font-oswald font-bold text-[24px] md:text-[32px] mb-8">Seguici sui social</h2>
                 <div className="flex flex-col md:flex-row gap-4">
                     {[
-                        { nome: 'Instagram', handle: '@fitg_italia', href: '#' },
-                        { nome: 'Facebook', handle: 'FITG Federazione', href: '#' },
-                        { nome: 'YouTube', handle: 'FITG Channel', href: '#' },
+                        { nome: 'Instagram', handle: '@fitg', href: '#' },
+                        { nome: 'Facebook', handle: 'FITG', href: '#' },
+                        { nome: 'YouTube', handle: 'FITG', href: '#' },
                     ].map((s) => (
                         <a key={s.nome} href={s.href} className="group flex items-center gap-4 bg-[#1A1A1A] border border-gold/20 hover:border-gold px-6 py-4 transition-colors flex-1">
                             <div className="font-oswald font-bold text-gold text-[13px] tracking-[2px]">{s.nome}</div>
