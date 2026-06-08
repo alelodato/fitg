@@ -18,14 +18,14 @@ export default function Navbar() {
 
     return (
         <header className="sticky top-0 z-50 bg-[#1A1A1A] border-b border-gold/20">
-            <div className="flex items-center justify-between px-5 md:px-16 h-[52px] md:h-[68px]">
-                <Link href="/" className="flex items-center gap-3">
+            <div className="flex items-center justify-between px-5 md:px-16 h-[72px] md:h-[88px]">
+                <Link href="/" className="flex items-center py-2 gap-3">
                     <Image
                         src="/fitg-logo.png"
                         alt="FITG Logo"
-                        width={44}
-                        height={44}
-                        className="object-contain"
+                        width={80}
+                        height={80}
+                        className="w-[60px] h-[60px] md:w-[80px] md:h-[80px] object-contain"
                     />
                     <div>
                         <div className="text-gold font-oswald font-bold tracking-widest text-sm md:text-base leading-none">FITG</div>

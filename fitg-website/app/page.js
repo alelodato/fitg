@@ -81,28 +81,24 @@ export default function HomePage() {
             </div>
 
             {/* LOGHI */}
-            <div className="flex md:flex-col items-center gap-6 shrink-0">
+            <div className="flex md:flex-row items-center gap-6 shrink-0">
               <Image
                 src="/fitg-logo.png"
                 alt="FITG Logo"
-                width={120}
-                height={120}
-                className="object-contain"
+                width={180}
+                height={180}
+                className="w-[100px] h-[100px] md:w-[180px] md:h-[180px] object-contain"
               />
               <Image
                 src="/fitg-logo2.png"
                 alt="FITG Logo 2"
-                width={120}
-                height={120}
-                className="object-contain"
+                width={180}
+                height={180}
+                className="w-[100px] h-[100px] md:w-[180px] md:h-[180px] object-contain"
               />
             </div>
 
           </div>
-        </div>
-
-        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 font-oswald text-[8px] tracking-[3px] text-[#555]">
-          ↓ &nbsp; SCORRI
         </div>
       </section>
 
@@ -204,6 +200,8 @@ export default function HomePage() {
           ))}
         </div>
       </section>
+
+      <SponsorsStrip />
 
       {/* FORM CONTATTO */}
       <section className="bg-[#111] px-5 md:px-16 py-12 md:py-20 border-t border-gold/20">
