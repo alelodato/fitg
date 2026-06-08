@@ -64,47 +64,59 @@ export default function HomePage() {
           className="object-cover object-center brightness-[0.35]"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/50 to-transparent" />
-        <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent" />
+        <div className="absolute inset-0 flex items-center px-5 md:px-16">
+          <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16 w-full max-w-[900px]">
 
-        <div className="absolute inset-0 flex flex-col justify-center px-5 md:px-16 max-w-[700px]">
-          <div className="inline-flex items-center gap-1.5 bg-gold px-3.5 py-1.5 mb-6 self-start">
-            <div className="w-1 h-1 bg-black rotate-45" />
-            <span className="font-oswald font-bold text-[8px] tracking-[2px] text-black">FEDERAZIONE UFFICIALE</span>
-            <div className="w-1 h-1 bg-black rotate-45" />
+            {/* TESTO */}
+            <div className="flex flex-col flex-1">
+              <h1 className="font-oswald font-bold leading-[1.05] tracking-wide">
+                <span className="block text-[38px] md:text-[62px] text-white">LA FEDERAZIONE</span>
+                <span className="block text-[38px] md:text-[62px] text-gold">ITALIANA</span>
+                <span className="block text-[38px] md:text-[62px] text-white">TACTICAL GAMES</span>
+              </h1>
+
+              <div className="w-48 h-0.5 bg-gradient-to-r from-gold to-transparent my-4 md:my-5" />
+
+              <p className="font-inter text-[13px] md:text-[15px] text-[#ccc] leading-relaxed max-w-[480px]">
+                Sport, disciplina e precisione.<br />
+                La federazione ufficiale dei Tactical Games in Italia.
+              </p>
+
+              <div className="flex flex-col md:flex-row gap-3 mt-7">
+                <Link href="/regole" className="bg-gold text-black font-oswald font-bold text-[11px] tracking-[3px] px-8 py-3.5 text-center hover:bg-gold-light transition-colors">
+                  SCOPRI LA FEDERAZIONE
+                </Link>
+                <Link href="/contatti" className="border border-white text-white font-oswald text-[11px] tracking-[3px] px-8 py-3.5 text-center hover:border-gold hover:text-gold transition-colors">
+                  CONTATTACI
+                </Link>
+              </div>
+            </div>
+
+            {/* LOGHI */}
+            <div className="flex md:flex-col items-center gap-6 shrink-0">
+              <Image
+                src="/fitg-logo.png"
+                alt="FITG Logo"
+                width={120}
+                height={120}
+                className="object-contain"
+              />
+              <Image
+                src="/fitg-logo2.png"
+                alt="FITG Logo 2"
+                width={120}
+                height={120}
+                className="object-contain"
+              />
+            </div>
+
           </div>
-
-          <h1 className="font-oswald font-bold leading-[1.05] tracking-wide">
-            <span className="block text-[38px] md:text-[62px] text-white">LA FEDERAZIONE</span>
-            <span className="block text-[38px] md:text-[62px] text-gold">ITALIANA</span>
-            <span className="block text-[38px] md:text-[62px] text-white">TACTICAL GAMES</span>
-          </h1>
-
-          <div className="w-48 h-0.5 bg-gradient-to-r from-gold to-transparent my-4 md:my-5" />
-
-          <p className="font-inter text-[13px] md:text-[15px] text-[#ccc] leading-relaxed max-w-[480px]">
-            Sport, disciplina e precisione.<br />
-            La federazione ufficiale dei Tactical Games in Italia.
-          </p>
-
-          <div className="flex flex-col md:flex-row gap-3 mt-7">
-            <Link href="/regole" className="bg-gold text-black font-oswald font-bold text-[11px] tracking-[3px] px-8 py-3.5 text-center hover:bg-gold-light transition-colors">
-              SCOPRI LA FEDERAZIONE
-            </Link>
-            <Link href="/contatti" className="border border-white text-white font-oswald text-[11px] tracking-[3px] px-8 py-3.5 text-center hover:border-gold hover:text-gold transition-colors">
-              CONTATTACI
-            </Link>
-          </div>
-        </div>
-
-        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 font-oswald text-[8px] tracking-[3px] text-[#555]">
-          ↓ &nbsp; SCORRI
         </div>
       </section>
 
       {/* IDENTITY STRIP */}
       <div className="bg-[#222] border-t-2 border-gold border-b border-gold/20 py-3 flex justify-center gap-4 md:gap-6 flex-wrap">
-        {['FORZA', '·', 'PRECISIONE', '·', 'DISCIPLINA', '·', 'COMPETIZIONE', '·', 'ITALIA'].map((k, i) => (
+        {['FEDERAZIONE ITALIANA TACTICAL GAMES'].map((k, i) => (
           <span key={i} className={`font-oswald ${i % 2 === 1 ? 'text-[8px] text-[#555]' : 'text-[10px] tracking-[3px] text-gold font-bold'}`}>
             {k}
           </span>
@@ -122,7 +134,7 @@ export default function HomePage() {
             </h2>
             <div className="w-12 h-0.5 bg-gold mb-5" />
             <div className="font-inter text-[13px] md:text-[15px] text-[#ccc] leading-relaxed">
-              <p>Testo di presentazione della federazione — fornito dal cliente.</p>
+              <p>Testo di presentazione della federazione</p>
               <p className="mt-4">Secondo paragrafo: storia, missione e valori.</p>
             </div>
             <Link href="/regole" className="mt-6 font-oswald text-[10px] tracking-[3px] text-gold flex items-center gap-2.5 hover:gap-4 transition-all w-fit">

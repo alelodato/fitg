@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-
+import Image from 'next/image'
 const links = [
     { href: '/', label: 'Home' },
     { href: '/regole', label: 'Regole' },
@@ -21,9 +21,13 @@ export default function Navbar() {
         <header className="sticky top-0 z-50 bg-[#1A1A1A] border-b border-gold/20">
             <div className="flex items-center justify-between px-5 md:px-16 h-[52px] md:h-[68px]">
                 <Link href="/" className="flex items-center gap-3">
-                    <div className="w-9 h-9 md:w-11 md:h-11 bg-[#222] border border-gold/40 flex items-center justify-center text-gold text-[7px] tracking-widest">
-                        LOGO
-                    </div>
+                    <Image
+                        src="/fitg-logo.png"
+                        alt="FITG Logo"
+                        width={44}
+                        height={44}
+                        className="object-contain"
+                    />
                     <div>
                         <div className="text-gold font-oswald font-bold tracking-widest text-sm md:text-base leading-none">FITG</div>
                         <div className="text-[#555] font-inter text-[6px] md:text-[7px] tracking-widest leading-none mt-0.5">
@@ -38,8 +42,8 @@ export default function Navbar() {
                             key={link.href}
                             href={link.href}
                             className={`font-oswald text-[11px] tracking-[2px] uppercase transition-colors duration-200 pb-0.5 ${pathname === link.href
-                                    ? 'text-gold border-b border-gold'
-                                    : 'text-[#ccc] hover:text-gold'
+                                ? 'text-gold border-b border-gold'
+                                : 'text-[#ccc] hover:text-gold'
                                 }`}
                         >
                             {link.label}
