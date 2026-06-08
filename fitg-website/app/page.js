@@ -203,7 +203,7 @@ export default function HomePage() {
       </section>
 
       <SponsorsStrip />
-      <FAQ />
+      <FAQ id="faq" />
 
       {/* FORM CONTATTO */}
       <section className="bg-[#111] px-5 md:px-16 py-12 md:py-20 border-t border-gold/20">

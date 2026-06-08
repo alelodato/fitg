@@ -5,28 +5,28 @@ import SectionLabel from './SectionLabel'
 
 const faqs = [
     {
-        domanda: 'Cos\'è un Tactical Game?',
-        risposta: 'I Tactical Games sono competizioni sportive che combinano fitness funzionale ad alta intensità e tiro di precisione. Gli atleti affrontano percorsi misti con prove fisiche — corsa, trasporto pesi, ostacoli — alternate a linee di tiro con arma lunga e arma corta.',
+        domanda: 'Domanda frequente n°1',
+        risposta: 'Testo risposta da inserire.',
     },
     {
-        domanda: 'Chi può partecipare alle competizioni FITG?',
-        risposta: 'Chiunque sia in possesso di regolare porto d\'armi sportivo e tesseramento FITG può partecipare. Esistono divisioni per tutti i livelli: dalla Rookie per i principianti fino alla Open per gli atleti più esperti.',
+        domanda: 'Domanda frequente n°2',
+        risposta: 'Testo risposta da inserire.',
     },
     {
-        domanda: 'Che attrezzatura serve per competere?',
-        risposta: 'L\'attrezzatura obbligatoria comprende arma lunga, arma corta e gilet tattico. Protezioni obbligatorie: cuffie antirumore e occhiali balistici. Consulta il regolamento completo per i dettagli sulle specifiche tecniche.',
+        domanda: 'Domanda frequente n°3',
+        risposta: 'Testo risposta da inserire.',
     },
     {
-        domanda: 'Come ci si tessera alla FITG?',
-        risposta: 'Per tesserarsi è necessario compilare il modulo di iscrizione disponibile nella sezione Contatti, allegare copia del porto d\'armi sportivo in corso di validità e versare la quota annuale di tesseramento. Per informazioni scrivici a info@federtacticalgames.it.',
+        domanda: 'Domanda frequente n°4',
+        risposta: 'Testo risposta da inserire.',
     },
     {
-        domanda: 'Le competizioni sono sicure?',
-        risposta: 'La sicurezza è la priorità assoluta della FITG. Ogni evento prevede un briefing obbligatorio sulle norme di sicurezza, Range Officer certificati presenti su ogni linea di tiro e un sistema di penalità severe per qualsiasi violazione. Le norme di sicurezza non sono mai derogabili.',
+        domanda: 'Domanda frequente n°5',
+        risposta: 'Testo risposta da inserire.',
     },
     {
-        domanda: 'Come vengono calcolati i punteggi?',
-        risposta: 'Il punteggio finale è la somma dei punti ottenuti nelle prove fisiche e nelle linee di tiro, al netto delle penalità. Ogni bersaglio mancato comporta una penalità in punti; ogni violazione delle norme di sicurezza costa -10 punti.',
+        domanda: 'Domanda frequente n°6',
+        risposta: 'Testo risposta da inserire.',
     },
 ]
 
@@ -34,7 +34,7 @@ export default function FAQ() {
     const [aperto, setAperto] = useState(null)
 
     return (
-        <section className="bg-[#1A1A1A] px-5 md:px-16 py-12 md:py-20 border-t border-gold/20">
+        <section id='faq' className="bg-[#1A1A1A] px-5 md:px-16 py-12 md:py-20 border-t border-gold/20">
             <div className="max-w-3xl mx-auto">
                 <div className="text-center mb-10 md:mb-14">
                     <SectionLabel center>FAQ</SectionLabel>

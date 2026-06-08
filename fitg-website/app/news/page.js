@@ -1,81 +1,9 @@
 import Image from 'next/image'
 import SectionLabel from '@/components/SectionLabel'
+import { articoli, eventi } from './data'
+import Link from 'next/link'
 
 export const metadata = { title: 'News & Eventi — FITG' }
-
-const eventi = [
-    {
-        id: 1,
-        data: 'Data di svolgimento',
-        luogo: 'Luogo di svolgimento',
-        titolo: 'Titolo dell`evento',
-        desc: 'Descrizione Evento',
-        tag: 'Evento Nazionale',
-        stato: 'upcoming',
-    },
-    {
-        id: 2,
-        data: 'Data di svolgimento',
-        luogo: 'Luogo di svolgimento',
-        titolo: 'Titolo dell`evento',
-        desc: 'Descrizione dell`evento',
-        tag: 'Evento Regionale',
-        stato: 'upcoming',
-    },
-    {
-        id: 3,
-        data: 'Data di svolgimento',
-        luogo: 'Luogo di svolgimento',
-        titolo: 'Titolo dell`evento',
-        desc: 'Descrizione dell`evento',
-        tag: 'Evento Regionale',
-        stato: 'upcoming',
-    },
-    {
-        id: 4,
-        data: 'Data di svolgimento',
-        luogo: 'Luogo di svolgimento',
-        titolo: 'Titolo dell`evento',
-        desc: 'Descrizione Evento',
-        tag: 'Campionato',
-        stato: 'upcoming',
-    },
-]
-
-const articoli = [
-    {
-        id: 1,
-        data: 'Data di pubblicazione',
-        titolo: 'Titolo dell`articolo o comunicato ufficiale',
-        estratto: 'Estratto o breve descrizione del contenuto dell`articolo, per invogliare il lettore a cliccare e leggere di più.',
-        img: '/images/news-1.jpg',
-        tag: 'Evento',
-    },
-    {
-        id: 2,
-        data: 'Data di pubblicazione',
-        titolo: 'Titolo dell`articolo o comunicato ufficiale',
-        estratto: 'Estratto o breve descrizione del contenuto dell`articolo, per invogliare il lettore a cliccare e leggere di più.',
-        img: '/images/news-2.jpg',
-        tag: 'Comunicato',
-    },
-    {
-        id: 3,
-        data: 'Data di pubblicazione',
-        titolo: 'Titolo dell`articolo o comunicato ufficiale',
-        estratto: 'Estratto o breve descrizione del contenuto dell`articolo, per invogliare il lettore a cliccare e leggere di più.',
-        img: '/images/news-3.jpg',
-        tag: 'Regolamento',
-    },
-    {
-        id: 4,
-        data: 'Data di pubblicazione',
-        titolo: 'Titolo dell`articolo o comunicato ufficiale',
-        estratto: 'Estratto o breve descrizione del contenuto dell`articolo, per invogliare il lettore a cliccare e leggere di più.',
-        img: '/images/news-4.jpg',
-        tag: 'Guida',
-    },
-]
 
 export default function NewsPage() {
     return (
@@ -142,11 +70,13 @@ export default function NewsPage() {
                             </div>
 
                             {/* CTA */}
-                            <div className="shrink-0 flex items-center">
-                                <div className="font-oswald text-[9px] tracking-[3px] text-gold flex items-center gap-2 group-hover:gap-4 transition-all">
-                                    DETTAGLI <span className="w-4 h-px bg-gold block" />
+                            <Link key={e.id} href={`/eventi/${e.slug}`} className="shrink-0 flex items-center">
+                                <div className="shrink-0 flex items-center">
+                                    <div className="font-oswald text-[9px] tracking-[3px] text-gold flex items-center gap-2 group-hover:gap-4 transition-all">
+                                        DETTAGLI <span className="w-4 h-px bg-gold block" />
+                                    </div>
                                 </div>
-                            </div>
+                            </Link>
                         </div>
                     ))}
                 </div>
@@ -183,9 +113,9 @@ export default function NewsPage() {
                                 <p className="font-inter text-[12px] md:text-[13px] text-[#ccc] leading-relaxed mb-4">
                                     {a.estratto}
                                 </p>
-                                <div className="font-oswald text-[9px] tracking-[3px] text-gold flex items-center gap-2 group-hover:gap-3 transition-all">
+                                <Link key={a.id} href={`/news/${a.slug}`} className="font-oswald text-[9px] tracking-[3px] text-gold flex items-center gap-2 group-hover:gap-4 transition-all">
                                     LEGGI <span className="w-3.5 h-px bg-gold block" />
-                                </div>
+                                </Link>
                             </div>
                         </article>
                     ))}

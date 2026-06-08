@@ -49,9 +49,8 @@ export default function Footer() {
                         <div className="text-[9px] tracking-[3px] text-white font-oswald mb-2">LINK UTILI</div>
                         <div className="w-7 h-px bg-gold mb-4" />
                         {[
-                            { label: 'Formazione', href: '/formazione' },
                             { label: 'TTG Gear List', href: '/gear' },
-                            { label: 'FAQ', href: '/faq' },
+                            { label: 'FAQ', href: '/#faq' },
                             { label: 'Sicurezza', href: '/sicurezza' },
                             { label: 'Contatti', href: '/contatti' },
                         ].map((l) => (
