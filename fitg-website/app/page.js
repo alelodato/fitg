@@ -62,7 +62,7 @@ export default function HomePage() {
             {/* TESTO */}
             <div className="flex flex-col flex-1">
               <h1 className="font-oswald font-bold leading-[1.05] tracking-wide">
-                <span className="block text-[38px] md:text-[62px] text-white">LA FEDERAZIONE</span>
+                <span className="block text-[38px] md:text-[62px] text-white">FEDERAZIONE</span>
                 <span className="block text-[38px] md:text-[62px] text-gold">ITALIANA</span>
                 <span className="block text-[38px] md:text-[62px] text-white">TACTICAL GAMES</span>
               </h1>
