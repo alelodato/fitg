@@ -21,7 +21,7 @@ export default function Navbar() {
             <div className="flex items-center justify-between px-5 md:px-16 h-[72px] md:h-[88px]">
                 <Link href="/" className="flex items-center py-2 gap-3">
                     <Image
-                        src="/fitg-logo.png"
+                        src="/fitg-logo2.png"
                         alt="FITG Logo"
                         width={80}
                         height={80}

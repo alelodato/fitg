@@ -11,14 +11,14 @@ const sezioni = [
     title: 'Regolamento ufficiale dei Tactical Games',
     desc: 'Consulta il regolamento completo delle competizioni FITG. Categorie, prove, sistemi di punteggio e norme di sicurezza: tutto quello che devi sapere per partecipare.',
     href: '/regole',
-    img: '/images/regole.jpg',
+    img: '/image2.jpeg',
   },
   {
     label: 'FORMAZIONE',
     title: 'Allenati per competere',
     desc: 'Piani di allenamento, esercizi consigliati e aree attrezzate per prepararti al meglio. Fitness funzionale e tiro di precisione: due discipline, un unico obiettivo.',
     href: '/formazione',
-    img: '/images/formazione.jpg',
+    img: '/image3.jpeg',
   },
 ]
 
@@ -27,13 +27,13 @@ const news = [
     data: 'Giugno 2025',
     titolo: 'Primo evento FITG: appuntamento a luglio',
     estratto: 'La federazione annuncia il primo evento ufficiale della stagione. Percorso misto, tre divisioni disponibili e classifiche nazionali in palio.',
-    img: '/images/news-1.jpg',
+    img: '/news-1.jpg',
   },
   {
     data: 'Maggio 2025',
     titolo: 'Nasce la FITG: la federazione ufficiale dei Tactical Games in Italia',
     estratto: 'Con la fondazione della FITG, i Tactical Games in Italia hanno finalmente un organo ufficiale di riferimento.',
-    img: '/images/news-2.jpg',
+    img: '/news-2.jpg',
   },
 ]
 
@@ -47,7 +47,7 @@ export default function HomePage() {
       {/* HERO */}
       <section className="relative overflow-hidden h-[520px] md:h-[680px]">
         <Image
-          src="/images/hero.jpg"
+          src="/image0.jpeg"
           alt="Hero FITG"
           fill
           className="object-cover object-center brightness-[0.35]"
@@ -81,24 +81,6 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* LOGHI */}
-            <div className="flex md:flex-row items-center gap-6 shrink-0">
-              <Image
-                src="/fitg-logo.png"
-                alt="FITG Logo"
-                width={180}
-                height={180}
-                className="w-[100px] h-[100px] md:w-[180px] md:h-[180px] object-contain"
-              />
-              <Image
-                src="/fitg-logo2.png"
-                alt="FITG Logo 2"
-                width={180}
-                height={180}
-                className="w-[100px] h-[100px] md:w-[180px] md:h-[180px] object-contain"
-              />
-            </div>
-
           </div>
         </div>
       </section>
@@ -124,8 +106,18 @@ export default function HomePage() {
             </Link>
           </div>
           <div className="relative min-h-[220px] md:min-h-auto overflow-hidden">
-            <Image src="/images/chi-siamo.jpg" alt="Chi Siamo" fill className="object-cover brightness-[0.65]" />
+            <Image src="/image8.jpeg" alt="Chi Siamo" fill className="object-cover brightness-[0.45]" />
+            <div className="absolute inset-0 bg-black/30" />
             <div className="absolute left-0 top-0 bottom-0 w-1 bg-gold" />
+            <div className="absolute inset-0 flex items-center justify-center">
+              <Image
+                src="/fitg-logo2.png"
+                alt="FITG Logo"
+                width={160}
+                height={160}
+                className="object-contain opacity-90"
+              />
+            </div>
           </div>
         </div>
       </section>
