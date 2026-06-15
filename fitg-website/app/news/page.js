@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import SectionLabel from '@/components/SectionLabel'
-import { articoli, eventi } from './data'
+import { articoli, eventi, blog } from './data'
 import Link from 'next/link'
 
 export const metadata = { title: 'News & Eventi — FITG' }
@@ -116,6 +116,45 @@ export default function NewsPage() {
                                 <Link key={a.id} href={`/news/${a.slug}`} className="font-oswald text-[9px] tracking-[3px] text-gold flex items-center gap-2 group-hover:gap-4 transition-all">
                                     LEGGI <span className="w-3.5 h-px bg-gold block" />
                                 </Link>
+                            </div>
+                        </article>
+                    ))}
+                </div>
+            </section>
+
+            {/* BLOG */}
+            <section className="bg-[#111] px-5 md:px-16 py-12 md:py-20 border-t border-gold/20">
+                <SectionLabel>Blog</SectionLabel>
+                <h2 className="font-oswald font-bold text-[24px] md:text-[36px] mb-8 md:mb-10">
+                    <span className="text-white">Approfondimenti </span>
+                    <span className="text-gold">e Guide</span>
+                </h2>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5">
+                    {blog.map((b) => (
+                        <article key={b.id} className="group bg-[#1A1A1A] overflow-hidden cursor-pointer">
+                            <div className="relative h-[180px] overflow-hidden">
+                                <Image
+                                    src={b.img}
+                                    alt={b.titolo}
+                                    fill
+                                    className="object-cover brightness-50 group-hover:brightness-[0.65] group-hover:scale-105 transition-all duration-500"
+                                />
+                            </div>
+                            <div className="h-0.5 bg-gold" />
+                            <div className="p-5">
+                                <div className="flex items-center justify-between mb-3">
+                                    <span className="font-inter text-[8px] tracking-[2px] text-[#555] uppercase">{b.data}</span>
+                                    <span className="font-oswald text-[8px] tracking-[2px] text-gold border border-gold/30 px-2 py-0.5">{b.tag}</span>
+                                </div>
+                                <h3 className="font-oswald font-bold text-[15px] md:text-[17px] text-white mb-3 leading-tight">
+                                    {b.titolo}
+                                </h3>
+                                <p className="font-inter text-[12px] text-[#ccc] leading-relaxed mb-4">
+                                    {b.estratto}
+                                </p>
+                                <div className="font-oswald text-[9px] tracking-[3px] text-gold flex items-center gap-2 group-hover:gap-3 transition-all">
+                                    LEGGI <span className="w-3.5 h-px bg-gold block" />
+                                </div>
                             </div>
                         </article>
                     ))}

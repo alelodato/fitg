@@ -6,9 +6,9 @@ import { usePathname } from 'next/navigation'
 import Image from 'next/image'
 const links = [
     { href: '/', label: 'Home' },
-    { href: '/regole', label: 'Regole' },
+    { href: '/regole', label: 'Tactical Games' },
     { href: '/formazione', label: 'Formazione' },
-    { href: '/news', label: 'News' },
+    { href: '/news', label: 'Blog & News' },
     { href: '/contatti', label: 'Contatti' },
 ]
 

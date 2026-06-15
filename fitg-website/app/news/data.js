@@ -150,3 +150,48 @@ export const eventi = [
         ],
     },
 ]
+
+export const blog = [
+    {
+        slug: 'blog-1',
+        id: 1,
+        data: 'Data di pubblicazione',
+        titolo: 'Titolo articolo blog',
+        estratto: 'Estratto o breve descrizione del contenuto del post, per invogliare il lettore a cliccare e leggere di più.',
+        img: '/images/blog-1.jpg',
+        tag: 'Approfondimento',
+        contenuto: [
+            { tipo: 'paragrafo', testo: 'Testo introduttivo del post da inserire.' },
+            { tipo: 'titolo', testo: 'Titolo paragrafo interno' },
+            { tipo: 'paragrafo', testo: 'Secondo paragrafo da inserire.' },
+        ],
+    },
+    {
+        slug: 'blog-2',
+        id: 2,
+        data: 'Data di pubblicazione',
+        titolo: 'Titolo articolo blog',
+        estratto: 'Estratto o breve descrizione del contenuto del post, per invogliare il lettore a cliccare e leggere di più.',
+        img: '/images/blog-2.jpg',
+        tag: 'Guida',
+        contenuto: [
+            { tipo: 'paragrafo', testo: 'Testo introduttivo del post da inserire.' },
+            { tipo: 'titolo', testo: 'Titolo paragrafo interno' },
+            { tipo: 'paragrafo', testo: 'Secondo paragrafo da inserire.' },
+        ],
+    },
+    {
+        slug: 'blog-3',
+        id: 3,
+        data: 'Data di pubblicazione',
+        titolo: 'Titolo articolo blog',
+        estratto: 'Estratto o breve descrizione del contenuto del post, per invogliare il lettore a cliccare e leggere di più.',
+        img: '/images/blog-3.jpg',
+        tag: 'Intervista',
+        contenuto: [
+            { tipo: 'paragrafo', testo: 'Testo introduttivo del post da inserire.' },
+            { tipo: 'titolo', testo: 'Titolo paragrafo interno' },
+            { tipo: 'paragrafo', testo: 'Secondo paragrafo da inserire.' },
+        ],
+    },
+]

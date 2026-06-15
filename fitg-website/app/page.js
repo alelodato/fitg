@@ -15,7 +15,7 @@ const sezioni = [
   },
   {
     label: 'FORMAZIONE',
-    title: 'Allenati per competere',
+    title: 'Formazione e preparazione atletica',
     desc: 'Piani di allenamento, esercizi consigliati e aree attrezzate per prepararti al meglio. Fitness funzionale e tiro di precisione: due discipline, un unico obiettivo.',
     href: '/formazione',
     img: '/image3.jpeg',
@@ -98,7 +98,8 @@ export default function HomePage() {
             </h2>
             <div className="w-12 h-0.5 bg-gold mb-5" />
             <div className="font-inter text-[13px] md:text-[15px] text-[#ccc] leading-relaxed">
-              <p>La FITG nasce per promuovere e regolamentare i Tactical Games in Italia: uno sport che unisce fitness funzionale e tiro di precisione in un unico percorso competitivo. Corri, supera ostacoli, solleva carichi e poi controlla il respiro per ingaggiare i bersagli con precisione.</p>
+              <p>La FITG nasce per promuovere e regolamentare i Tactical Games in Italia: i Tactical Games sono competizioni sportive multidisciplinari che uniscono fitness estremo, prove di abilità e tiro tattico/ dinamico con armi da fuoco (o repliche nel caso del softair).
+Il loro scopo è testare la capacità del partecipante di mantenere lucidità, precisione e controllo sotto un forte sforzo fisico.</p>
               <p className="mt-4">Una disciplina aperta a tutti i livelli, con divisioni per uomini e donne, atleti esperti e neofiti. La FITG coordina gli eventi nazionali, forma gli istruttori e promuove una cultura sportiva basata su sicurezza, fair play e crescita continua.</p>
             </div>
             <Link href="/regole" className="mt-6 font-oswald text-[10px] tracking-[3px] text-gold flex items-center gap-2.5 hover:gap-4 transition-all w-fit">

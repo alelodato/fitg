@@ -33,9 +33,9 @@ export default function Footer() {
                         <div className="w-7 h-px bg-gold mb-4" />
                         {[
                             { label: 'Home', href: '/' },
-                            { label: 'Regole', href: '/regole' },
+                            { label: 'Tactical Games', href: '/regole' },
                             { label: 'Formazione', href: '/formazione' },
-                            { label: 'News', href: '/news' },
+                            { label: 'Blog & News', href: '/news' },
                             { label: 'Contatti', href: '/contatti' },
                         ].map((l) => (
                             <Link key={l.href} href={l.href} className="block font-inter text-sm text-[#555] mb-2.5 hover:text-gold transition-colors">

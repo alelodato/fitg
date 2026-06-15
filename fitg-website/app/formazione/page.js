@@ -53,8 +53,8 @@ export default function FormazionePage() {
                 <div className="absolute inset-0 flex flex-col justify-end px-5 md:px-16 pb-10 md:pb-14">
                     <SectionLabel>Formazione</SectionLabel>
                     <h1 className="font-oswald font-bold text-[32px] md:text-[52px] leading-tight">
-                        <span className="text-white">Allenati per </span>
-                        <span className="text-gold">Competere</span>
+                        <span className="text-white">Formazione e </span>
+                        <span className="text-gold">Preparazione Atletica</span>
                     </h1>
                     <p className="font-inter text-[13px] md:text-[15px] text-[#ccc] mt-3 max-w-xl">
                         Piani di allenamento e aree attrezzate per prepararti al meglio.
