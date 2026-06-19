@@ -6,20 +6,20 @@ import Image from 'next/image'
 const storiaSteps = [
     {
         num: '01',
-        titolo: 'La Sfida',
-        img: '/images/image2.jpeg',
+        titolo: 'Cosa sono i Tactical Games?',
+        img: '/image2.jpeg',
         testo: 'Benvenuti ai Tactical Games, dove l\'emozione della competizione incontra l\'esigenza di precisione tattica. Dal personale militare e dalle forze dell\'ordine ai tiratori sportivi e ai civili, i nostri eventi rappresentano il banco di prova definitivo. Qui, individui provenienti da diversi ambiti si incontrano per competere con l\'élite, scoprendo i propri limiti sotto l\'intensa pressione che si respira solo nelle nostre arene.',
     },
     {
         num: '02',
-        titolo: 'Il Percorso',
-        img: '/images/image3.jpeg',
+        titolo: 'Forza, resistenza e precisione',
+        img: '/image3.jpeg',
         testo: 'Ogni evento combina esercizi di fitness funzionale con sfide di tiro di precisione. I concorrenti si muovono attraverso percorsi che mettono alla prova forza, resistenza e abilità nel tiro, trasportando equipaggiamento pesante, superando ostacoli e ingaggiando bersagli sotto pressione temporale, dove l\'affaticamento fisico si unisce all\'esigenza di precisione.',
     },
     {
         num: '03',
-        titolo: 'Il Punteggio',
-        img: '/images/image0.jpeg',
+        titolo: 'Premiare gli atleti migliori',
+        img: '/image0.jpeg',
         testo: 'Il punteggio si basa sia sul tempo che sulla precisione, con penalità per i colpi mancati o gli errori procedurali. Diverse categorie garantiscono una competizione equa, dalle qualificazioni regionali ai campionati nazionali, tutti finalizzati a incoronare l\'atleta tattico più completo.',
     },
 ]
@@ -46,16 +46,6 @@ export default function StoriaStickyScroll() {
 
     return (
         <section className="bg-[#1A1A1A] border-b border-gold/20">
-            <div className="px-5 md:px-16 pt-12 md:pt-20 pb-8 md:pb-12">
-                <div className="flex items-center gap-2.5 mb-2.5">
-                    <div className="w-5 h-px bg-gold" />
-                    <span className="text-[9px] tracking-[3px] text-gold font-oswald uppercase">Storia</span>
-                </div>
-                <h2 className="font-oswald font-bold text-[28px] md:text-[44px]">
-                    <span className="text-white">Cosa sono i </span>
-                    <span className="text-gold">Tactical Games</span>
-                </h2>
-            </div>
 
             {/* DESKTOP — sticky scroll a due colonne, solo da lg in su */}
             <div className="hidden lg:grid lg:grid-cols-2">

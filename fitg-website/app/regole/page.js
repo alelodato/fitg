@@ -36,15 +36,6 @@ const regoleSicurezza = [
     'È vietato lasciare armi incustodite, cariche o con colpo in canna sul banco o altrove nel poligono',
 ]
 
-const regoleRapide = [
-    'Sicurezza prima di tutto: tutti gli eventi in cold range. Armi scariche tranne sotto supervisione RO.',
-    'Regola dei 180°: superare il piano di sicurezza o puntare verso una persona = DQ immediata.',
-    'Gilet zavorrabile obbligatorio — peso da definire per categoria.',
-    'Nessun compensatore sul fucile, solo flash hider o silenziatore.',
-    'La cinghia sul fucile è obbligatoria in tutti gli stage.',
-    'Non puoi modificare la cintura dopo il check-in.',
-]
-
 const giornoCompetizione = [
     { num: '01', titolo: 'CHECK-IN', desc: 'Ispezione fucile, pistola e gilet tattico. Completare prima del briefing.' },
     { num: '02', titolo: 'BRIEFING', desc: 'Briefing sicurezza obbligatorio. Assenza = DQ immediata.' },
@@ -82,7 +73,7 @@ export default function RegolePage() {
         <>
             {/* HERO */}
             <section className="relative overflow-hidden h-[260px] md:h-[420px]">
-                <Image src="/images/image2.jpeg" alt="Tactical Games" fill className="object-cover brightness-[0.3]" />
+                <Image src="/image6.jpeg" alt="Tactical Games" fill className="object-cover brightness-[0.3]" />
                 <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/90" />
                 <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent" />
                 <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-5">
@@ -156,22 +147,6 @@ export default function RegolePage() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3 max-w-4xl">
                     {regoleSicurezza.map((item, i) => (
                         <div key={i} className="flex items-start gap-4 bg-[#1A1A1A] px-5 py-4 border border-gold/10">
-                            <span className="text-gold text-[16px] shrink-0 mt-0.5">◎</span>
-                            <span className="font-inter text-[13px] md:text-[14px] text-[#ccc] leading-relaxed">{item}</span>
-                        </div>
-                    ))}
-                </div>
-            </section>
-
-            {/* REGOLE RAPIDE */}
-            <section className="bg-[#1A1A1A] px-5 md:px-16 py-12 md:py-16 border-t border-gold/20">
-                <h2 className="font-oswald font-bold text-[24px] md:text-[32px] mb-8">
-                    <span className="text-white">REGOLE RAPIDE </span>
-                    <span className="text-gold">DA RICORDARE</span>
-                </h2>
-                <div className="flex flex-col gap-3 max-w-2xl">
-                    {regoleRapide.map((item, i) => (
-                        <div key={i} className="flex items-start gap-4 bg-[#222] px-5 py-4 border border-gold/10">
                             <span className="text-gold text-[16px] shrink-0 mt-0.5">◎</span>
                             <span className="font-inter text-[13px] md:text-[14px] text-[#ccc] leading-relaxed">{item}</span>
                         </div>
