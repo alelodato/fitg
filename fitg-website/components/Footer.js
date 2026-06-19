@@ -4,14 +4,17 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 const sponsors = [
-    { nome: 'Dsa', img: '/dsa-nobg.png', href: 'https://dsa.it' },
-    { nome: 'GW', img: '/gw.png', href: 'https://gw.it' },
-    { nome: 'Kali Kalasag', img: '/kali.png', href: 'https://kalikalasag.it' },
-    { nome: 'Military', img: '/military.png', href: 'https://military.it' },
+    { nome: 'Tmt', img: '/tmt.png', href: 'https://www.tmt-academy.com/' },
+    { nome: 'Dsa', img: '/dsa-nobg.png', href: 'https://www.dsa-delta.it/' },
+    { nome: 'GW', img: '/gw.png', href: 'https://gunsweek.com/en' },
+    { nome: 'Kali Kalasag', img: '/kali.png', href: 'https://kalikalasag.com' },
+    { nome: 'Military', img: '/military.png', href: 'https://www.instagram.com/military.camp.experience?igsh=cXFta2txNTBxOXd3' },
     { nome: 'Red Gym', img: '/rgym.png', href: 'https://redgym.it' },
-    { nome: 'Ruggiero', img: '/ruggiero.jpeg', href: 'https://ruggiero.it' },
+    { nome: 'Ruggiero', img: '/ruggiero.jpeg', href: 'https://www.ruggieroarmi.com' },
     { nome: 'Sabatti', img: '/sabatti.jpeg', href: 'https://sabatti.it' },
-    { nome: 'Shooter', img: '/shooter.png', href: 'https://shooter.it' },
+    { nome: 'Shooter', img: '/shooter.png', href: 'https://shooterstore.it/' },
+    { nome: 'Tacfit', img: '/tacfit.jpeg', href: 'https://tacfititalia.com/' },
+    { nome: 'Unuci', img: '/unuci.gif', href: 'https://www.instagram.com/unuci.addestramento/' },
 ]
 
 export default function Footer() {
@@ -92,7 +95,7 @@ export default function Footer() {
 
                 {/* SPONSOR */}
                 <div className="border-t border-[#222] pt-8 pb-8">
-                    <div className="text-[9px] tracking-[3px] text-white font-oswald mb-2">I NOSTRI SPONSOR</div>
+                    <div className="text-[9px] tracking-[3px] text-white font-oswald mb-2">I NOSTRI PARTNER</div>
                     <div className="w-7 h-px bg-gold mb-6" />
                     <div className="flex flex-wrap items-center gap-6 md:gap-10">
                         {sponsors.map((s, i) => (
