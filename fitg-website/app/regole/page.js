@@ -1,12 +1,15 @@
 import Image from 'next/image'
 import SectionLabel from '@/components/SectionLabel'
+import StoriaStickyScroll from '@/components/StoriaStickyScroll'
 
 export const metadata = { title: 'Tactical Games — FITG' }
 
 const categorie = [
-    { nome: 'Categoria 1', desc: 'Descrizione categoria da inserire.' },
-    { nome: 'Categoria 2', desc: 'Descrizione categoria da inserire.' },
-    { nome: 'Categoria 3', desc: 'Descrizione categoria da inserire.' },
+    { nome: 'Divisione Élite', desc: 'Descrizione categoria da inserire.' },
+    { nome: 'Divisione Tattica', desc: 'Descrizione categoria da inserire.' },
+    { nome: 'Divisione Standard', desc: 'Descrizione categoria da inserire.' },
+    { nome: 'Divisione a Squadre', desc: 'Descrizione categoria da inserire.' },
+    { nome: 'Divisione Air Soft', desc: 'Descrizione categoria da inserire.' },
 ]
 
 const categorieAttrezzatura = [
@@ -19,12 +22,18 @@ const categorieAttrezzatura = [
 ]
 
 const regoleSicurezza = [
-    'Tutti gli eventi in COLD RANGE — armi scariche tranne sotto supervisione RO',
-    'Regola dei 180° — superare il piano di sicurezza = DQ immediata',
-    'Sweeping = DQ immediata',
-    'Sparo dopo Cease Fire = DQ immediata',
-    'Munizioni vietate = DQ immediata',
-    'Occhiali balistici e protezione uditiva obbligatori',
+    'Considera ogni arma come se fosse sempre carica',
+    'Non rivolgere mai la volata dell\'arma verso qualcosa che non si voglia colpire',
+    'Essere certi del proprio bersaglio e di cosa lo circonda',
+    'Tieni sempre il dito fuori dal grilletto fino a quando non si è coscientemente deciso di sparare',
+    'Sono obbligatori i dispositivi di protezione dell\'udito (cuffie o tappi) e della vista (occhiali)',
+    'Tutti gli eventi si svolgono a COLD RANGE: le armi da fuoco sono scariche',
+    'Le armi si possono maneggiare solo sotto la supervisione di un RO (Responsabile di Revisione)',
+    'È vietato il maneggio di qualsiasi arma al di fuori delle aree preposte',
+    'Vietato sparare dopo il comando "Cessate il fuoco"',
+    'L\'area preposta al tiro non deve superare il piano di sicurezza (parapalle)',
+    'Munizioni proibite: bimetalliche, con anima in acciaio, traccianti, incendiarie',
+    'È vietato lasciare armi incustodite, cariche o con colpo in canna sul banco o altrove nel poligono',
 ]
 
 const regoleRapide = [
@@ -94,32 +103,8 @@ export default function RegolePage() {
                 </div>
             </section>
 
-            {/* STORIA */}
-            <section className="bg-[#1A1A1A] px-5 md:px-16 py-12 md:py-20 border-b border-gold/20">
-                <SectionLabel>Storia</SectionLabel>
-                <h2 className="font-oswald font-bold text-[24px] md:text-[36px] mb-8">
-                    <span className="text-white">Cosa sono i </span>
-                    <span className="text-gold">Tactical Games</span>
-                </h2>
-                <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
-                    <div className="max-w-xl">
-                        <p className="font-inter text-[14px] md:text-[15px] text-[#ccc] leading-relaxed">
-                            I Tactical Games sono competizioni sportive multidisciplinari che uniscono fitness estremo, prove di abilità e tiro tattico/ dinamico con armi da fuoco (o repliche nel caso del softair).
-                            Il loro scopo è testare la capacità del partecipante di mantenere lucidità, precisione e controllo sotto un forte sforzo fisico
-                        </p>
-                        <p className="font-inter text-[14px] md:text-[15px] text-[#ccc] leading-relaxed mt-4">
-                            Secondo paragrafo sulla storia e le origini da inserire.
-                        </p>
-                        <p className="font-inter text-[14px] md:text-[15px] text-[#ccc] leading-relaxed mt-4">
-                            Terzo paragrafo sulla diffusione in Italia da inserire.
-                        </p>
-                    </div>
-                    <div className="relative h-[260px] md:h-[340px] overflow-hidden">
-                        <Image src="/images/image2.jpeg" alt="Tactical Games Storia" fill className="object-cover brightness-[0.6]" />
-                        <div className="absolute left-0 top-0 bottom-0 w-1 bg-gold" />
-                    </div>
-                </div>
-            </section>
+            {/* STORIA — Sticky scroll */}
+            <StoriaStickyScroll />
 
             {/* CATEGORIE */}
             <section className="bg-[#111] px-5 md:px-16 py-12 md:py-20">
@@ -142,7 +127,7 @@ export default function RegolePage() {
                 </div>
             </section>
 
-            {/* REGOLAMENTO */}
+            {/* REGOLAMENTO — Attrezzatura */}
             <section className="bg-[#1A1A1A] px-5 md:px-16 py-12 md:py-16 border-t border-gold/20">
                 <SectionLabel>Regolamento</SectionLabel>
                 <h2 className="font-oswald font-bold text-[24px] md:text-[36px] mb-8">
@@ -159,16 +144,16 @@ export default function RegolePage() {
                 </div>
             </section>
 
-            {/* REGOLE SICUREZZA */}
+            {/* REGOLE DI SICUREZZA */}
             <section className="bg-[#111] px-5 md:px-16 py-12 md:py-16 border-t border-gold/20">
                 <div className="flex items-center gap-3 mb-2">
                     <span className="text-gold text-xl">⚠</span>
                     <h2 className="font-oswald font-bold text-[24px] md:text-[32px] text-white">
-                        REGOLE DI SICUREZZA <span className="text-gold">CHIAVE</span>
+                        REGOLE DI SICUREZZA
                     </h2>
                 </div>
                 <div className="w-10 h-0.5 bg-gold mb-8" />
-                <div className="flex flex-col gap-3 max-w-2xl">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 max-w-4xl">
                     {regoleSicurezza.map((item, i) => (
                         <div key={i} className="flex items-start gap-4 bg-[#1A1A1A] px-5 py-4 border border-gold/10">
                             <span className="text-gold text-[16px] shrink-0 mt-0.5">◎</span>
