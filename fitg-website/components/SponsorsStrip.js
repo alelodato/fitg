@@ -44,7 +44,7 @@ export default function SponsorsStrip() {
                         href={s.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-center h-16 md:h-20 w-40 md:w-48 shrink-0 grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-300"
+                        className="flex items-center justify-center h-16 md:h-20 w-40 md:w-48 shrink-0 lg:grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-300"
                     >
                         <Image
                             src={s.img}

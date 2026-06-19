@@ -101,7 +101,7 @@ export default function Footer() {
                                 href={s.href}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="h-10 w-24 flex items-center justify-center grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300"
+                                className="h-10 w-24 flex items-center justify-center lg:grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300"
                             >
                                 <Image src={s.img} alt={s.nome} width={96} height={40} className="object-contain w-full h-full" />
                             </a>
