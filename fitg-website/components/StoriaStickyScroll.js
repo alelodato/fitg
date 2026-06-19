@@ -89,9 +89,6 @@ export default function StoriaStickyScroll() {
                             >
                                 <Image src={step.img} alt={step.titolo} fill className="object-cover brightness-[0.55]" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A]/60 to-transparent" />
-                                <div className="absolute bottom-10 left-10 font-oswald font-bold text-gold text-[15px] tracking-[3px]">
-                                    {step.num} / 03
-                                </div>
                             </div>
                         ))}
                     </div>
@@ -105,9 +102,6 @@ export default function StoriaStickyScroll() {
                         <div className="relative h-[280px] md:h-[400px] overflow-hidden">
                             <Image src={step.img} alt={step.titolo} fill className="object-cover brightness-[0.55]" />
                             <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A] to-transparent" />
-                            <div className="absolute bottom-4 left-5 md:left-10 font-oswald font-bold text-gold text-[12px] md:text-[14px] tracking-[3px]">
-                                {step.num} / 03
-                            </div>
                         </div>
                         <div className="px-5 md:px-16 py-8 md:py-12 max-w-2xl md:mx-auto">
                             <h3 className="font-oswald font-bold text-white text-[22px] md:text-[28px] mb-4">{step.titolo}</h3>
