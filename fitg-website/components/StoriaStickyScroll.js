@@ -127,51 +127,24 @@ export default function StoriaStickyScroll() {
         </div>
       </div>
 
-      {/* MOBILE + TABLET — scroll laterale vero (free scroll, card parzialmente visibile) */}
-      <div className="lg:hidden">
-        <div
-          ref={scrollRef}
-          onScroll={handleMobileScroll}
-          className="flex overflow-x-auto snap-x snap-proximity scrollbar-hide gap-4 px-5 md:px-16 py-2"
-          style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-        >
-          {storiaSteps.map((step, i) => (
-            <div key={i} className="snap-start shrink-0 w-[85%] sm:w-[70%] md:w-[55%]">
-              <div className="relative h-[260px] sm:h-[320px] md:h-[380px] overflow-hidden">
-                <Image src={step.img} alt={step.titolo} fill className="object-cover brightness-[0.5]" />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A] via-black/20 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 px-5 pb-5">
-                  <div className="font-oswald font-bold text-gold text-[11px] md:text-[13px] tracking-[3px] mb-2">
-                    {step.num} / 03
-                  </div>
-                  <h3 className="font-oswald font-bold text-white text-[19px] md:text-[24px] leading-tight">
-                    {step.titolo}
-                  </h3>
-                </div>
-              </div>
-              <div className="py-5">
-                <p className="font-inter text-[13px] md:text-[15px] text-[#ccc] leading-relaxed">
-                  {step.testo}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Indicatori puntini */}
-        <div className="flex items-center justify-center gap-2 pb-10">
-          {storiaSteps.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => scrollToSlide(i)}
-              aria-label={`Vai al paragrafo ${i + 1}`}
-              className={`h-1.5 rounded-full transition-all duration-300 ${
-                mobileActive === i ? 'w-8 bg-gold' : 'w-1.5 bg-gold/30'
-              }`}
-            />
-          ))}
+      {/* MOBILE + TABLET — layout verticale impilato */}
+<div className="lg:hidden flex flex-col">
+  {storiaSteps.map((step, i) => (
+    <div key={i} className="border-t border-gold/10">
+      <div className="relative h-[280px] md:h-[400px] overflow-hidden">
+        <Image src={step.img} alt={step.titolo} fill className="object-cover brightness-[0.55]" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A] to-transparent" />
+        <div className="absolute bottom-4 left-5 md:left-10 font-oswald font-bold text-gold text-[12px] md:text-[14px] tracking-[3px]">
+          {step.num} / 03
         </div>
       </div>
+      <div className="px-5 md:px-16 py-8 md:py-12 max-w-2xl md:mx-auto">
+        <h3 className="font-oswald font-bold text-white text-[22px] md:text-[28px] mb-4 leading-tight">{step.titolo}</h3>
+        <p className="font-inter text-[14px] md:text-[16px] text-[#ccc] leading-relaxed">{step.testo}</p>
+      </div>
+    </div>
+  ))}
+</div>
     </section>
   )
 }
