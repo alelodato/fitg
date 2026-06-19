@@ -4,14 +4,14 @@ import { useEffect, useRef } from 'react'
 import Image from 'next/image'
 
 const sponsors = [
-    { nome: 'Dsa', img: '/dsa-nobg.png', href: 'https://dsa.it' },
-    { nome: 'GW', img: '/gw.png', href: 'https://gw.it' },
-    { nome: 'Kali Kalasag', img: '/kali.png', href: 'https://kalikalasag.it' },
-    { nome: 'Military', img: '/military.png', href: 'https://military.it' },
+    { nome: 'Dsa', img: '/dsa-nobg.png', href: '/' },
+    { nome: 'GW', img: '/gw.png', href: 'https://gunsweek.com/en' },
+    { nome: 'Kali Kalasag', img: '/kali.png', href: 'https://kalikalasag.com' },
+    { nome: 'Military', img: '/military.png', href: '/' },
     { nome: 'Red Gym', img: '/rgym.png', href: 'https://redgym.it' },
-    { nome: 'Ruggiero', img: '/ruggiero.jpeg', href: 'https://ruggiero.it' },
+    { nome: 'Ruggiero', img: '/ruggiero.jpeg', href: 'https://www.ruggieroarmi.com/en/' },
     { nome: 'Sabatti', img: '/sabatti.jpeg', href: 'https://sabatti.it' },
-    { nome: 'Shooter', img: '/shooter.png', href: 'https://shooter.it' },
+    { nome: 'Shooter', img: '/shooter.png', href: 'https://shooterstore.it/' },
 ]
 
 export default function SponsorsStrip() {
