@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import CategorieAccordion from '@/components/CategorieAccordion'
 import SectionLabel from '@/components/SectionLabel'
 import StoriaStickyScroll from '@/components/StoriaStickyScroll'
 
@@ -71,31 +72,11 @@ const infrazioniSqualifica = [
 export default function RegolePage() {
     return (
         <>
-            
 
             {/* STORIA — Sticky scroll */}
             <StoriaStickyScroll />
 
-            {/* CATEGORIE */}
-            <section className="bg-[#111] px-5 md:px-16 py-12 md:py-20">
-                <SectionLabel>Categorie</SectionLabel>
-                <h2 className="font-oswald font-bold text-[24px] md:text-[36px] mb-8">
-                    <span className="text-white">Le </span>
-                    <span className="text-gold">Categorie</span>
-                </h2>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl">
-                    {categorie.map((c, i) => (
-                        <div key={i} className="bg-[#1A1A1A] border-t-2 border-gold p-6">
-                            <div className="font-oswald font-bold text-gold text-[11px] tracking-[3px] mb-3">
-                                {String(i + 1).padStart(2, '0')}
-                            </div>
-                            <div className="font-oswald font-bold text-white text-[18px] mb-3">{c.nome}</div>
-                            <div className="w-8 h-px bg-gold mb-4" />
-                            <p className="font-inter text-[13px] text-[#ccc] leading-relaxed">{c.desc}</p>
-                        </div>
-                    ))}
-                </div>
-            </section>
+            <CategorieAccordion />
 
             {/* REGOLAMENTO — Attrezzatura */}
             <section className="bg-[#1A1A1A] px-5 md:px-16 py-12 md:py-16 border-t border-gold/20">
