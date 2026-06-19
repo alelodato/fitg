@@ -4,12 +4,14 @@ import { useEffect, useRef } from 'react'
 import Image from 'next/image'
 
 const sponsors = [
-    { nome: 'Sponsor 1', img: '/images/sponsor-1.png' },
-    { nome: 'Sponsor 2', img: '/images/sponsor-2.png' },
-    { nome: 'Sponsor 3', img: '/images/sponsor-3.png' },
-    { nome: 'Sponsor 4', img: '/images/sponsor-4.png' },
-    { nome: 'Sponsor 5', img: '/images/sponsor-5.png' },
-    { nome: 'Sponsor 6', img: '/images/sponsor-6.png' },
+    { nome: 'Dsa', img: '/dsa-nobg.png', href: 'https://dsa.it' },
+    { nome: 'GW', img: '/gw.png', href: 'https://gw.it' },
+    { nome: 'Kali Kalasag', img: '/kali.png', href: 'https://kalikalasag.it' },
+    { nome: 'Military', img: '/military.png', href: 'https://military.it' },
+    { nome: 'Red Gym', img: '/rgym.png', href: 'https://redgym.it' },
+    { nome: 'Ruggiero', img: '/ruggiero.jpeg', href: 'https://ruggiero.it' },
+    { nome: 'Sabatti', img: '/sabatti.jpeg', href: 'https://sabatti.it' },
+    { nome: 'Shooter', img: '/shooter.png', href: 'https://shooter.it' },
 ]
 
 export default function SponsorsStrip() {
@@ -34,18 +36,24 @@ export default function SponsorsStrip() {
     }, [])
 
     return (
-        <div className="bg-[#222] border-t-2 border-gold border-b border-gold/20 py-4 overflow-hidden">
-            <div ref={trackRef} className="flex items-center gap-12 w-max">
+        <div className="bg-[#1A1A1A] border-t-2 border-gold border-b border-gold/20 py-8 md:py-10 overflow-hidden">
+            <div ref={trackRef} className="flex items-center gap-12 md:gap-16 w-max">
                 {sponsors.map((s, i) => (
-                    <div key={i} className="flex items-center justify-center h-10 w-32 shrink-0 opacity-50 hover:opacity-100 transition-opacity">
+                    <a
+                        key={i}
+                        href={s.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center h-16 md:h-20 w-40 md:w-48 shrink-0 grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-300"
+                    >
                         <Image
                             src={s.img}
                             alt={s.nome}
-                            width={120}
-                            height={40}
-                            className="object-contain filter brightness-0 invert"
+                            width={180}
+                            height={80}
+                            className="object-contain w-full h-full"
                         />
-                    </div>
+                    </a>
                 ))}
             </div>
         </div>

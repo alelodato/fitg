@@ -1,5 +1,18 @@
+'use client'
+
 import Link from 'next/link'
 import Image from 'next/image'
+
+const sponsors = [
+    { nome: 'Dsa', img: '/dsa-nobg.png', href: 'https://dsa.it' },
+    { nome: 'GW', img: '/gw.png', href: 'https://gw.it' },
+    { nome: 'Kali Kalasag', img: '/kali.png', href: 'https://kalikalasag.it' },
+    { nome: 'Military', img: '/military.png', href: 'https://military.it' },
+    { nome: 'Red Gym', img: '/rgym.png', href: 'https://redgym.it' },
+    { nome: 'Ruggiero', img: '/ruggiero.jpeg', href: 'https://ruggiero.it' },
+    { nome: 'Sabatti', img: '/sabatti.jpeg', href: 'https://sabatti.it' },
+    { nome: 'Shooter', img: '/shooter.png', href: 'https://shooter.it' },
+]
 
 export default function Footer() {
     return (
@@ -75,6 +88,25 @@ export default function Footer() {
                         ))}
                     </div>
 
+                </div>
+
+                {/* SPONSOR */}
+                <div className="border-t border-[#222] pt-8 pb-8">
+                    <div className="text-[9px] tracking-[3px] text-white font-oswald mb-2">I NOSTRI SPONSOR</div>
+                    <div className="w-7 h-px bg-gold mb-6" />
+                    <div className="flex flex-wrap items-center gap-6 md:gap-10">
+                        {sponsors.map((s, i) => (
+                            <a
+                                key={i}
+                                href={s.href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="h-10 w-24 flex items-center justify-center grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300"
+                            >
+                                <Image src={s.img} alt={s.nome} width={96} height={40} className="object-contain w-full h-full" />
+                            </a>
+                        ))}
+                    </div>
                 </div>
 
                 <div className="border-t border-[#222] pt-4 flex flex-col md:flex-row justify-between gap-2">

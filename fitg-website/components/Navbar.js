@@ -1,9 +1,10 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import Image from 'next/image'
+
 const links = [
     { href: '/', label: 'Home' },
     { href: '/regole', label: 'Tactical Games' },
@@ -14,10 +15,22 @@ const links = [
 
 export default function Navbar() {
     const [open, setOpen] = useState(false)
+    const [scrolled, setScrolled] = useState(false)
     const pathname = usePathname()
 
+    useEffect(() => {
+        const handleScroll = () => setScrolled(window.scrollY > 20)
+        window.addEventListener('scroll', handleScroll)
+        return () => window.removeEventListener('scroll', handleScroll)
+    }, [])
+
     return (
-        <header className="sticky top-0 z-50 bg-[#1A1A1A] border-b border-gold/20">
+        <header
+            className={`sticky top-0 z-50 transition-all duration-300 ${scrolled
+                ? 'bg-black/80 backdrop-blur-md border-b border-gold/30 shadow-[0_4px_30px_rgba(0,0,0,0.5)]'
+                : 'bg-gradient-to-b from-black/90 to-black/40 border-b border-gold/10'
+                }`}
+        >
             <div className="flex items-center justify-between px-5 md:px-16 h-[72px] md:h-[88px]">
                 <Link href="/" className="flex items-center py-2 gap-3">
                     <Image
@@ -28,8 +41,8 @@ export default function Navbar() {
                         className="w-[60px] h-[60px] md:w-[80px] md:h-[80px] object-contain"
                     />
                     <div>
-                        <div className="text-gold font-oswald font-bold tracking-widest text-sm md:text-base leading-none">FITG</div>
-                        <div className="text-[#555] font-inter text-[6px] md:text-[7px] tracking-widest leading-none mt-0.5">
+                        <div className="text-gold font-oswald font-bold tracking-widest text-sm md:text-base lg:text-lg leading-none">FITG</div>
+                        <div className="text-[#999] font-inter text-[6px] md:text-[7px] lg:text-[9px] tracking-widest leading-none mt-0.5">
                             FEDERAZIONE ITALIANA TACTICAL GAMES
                         </div>
                     </div>
@@ -42,7 +55,7 @@ export default function Navbar() {
                             href={link.href}
                             className={`font-oswald text-[11px] tracking-[2px] uppercase transition-colors duration-200 pb-0.5 ${pathname === link.href
                                 ? 'text-gold border-b border-gold'
-                                : 'text-[#ccc] hover:text-gold'
+                                : 'text-[#ddd] hover:text-gold'
                                 }`}
                         >
                             {link.label}
@@ -62,13 +75,13 @@ export default function Navbar() {
             </div>
 
             {open && (
-                <div className="md:hidden bg-[#0f0f0f] border-t border-gold/10">
+                <div className="md:hidden bg-black/95 backdrop-blur-md border-t border-gold/10">
                     {links.map((link) => (
                         <Link
                             key={link.href}
                             href={link.href}
                             onClick={() => setOpen(false)}
-                            className={`block px-6 py-3.5 font-oswald text-xs tracking-[3px] uppercase border-b border-gold/10 transition-colors ${pathname === link.href ? 'text-gold' : 'text-[#ccc] hover:text-gold'
+                            className={`block px-6 py-3.5 font-oswald text-xs tracking-[3px] uppercase border-b border-gold/10 transition-colors ${pathname === link.href ? 'text-gold' : 'text-[#ddd] hover:text-gold'
                                 }`}
                         >
                             {link.label}
