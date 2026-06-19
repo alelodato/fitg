@@ -71,28 +71,7 @@ const infrazioniSqualifica = [
 export default function RegolePage() {
     return (
         <>
-            {/* HERO */}
-            <section className="relative overflow-hidden h-[260px] md:h-[420px]">
-                <Image src="/image6.jpeg" alt="Tactical Games" fill className="object-cover brightness-[0.3]" />
-                <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/90" />
-                <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent" />
-                <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-5">
-                    <div className="font-oswald font-bold text-gold text-[13px] tracking-[4px] mb-4">FITG</div>
-                    <h1 className="font-oswald font-bold text-[36px] md:text-[64px] leading-tight text-white">
-                        TACTICAL GAMES
-                    </h1>
-                    <div className="flex items-center gap-6 md:gap-10 mt-6">
-                        {['STORIA', 'CATEGORIE', 'REGOLAMENTO'].map((label, i) => (
-                            <div key={i} className="flex items-center gap-6 md:gap-10">
-                                <span className="font-oswald font-bold text-[13px] md:text-[16px] tracking-[2px] text-white hover:text-gold transition-colors cursor-pointer">
-                                    {label}
-                                </span>
-                                {i < 2 && <span className="text-gold/40">·</span>}
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
+            
 
             {/* STORIA — Sticky scroll */}
             <StoriaStickyScroll />

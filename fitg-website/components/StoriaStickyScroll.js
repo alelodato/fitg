@@ -6,19 +6,19 @@ import Image from 'next/image'
 const storiaSteps = [
     {
         num: '01',
-        titolo: 'Cosa sono i Tactical Games?',
+        titolo: 'Che cosa sono i Tactical Games?',
         img: '/image2.jpeg',
         testo: 'Benvenuti ai Tactical Games, dove l\'emozione della competizione incontra l\'esigenza di precisione tattica. Dal personale militare e dalle forze dell\'ordine ai tiratori sportivi e ai civili, i nostri eventi rappresentano il banco di prova definitivo. Qui, individui provenienti da diversi ambiti si incontrano per competere con l\'élite, scoprendo i propri limiti sotto l\'intensa pressione che si respira solo nelle nostre arene.',
     },
     {
         num: '02',
-        titolo: 'Forza, resistenza e precisione',
+        titolo: 'Forza, Resistenza e Precisione',
         img: '/image3.jpeg',
         testo: 'Ogni evento combina esercizi di fitness funzionale con sfide di tiro di precisione. I concorrenti si muovono attraverso percorsi che mettono alla prova forza, resistenza e abilità nel tiro, trasportando equipaggiamento pesante, superando ostacoli e ingaggiando bersagli sotto pressione temporale, dove l\'affaticamento fisico si unisce all\'esigenza di precisione.',
     },
     {
         num: '03',
-        titolo: 'Premiare gli atleti migliori',
+        titolo: 'Premiare gli atleti più completi',
         img: '/image0.jpeg',
         testo: 'Il punteggio si basa sia sul tempo che sulla precisione, con penalità per i colpi mancati o gli errori procedurali. Diverse categorie garantiscono una competizione equa, dalle qualificazioni regionali ai campionati nazionali, tutti finalizzati a incoronare l\'atleta tattico più completo.',
     },
@@ -29,23 +29,44 @@ export default function StoriaStickyScroll() {
     const refs = useRef([])
 
     useEffect(() => {
+        const elements = refs.current.filter(Boolean)
+        if (elements.length === 0) return
+
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
-                        const idx = Number(entry.target.dataset.index)
+                        const idx = Number(entry.target.getAttribute('data-index'))
                         setActive(idx)
                     }
                 })
             },
             { rootMargin: '-40% 0px -40% 0px', threshold: 0 }
         )
-        refs.current.forEach((el) => el && observer.observe(el))
+
+        elements.forEach((el) => observer.observe(el))
         return () => observer.disconnect()
     }, [])
 
+    const setRef = (el, index) => {
+        refs.current[index] = el
+    }
+
     return (
-        <section className="bg-[#1A1A1A] border-b border-gold/20">
+        <section className="bg-[#1A1A1A]">
+            {/* APERTURA — si fonde con la sezione, niente bordo netto */}
+            <div className="relative overflow-hidden h-[380px] md:h-[560px]">
+                <Image src="/image6.jpeg" alt="Tactical Games" fill className="object-cover brightness-[0.4]" />
+                <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/40 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#1A1A1A]" />
+                <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent" />
+
+                <div className="absolute inset-0 flex flex-col justify-center px-5 md:px-16">
+                    <p className="font-oswald font-bold text-[26px] md:text-[42px] leading-[1.15] text-white max-w-[320px] md:max-w-2xl">
+                        Forza, precisione e tattica si incontrano in un'<span className="text-gold">unica disciplina</span>. Scopri tutto quello che c'è da sapere sui Tactical Games.
+                    </p>
+                </div>
+            </div>
 
             {/* DESKTOP — sticky scroll a due colonne, solo da lg in su */}
             <div className="hidden lg:grid lg:grid-cols-2">
@@ -53,14 +74,14 @@ export default function StoriaStickyScroll() {
                     {storiaSteps.map((step, i) => (
                         <div
                             key={i}
-                            ref={(el) => (refs.current[i] = el)}
+                            ref={(el) => setRef(el, i)}
                             data-index={i}
                             className="min-h-screen flex flex-col justify-center px-16 py-16 border-t border-gold/10"
                         >
                             <div className={`font-oswald font-bold text-[13px] tracking-[4px] mb-4 transition-colors duration-500 ${active === i ? 'text-gold' : 'text-[#444]'}`}>
                                 {step.num}
                             </div>
-                            <h3 className={`font-oswald font-bold text-[34px] mb-5 transition-colors duration-500 ${active === i ? 'text-white' : 'text-[#555]'}`}>
+                            <h3 className={`font-oswald font-bold text-[30px] mb-5 leading-tight transition-colors duration-500 ${active === i ? 'text-white' : 'text-[#555]'}`}>
                                 {step.titolo}
                             </h3>
                             <p className={`font-inter text-[16px] leading-relaxed transition-colors duration-500 ${active === i ? 'text-[#ccc]' : 'text-[#444]'}`}>
@@ -92,9 +113,12 @@ export default function StoriaStickyScroll() {
                         <div className="relative h-[280px] md:h-[400px] overflow-hidden">
                             <Image src={step.img} alt={step.titolo} fill className="object-cover brightness-[0.55]" />
                             <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A] to-transparent" />
+                            <div className="absolute bottom-4 left-5 md:left-10 font-oswald font-bold text-gold text-[12px] md:text-[14px] tracking-[3px]">
+                                {step.num} / 03
+                            </div>
                         </div>
                         <div className="px-5 md:px-16 py-8 md:py-12 max-w-2xl md:mx-auto">
-                            <h3 className="font-oswald font-bold text-white text-[22px] md:text-[28px] mb-4">{step.titolo}</h3>
+                            <h3 className="font-oswald font-bold text-white text-[22px] md:text-[28px] mb-4 leading-tight">{step.titolo}</h3>
                             <p className="font-inter text-[14px] md:text-[16px] text-[#ccc] leading-relaxed">{step.testo}</p>
                         </div>
                     </div>
