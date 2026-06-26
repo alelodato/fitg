@@ -40,7 +40,7 @@ export default function SponsorsStrip() {
 
     return (
         <div className="bg-[#1A1A1A] border-t-2 border-gold border-b border-gold/20 py-5 md:py-8 overflow-hidden">
-            <div ref={trackRef} className="flex items-center gap-6 md:gap-10 w-max">
+            <div ref={trackRef} className="flex items-center gap-4 md:gap-10 w-max">
                 {sponsors.map((s, i) => (
                     <a
                         key={i}
