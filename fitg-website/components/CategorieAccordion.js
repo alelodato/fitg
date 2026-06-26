@@ -5,11 +5,31 @@ import Image from 'next/image'
 import SectionLabel from './SectionLabel'
 
 const categorie = [
-    { nome: 'Divisione Élite', desc: 'Descrizione categoria da inserire.', img: '/image2.jpeg' },
-    { nome: 'Divisione Tattica', desc: 'Descrizione categoria da inserire.', img: '/image3.jpeg' },
-    { nome: 'Divisione Standard', desc: 'Descrizione categoria da inserire.', img: '/image0.jpeg' },
-    { nome: 'Divisione a Squadre', desc: 'Descrizione categoria da inserire.', img: '/image6.jpeg' },
-    { nome: 'Divisione Air Soft', desc: 'Descrizione categoria da inserire.', img: '/image2.jpeg' },
+    {
+        nome: 'Divisione Élite',
+        img: '/elite.webp',
+        desc: 'La categoria Élite è dedicata agli atleti più esperti e preparati. Le prove fisiche e gli stage di tiro richiedono elevate capacità atletiche, velocità di esecuzione e massima precisione. È la categoria che esprime al massimo lo spirito dei Tactical Games, dove ogni errore o perdita di concentrazione può fare la differenza sul risultato finale.',
+    },
+    {
+        nome: 'Divisione Tattica',
+        img: '/tattica.webp',
+        desc: 'La categoria Tattica mantiene la stessa struttura di gara dei Tactical Games, ma con particolare attenzione all\'utilizzo dell\'equipaggiamento operativo. Gli atleti affrontano le prove indossando dotazioni specifiche che aumentano il livello di realismo e l\'impegno fisico richiesto. È ideale per chi desidera vivere un\'esperienza più vicina agli scenari tattici reali.',
+    },
+    {
+        nome: 'Divisione Standard',
+        img: '/standard.webp',
+        desc: 'La categoria Standard rappresenta il punto di ingresso più accessibile ai Tactical Games. Mantiene l\'alternanza tra esercizi fisici e prove di tiro, ma con requisiti tecnici e di equipaggiamento più semplici rispetto alle categorie avanzate. È pensata per permettere a nuovi partecipanti e sportivi provenienti da altre discipline di avvicinarsi gradualmente alla competizione.',
+    },
+    {
+        nome: 'Divisione a Squadre',
+        img: '/squadre.webp',
+        desc: 'La categoria a Squadre trasferisce tutte le sfide dei Tactical Games in una dimensione collettiva. I partecipanti collaborano per affrontare le prove, dividere gli sforzi e gestire insieme le strategie di gara. Oltre alle capacità fisiche e tecniche individuali, diventano fondamentali comunicazione, coordinazione e spirito di squadra.',
+    },
+    {
+        nome: 'Divisione Air Soft',
+        img: '/airsoft.webp',
+        desc: 'La categoria Air Soft ripropone il format dei Tactical Games utilizzando repliche da softair al posto delle armi da fuoco. I partecipanti affrontano le stesse tipologie di prove fisiche e di tiro, sviluppando precisione, controllo e capacità decisionale sotto stress in un contesto più accessibile e adatto a strutture dedicate a questa disciplina.',
+    },
 ]
 
 export default function CategorieAccordion() {
@@ -42,7 +62,7 @@ export default function CategorieAccordion() {
                                         {c.nome}
                                     </span>
                                 </div>
-                                <span className={`shrink-0 w-6 h-6 border flex items-center justify-center transition-all ${isOpen ? 'border-gold text-gold rotate-45' : 'border-gold/30 text-[#555]'}`}>
+                                <span className={`shrink-0 w-6 h-6 border flex items-center justify-center transition-all duration-300 ${isOpen ? 'border-gold text-gold rotate-45' : 'border-gold/30 text-[#555]'}`}>
                                     +
                                 </span>
                             </button>
@@ -50,8 +70,8 @@ export default function CategorieAccordion() {
                             <div className={`grid transition-all duration-300 ease-in-out ${isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}>
                                 <div className="overflow-hidden">
                                     <div className="pb-6">
-                                        <div className="relative h-[180px] overflow-hidden mb-4">
-                                            <Image src={c.img} alt={c.nome} fill className="object-cover brightness-[0.6]" />
+                                        <div className="relative h-[200px] overflow-hidden mb-4">
+                                            <Image src={c.img} alt={c.nome} fill className="object-cover brightness-[0.7]" />
                                         </div>
                                         <p className="font-inter text-[13px] text-[#ccc] leading-relaxed">{c.desc}</p>
                                     </div>
@@ -62,7 +82,7 @@ export default function CategorieAccordion() {
                 })}
             </div>
 
-            {/* TABLET + DESKTOP — griglia con immagine, espande la card stessa */}
+            {/* TABLET + DESKTOP — griglia con immagine, espande al click */}
             <div className="hidden md:grid md:grid-cols-3 gap-4 max-w-5xl">
                 {categorie.map((c, i) => {
                     const isOpen = openDesktop === i
@@ -72,7 +92,7 @@ export default function CategorieAccordion() {
                             onClick={() => setOpenDesktop(isOpen ? null : i)}
                             className="group text-left bg-[#1A1A1A] overflow-hidden border-t-2 border-gold transition-all duration-300"
                         >
-                            <div className={`relative overflow-hidden transition-all duration-500 ${isOpen ? 'h-[140px]' : 'h-[180px]'}`}>
+                            <div className={`relative overflow-hidden transition-all duration-500 ${isOpen ? 'h-[120px]' : 'h-[200px]'}`}>
                                 <Image
                                     src={c.img}
                                     alt={c.nome}
@@ -88,7 +108,7 @@ export default function CategorieAccordion() {
                             <div className="p-5">
                                 <div className="flex items-center justify-between">
                                     <span className="font-oswald font-bold text-white text-[16px]">{c.nome}</span>
-                                    <span className={`shrink-0 w-5 h-5 border flex items-center justify-center text-[11px] transition-all ${isOpen ? 'border-gold text-gold rotate-45' : 'border-gold/30 text-[#555]'}`}>
+                                    <span className={`shrink-0 w-5 h-5 border flex items-center justify-center text-[11px] transition-all duration-300 ${isOpen ? 'border-gold text-gold rotate-45' : 'border-gold/30 text-[#555]'}`}>
                                         +
                                     </span>
                                 </div>
