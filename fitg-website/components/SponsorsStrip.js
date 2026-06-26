@@ -39,8 +39,19 @@ export default function SponsorsStrip() {
     }, [])
 
     return (
-        <div className="bg-[#1A1A1A] border-t-2 border-gold border-b border-gold/20 py-5 md:py-8 overflow-hidden">
-            <div ref={trackRef} className="flex items-center gap-4 md:gap-10 w-max">
+        <div className="bg-[#1A1A1A] overflow-hidden">
+            {/* Sfumatura top dalla sezione precedente */}
+            <div className="h-8 bg-gradient-to-b from-[#111] to-[#1A1A1A]" />
+
+            {/* Titolo */}
+            <div className="text-center pb-5 md:pb-6">
+                <span className="font-oswald font-bold text-[13px] md:text-[15px] tracking-[4px] text-gold uppercase">
+                    I Partner della FITG
+                </span>
+            </div>
+
+            {/* Loghi */}
+            <div ref={trackRef} className="flex items-center gap-2 md:gap-10 w-max">
                 {sponsors.map((s, i) => (
                     <a
                         key={i}
@@ -59,6 +70,9 @@ export default function SponsorsStrip() {
                     </a>
                 ))}
             </div>
+
+            {/* Sfumatura bottom verso la sezione successiva */}
+            <div className="h-8 bg-gradient-to-b from-[#1A1A1A] to-[#111]" />
         </div>
     )
 }

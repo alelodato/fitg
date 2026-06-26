@@ -96,6 +96,20 @@ export default function RegolePage() {
                         </div>
                     ))}
                 </div>
+
+                <div className="mt-8 max-w-4xl flex flex-col md:flex-row md:items-center gap-4 border-t border-gold/10 pt-8">
+                    <p className="font-inter text-[13px] text-[#555] leading-relaxed">
+                        Per il regolamento completo e ufficiale consulta il sito The Tactical Games.
+                    </p>
+                    <a
+                        href="https://thetacticalgames.com/rules"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="shrink-0 font-oswald font-bold text-[11px] tracking-[3px] text-black bg-gold px-6 py-3 hover:bg-gold-light transition-colors flex items-center gap-2"
+                    >
+                        REGOLAMENTO COMPLETO <span>→</span>
+                    </a>
+                </div>
             </section>
         </>
     )
