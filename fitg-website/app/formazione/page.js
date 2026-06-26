@@ -8,22 +8,22 @@ const areeAllenamento = [
     {
         icon: Dumbbell,
         titolo: 'FORZA E RESISTENZA',
-        desc: 'Trasporto pesi, farmer\'s carry, overhead carry, sandbag — elementi chiave di ogni stage TTG.',
-    },
-    {
-        icon: Target,
-        titolo: 'TIRO',
-        desc: 'Tiro di precisione con pistola e fucile da 3 a 600 yard. Allenati su distanze variabili in condizioni di stress fisico.',
+        desc: 'Allenamento di forza e resistenza funzionale finalizzato allo sviluppo della capacità di esprimere forza, potenza e resistenza sotto sforzo prolungato. Utilizza attrezzature specifiche come kettlebell, sandbag, Bulgarian bag, wall ball e altri strumenti del functional training, combinando movimenti multiarticolari, trasporto di carichi, sollevamenti e esercizi dinamici che coinvolgono tutto il corpo. Questo tipo di allenamento sviluppa la resistenza fisica e mentale necessaria per mantenere controllo, efficienza e prestazione anche in condizioni di elevata fatica.',
     },
     {
         icon: Heart,
         titolo: 'CARDIO E MOBILITÀ',
-        desc: 'Corsa, burpees, ostacoli — tutto in gilet tattico.',
+        desc: 'Allenamento dedicato alla capacità di muoversi rapidamente ed efficacemente in ambienti complessi. Attraverso corsa, superamento di muri, strisciamenti, passaggi tecnici e prove di equilibrio, vengono sviluppate resistenza cardiovascolare, mobilità, coordinazione e consapevolezza del corpo, competenze fondamentali per mantenere prestazione e controllo durante l\'intera competizione.',
+    },
+    {
+        icon: Target,
+        titolo: 'TIRO',
+        desc: 'Il tiro tattico con pistola e fucile non è una semplice disciplina di tiro dinamico: è una combinazione di precisione, gestione dello stress fisico, rapidità nelle transizioni tra armi e capacità atletica. Gli atleti devono eseguire esercizi fisici impegnativi e subito dopo colpire bersagli con elevata precisione, spesso con frequenza cardiaca molto alta. Il fucile viene utilizzato soprattutto per bersagli da media e lunga distanza, comunemente tra 50 e 400 metri. La pistola viene generalmente impiegata su bersagli più vicini, spesso tra 10 e 25 metri.',
     },
     {
         icon: Brain,
-        titolo: 'MENTALITÀ',
-        desc: 'Gestione dello stress sotto pressione temporale, prendere decisioni con affaticamento fisico.',
+        titolo: 'MINDSET',
+        desc: 'L\'aspetto psicologico in una competizione di Tactical Games è spesso tanto importante quanto la preparazione fisica e tecnica. La sfida psicologica principale non è "restare calmi", ma mantenere precisione, lucidità e disciplina tecnica mentre il corpo è in una condizione di forte stress fisiologico. Spesso la differenza tra due atleti fisicamente simili emerge proprio dalla capacità di controllare attenzione, emozioni e processo decisionale negli ultimi secondi prima di premere il grilletto.',
     },
 ]
 
@@ -47,7 +47,7 @@ export default function FormazionePage() {
         <>
             {/* HERO */}
             <section className="relative overflow-hidden h-[260px] md:h-[360px]">
-                <Image src="/images/formazione-hero.jpg" alt="Formazione" fill className="object-cover brightness-[0.3]" />
+                <Image src="/images/image3.jpeg" alt="Formazione" fill className="object-cover brightness-[0.3]" />
                 <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/90" />
                 <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent" />
                 <div className="absolute inset-0 flex flex-col justify-end px-5 md:px-16 pb-10 md:pb-14">
@@ -66,10 +66,10 @@ export default function FormazionePage() {
             <section className="bg-[#1A1A1A] px-5 md:px-16 py-12 md:py-16 border-b border-gold/20">
                 <div className="max-w-3xl">
                     <p className="font-inter text-[14px] md:text-[15px] text-[#ccc] leading-relaxed">
-                        Testo introduttivo alla formazione da inserire.
+                        Testo di introduzione sulla formazione e preparazione atletica.
                     </p>
                     <p className="font-inter text-[14px] md:text-[15px] text-[#ccc] leading-relaxed mt-4">
-                        Secondo paragrafo da inserire.
+                        Eventuale secondo paragrafo o immagini introduttive.
                     </p>
                 </div>
             </section>
@@ -83,16 +83,18 @@ export default function FormazionePage() {
                 <p className="font-inter text-[13px] text-[#999] mb-8">
                     Quattro pilastri della preparazione per i Tactical Games
                 </p>
-                <div className="flex flex-col gap-4 max-w-2xl">
+                <div className="flex flex-col gap-4 max-w-3xl">
                     {areeAllenamento.map((area, i) => {
                         const Icon = area.icon
                         return (
-                            <div key={i} className="bg-[#1A1A1A] border border-gold/10 p-6">
-                                <Icon size={28} className="text-gold mb-4" strokeWidth={1.5} />
-                                <div className="font-oswald font-bold text-white text-[18px] tracking-wide mb-3">
-                                    {area.titolo}
+                            <div key={i} className="bg-[#1A1A1A] border border-gold/10 p-6 md:p-8">
+                                <div className="flex items-center gap-4 mb-4">
+                                    <Icon size={24} className="text-gold shrink-0" strokeWidth={1.5} />
+                                    <div className="font-oswald font-bold text-white text-[17px] md:text-[19px] tracking-wide">
+                                        {area.titolo}
+                                    </div>
                                 </div>
-                                <p className="font-inter text-[13px] text-[#999] leading-relaxed">{area.desc}</p>
+                                <p className="font-inter text-[13px] md:text-[14px] text-[#ccc] leading-relaxed">{area.desc}</p>
                             </div>
                         )
                     })}
@@ -119,8 +121,8 @@ export default function FormazionePage() {
             <section className="bg-[#111] px-5 md:px-16 py-12 md:py-16 border-t border-gold/20">
                 <SectionLabel>Dove Allenarsi</SectionLabel>
                 <h2 className="font-oswald font-bold text-[24px] md:text-[32px] mb-8">
-                    <span className="text-white">Eventuali </span>
-                    <span className="text-gold">Club o palestre affiliate</span>
+                    <span className="text-white">Aree di </span>
+                    <span className="text-gold">Allenamento</span>
                 </h2>
                 <div className="flex flex-col md:flex-row gap-10 md:gap-16">
                     <div className="flex flex-col flex-1">
