@@ -66,12 +66,11 @@ export default function CategorieAccordion() {
                                     +
                                 </span>
                             </button>
-
                             <div className={`grid transition-all duration-300 ease-in-out ${isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}>
                                 <div className="overflow-hidden">
                                     <div className="pb-6">
                                         <div className="relative h-[200px] overflow-hidden mb-4">
-                                            <Image src={c.img} alt={c.nome} fill className="object-cover brightness-[0.7]" />
+                                            <Image src={c.img} alt={c.nome} fill className="object-cover object-top brightness-[0.7]" />
                                         </div>
                                         <p className="font-inter text-[13px] text-[#ccc] leading-relaxed">{c.desc}</p>
                                     </div>
@@ -82,46 +81,129 @@ export default function CategorieAccordion() {
                 })}
             </div>
 
-            {/* TABLET + DESKTOP — griglia con immagine, espande al click */}
-            <div className="hidden md:grid md:grid-cols-3 gap-4 max-w-5xl">
-                {categorie.map((c, i) => {
-                    const isOpen = openDesktop === i
-                    return (
-                        <button
-                            key={i}
-                            onClick={() => setOpenDesktop(isOpen ? null : i)}
-                            className="group text-left bg-[#1A1A1A] overflow-hidden border-t-2 border-gold transition-all duration-300"
-                        >
-                            <div className={`relative overflow-hidden transition-all duration-500 ${isOpen ? 'h-[120px]' : 'h-[200px]'}`}>
-                                <Image
-                                    src={c.img}
-                                    alt={c.nome}
-                                    fill
-                                    className="object-cover brightness-[0.5] group-hover:brightness-[0.65] group-hover:scale-105 transition-all duration-500"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A] to-transparent" />
-                                <div className="absolute bottom-3 left-5 font-oswald font-bold text-gold text-[10px] tracking-[3px]">
-                                    {String(i + 1).padStart(2, '0')}
+            {/* DESKTOP — grid 2x2 + ultima card full width */}
+            <div className="hidden md:block max-w-5xl">
+
+                {/* GRID 2x2 */}
+                <div className="grid grid-cols-2 gap-4 mb-4">
+
+                    {/* Card 1 — Élite */}
+                    <button
+                        onClick={() => setOpenDesktop(openDesktop === 0 ? null : 0)}
+                        className="group text-left bg-[#1A1A1A] overflow-hidden border-t-2 border-gold transition-all duration-300"
+                    >
+                        <div className={`relative overflow-hidden transition-all duration-500 ${openDesktop === 0 ? 'h-[160px]' : 'h-[260px]'}`}>
+                            <Image src={categorie[0].img} alt={categorie[0].nome} fill className="object-cover object-center brightness-[0.5] group-hover:brightness-[0.65] group-hover:scale-105 transition-all duration-500" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A] to-transparent" />
+                            <div className="absolute bottom-3 left-5 font-oswald font-bold text-gold text-[10px] tracking-[3px]">01</div>
+                        </div>
+                        <div className="p-5">
+                            <div className="flex items-center justify-between">
+                                <span className="font-oswald font-bold text-white text-[17px]">{categorie[0].nome}</span>
+                                <span className={`shrink-0 w-5 h-5 border flex items-center justify-center text-[11px] transition-all duration-300 ${openDesktop === 0 ? 'border-gold text-gold rotate-45' : 'border-gold/30 text-[#555]'}`}>+</span>
+                            </div>
+                            <div className={`grid transition-all duration-300 ease-in-out ${openDesktop === 0 ? 'grid-rows-[1fr] opacity-100 mt-4' : 'grid-rows-[0fr] opacity-0 mt-0'}`}>
+                                <div className="overflow-hidden">
+                                    <p className="font-inter text-[13px] text-[#ccc] leading-relaxed">{categorie[0].desc}</p>
                                 </div>
                             </div>
+                        </div>
+                    </button>
 
-                            <div className="p-5">
-                                <div className="flex items-center justify-between">
-                                    <span className="font-oswald font-bold text-white text-[16px]">{c.nome}</span>
-                                    <span className={`shrink-0 w-5 h-5 border flex items-center justify-center text-[11px] transition-all duration-300 ${isOpen ? 'border-gold text-gold rotate-45' : 'border-gold/30 text-[#555]'}`}>
-                                        +
-                                    </span>
-                                </div>
-
-                                <div className={`grid transition-all duration-300 ease-in-out ${isOpen ? 'grid-rows-[1fr] opacity-100 mt-4' : 'grid-rows-[0fr] opacity-0 mt-0'}`}>
-                                    <div className="overflow-hidden">
-                                        <p className="font-inter text-[13px] text-[#ccc] leading-relaxed">{c.desc}</p>
-                                    </div>
+                    {/* Card 2 — Tattica */}
+                    <button
+                        onClick={() => setOpenDesktop(openDesktop === 1 ? null : 1)}
+                        className="group text-left bg-[#1A1A1A] overflow-hidden border-t-2 border-gold transition-all duration-300"
+                    >
+                        <div className={`relative overflow-hidden transition-all duration-500 ${openDesktop === 1 ? 'h-[160px]' : 'h-[260px]'}`}>
+                            <Image src={categorie[1].img} alt={categorie[1].nome} fill className="object-cover object-center brightness-[0.5] group-hover:brightness-[0.65] group-hover:scale-105 transition-all duration-500" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A] to-transparent" />
+                            <div className="absolute bottom-3 left-5 font-oswald font-bold text-gold text-[10px] tracking-[3px]">02</div>
+                        </div>
+                        <div className="p-5">
+                            <div className="flex items-center justify-between">
+                                <span className="font-oswald font-bold text-white text-[17px]">{categorie[1].nome}</span>
+                                <span className={`shrink-0 w-5 h-5 border flex items-center justify-center text-[11px] transition-all duration-300 ${openDesktop === 1 ? 'border-gold text-gold rotate-45' : 'border-gold/30 text-[#555]'}`}>+</span>
+                            </div>
+                            <div className={`grid transition-all duration-300 ease-in-out ${openDesktop === 1 ? 'grid-rows-[1fr] opacity-100 mt-4' : 'grid-rows-[0fr] opacity-0 mt-0'}`}>
+                                <div className="overflow-hidden">
+                                    <p className="font-inter text-[13px] text-[#ccc] leading-relaxed">{categorie[1].desc}</p>
                                 </div>
                             </div>
-                        </button>
-                    )
-                })}
+                        </div>
+                    </button>
+
+                    {/* Card 3 — Standard */}
+                    <button
+                        onClick={() => setOpenDesktop(openDesktop === 2 ? null : 2)}
+                        className="group text-left bg-[#1A1A1A] overflow-hidden border-t-2 border-gold transition-all duration-300"
+                    >
+                        <div className={`relative overflow-hidden transition-all duration-500 ${openDesktop === 2 ? 'h-[160px]' : 'h-[260px]'}`}>
+                            <Image src={categorie[2].img} alt={categorie[2].nome} fill className="object-cover object-top brightness-[0.5] group-hover:brightness-[0.65] group-hover:scale-105 transition-all duration-500" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A] to-transparent" />
+                            <div className="absolute bottom-3 left-5 font-oswald font-bold text-gold text-[10px] tracking-[3px]">03</div>
+                        </div>
+                        <div className="p-5">
+                            <div className="flex items-center justify-between">
+                                <span className="font-oswald font-bold text-white text-[17px]">{categorie[2].nome}</span>
+                                <span className={`shrink-0 w-5 h-5 border flex items-center justify-center text-[11px] transition-all duration-300 ${openDesktop === 2 ? 'border-gold text-gold rotate-45' : 'border-gold/30 text-[#555]'}`}>+</span>
+                            </div>
+                            <div className={`grid transition-all duration-300 ease-in-out ${openDesktop === 2 ? 'grid-rows-[1fr] opacity-100 mt-4' : 'grid-rows-[0fr] opacity-0 mt-0'}`}>
+                                <div className="overflow-hidden">
+                                    <p className="font-inter text-[13px] text-[#ccc] leading-relaxed">{categorie[2].desc}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+
+                    {/* Card 4 — Squadre */}
+                    <button
+                        onClick={() => setOpenDesktop(openDesktop === 3 ? null : 3)}
+                        className="group text-left bg-[#1A1A1A] overflow-hidden border-t-2 border-gold transition-all duration-300"
+                    >
+                        <div className={`relative overflow-hidden transition-all duration-500 ${openDesktop === 3 ? 'h-[160px]' : 'h-[260px]'}`}>
+                            <Image src={categorie[3].img} alt={categorie[3].nome} fill className="object-cover object-center brightness-[0.5] group-hover:brightness-[0.65] group-hover:scale-105 transition-all duration-500" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A] to-transparent" />
+                            <div className="absolute bottom-3 left-5 font-oswald font-bold text-gold text-[10px] tracking-[3px]">04</div>
+                        </div>
+                        <div className="p-5">
+                            <div className="flex items-center justify-between">
+                                <span className="font-oswald font-bold text-white text-[17px]">{categorie[3].nome}</span>
+                                <span className={`shrink-0 w-5 h-5 border flex items-center justify-center text-[11px] transition-all duration-300 ${openDesktop === 3 ? 'border-gold text-gold rotate-45' : 'border-gold/30 text-[#555]'}`}>+</span>
+                            </div>
+                            <div className={`grid transition-all duration-300 ease-in-out ${openDesktop === 3 ? 'grid-rows-[1fr] opacity-100 mt-4' : 'grid-rows-[0fr] opacity-0 mt-0'}`}>
+                                <div className="overflow-hidden">
+                                    <p className="font-inter text-[13px] text-[#ccc] leading-relaxed">{categorie[3].desc}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+
+                </div>
+
+                {/* Card 5 — Air Soft — full width */}
+                <button
+                    onClick={() => setOpenDesktop(openDesktop === 4 ? null : 4)}
+                    className="group text-left bg-[#1A1A1A] overflow-hidden border-t-2 border-gold transition-all duration-300 w-full"
+                >
+                    <div className={`relative overflow-hidden transition-all duration-500 ${openDesktop === 4 ? 'h-[160px]' : 'h-[280px]'}`}>
+                        <Image src={categorie[4].img} alt={categorie[4].nome} fill className="object-cover object-top brightness-[0.5] group-hover:brightness-[0.65] group-hover:scale-105 transition-all duration-500" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A] to-transparent" />
+                        <div className="absolute bottom-3 left-5 font-oswald font-bold text-gold text-[10px] tracking-[3px]">05</div>
+                    </div>
+                    <div className="p-5">
+                        <div className="flex items-center justify-between">
+                            <span className="font-oswald font-bold text-white text-[17px]">{categorie[4].nome}</span>
+                            <span className={`shrink-0 w-5 h-5 border flex items-center justify-center text-[11px] transition-all duration-300 ${openDesktop === 4 ? 'border-gold text-gold rotate-45' : 'border-gold/30 text-[#555]'}`}>+</span>
+                        </div>
+                        <div className={`grid transition-all duration-300 ease-in-out ${openDesktop === 4 ? 'grid-rows-[1fr] opacity-100 mt-4' : 'grid-rows-[0fr] opacity-0 mt-0'}`}>
+                            <div className="overflow-hidden">
+                                <p className="font-inter text-[13px] text-[#ccc] leading-relaxed max-w-2xl">{categorie[4].desc}</p>
+                            </div>
+                        </div>
+                    </div>
+                </button>
+
             </div>
         </section>
     )
