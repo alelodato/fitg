@@ -11,7 +11,7 @@ const sezioni = [
     title: 'Regolamento ufficiale dei Tactical Games',
     desc: 'Consulta il regolamento completo delle competizioni FITG. Categorie, prove, sistemi di punteggio e norme di sicurezza: tutto quello che devi sapere per partecipare.',
     href: '/regole#rules',
-    img: '/images/image2.jpeg',
+    img: '/image2.jpeg',
   },
   {
     label: 'FORMAZIONE',
