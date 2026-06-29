@@ -80,7 +80,7 @@ export default function RegolePage() {
 
 
             {/* REGOLE DI SICUREZZA */}
-            <section className="bg-[#111] px-5 md:px-16 py-12 md:py-16 border-t border-gold/20">
+            <section id='rules' className="bg-[#111] px-5 md:px-16 py-12 md:py-16 border-t border-gold/20">
                 <div className="flex items-center gap-3 mb-2">
                     <span className="text-gold text-xl">⚠</span>
                     <h2 className="font-oswald font-bold text-[24px] md:text-[32px] text-white">

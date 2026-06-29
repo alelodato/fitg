@@ -46,7 +46,7 @@ export default function SponsorsStrip() {
             {/* Titolo */}
             <div className="text-center pb-5 md:pb-6">
                 <span className="font-oswald font-bold text-[13px] md:text-[15px] tracking-[4px] text-gold uppercase">
-                    I Partner della FITG
+                    PARTNERS
                 </span>
             </div>
 

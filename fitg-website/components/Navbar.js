@@ -41,8 +41,8 @@ export default function Navbar() {
                         className="w-[60px] h-[60px] md:w-[80px] md:h-[80px] object-contain"
                     />
                     <div>
-                        <div className="text-gold font-oswald font-bold tracking-widest text-lg md:text-xl lg:text-2xl leading-none">FITG</div>
-                        <div className="text-[#999] font-inter text-[9px] md:text-[10px] lg:text-[14px] tracking-widest leading-none mt-0.5">
+                        <div className="text-gold font-oswald font-bold tracking-widest text-lg md:text-xl leading-none">FITG</div>
+                        <div className="text-[#999] font-inter text-[9px] md:text-[10px] lg:text-[13px] tracking-widest leading-none mt-0.5">
                             FEDERAZIONE ITALIANA TACTICAL GAMES
                         </div>
                     </div>
