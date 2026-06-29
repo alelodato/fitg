@@ -41,8 +41,8 @@ export default function Navbar() {
                         className="w-[60px] h-[60px] md:w-[80px] md:h-[80px] object-contain"
                     />
                     <div>
-                        <div className="text-gold font-oswald font-bold tracking-widest text-base md:text-lg lg:text-xl leading-none">FITG</div>
-                        <div className="text-[#999] font-inter text-[8px] md:text-[10px] lg:text-[12px] tracking-widest leading-none mt-0.5">
+                        <div className="text-gold font-oswald font-bold tracking-widest text-lg md:text-xl lg:text-2xl leading-none">FITG</div>
+                        <div className="text-[#999] font-inter text-[9px] md:text-[10px] lg:text-[14px] tracking-widest leading-none mt-0.5">
                             FEDERAZIONE ITALIANA TACTICAL GAMES
                         </div>
                     </div>
@@ -53,7 +53,7 @@ export default function Navbar() {
                         <Link
                             key={link.href}
                             href={link.href}
-                            className={`font-oswald text-[11px] tracking-[2px] uppercase transition-colors duration-200 pb-0.5 ${pathname === link.href
+                            className={`font-oswald text-[15px] tracking-[2px] uppercase transition-colors duration-200 pb-0.5 ${pathname === link.href
                                 ? 'text-gold border-b border-gold'
                                 : 'text-[#ddd] hover:text-gold'
                                 }`}
