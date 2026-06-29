@@ -50,7 +50,7 @@ export default function HomePage() {
           src="/image0.jpeg"
           alt="Hero FITG"
           fill
-          className="object-cover object-center brightness-[0.35]"
+          className="object-cover object-center brightness-[0.45]"
           priority
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/50 to-transparent" />
@@ -99,7 +99,7 @@ export default function HomePage() {
             <div className="w-12 h-0.5 bg-gold mb-5" />
             <div className="font-inter text-[13px] md:text-[15px] text-[#ccc] leading-relaxed">
               <p>La FITG nasce per promuovere e regolamentare i Tactical Games in Italia: i Tactical Games sono competizioni sportive multidisciplinari che uniscono fitness estremo, prove di abilità e tiro tattico/ dinamico con armi da fuoco (o repliche nel caso del softair).
-Il loro scopo è testare la capacità del partecipante di mantenere lucidità, precisione e controllo sotto un forte sforzo fisico.</p>
+                Il loro scopo è testare la capacità del partecipante di mantenere lucidità, precisione e controllo sotto un forte sforzo fisico.</p>
               <p className="mt-4">Una disciplina aperta a tutti i livelli, con divisioni per uomini e donne, atleti esperti e neofiti. La FITG coordina gli eventi nazionali, forma gli istruttori e promuove una cultura sportiva basata su sicurezza, fair play e crescita continua.</p>
             </div>
             <Link href="/regole" className="mt-6 font-oswald text-[10px] tracking-[3px] text-gold flex items-center gap-2.5 hover:gap-4 transition-all w-fit">
