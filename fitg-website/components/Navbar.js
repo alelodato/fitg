@@ -48,7 +48,7 @@ export default function Navbar() {
                     </div>
                 </Link>
 
-                <nav className="hidden md:flex items-center gap-9">
+                <nav className="hidden lg:flex items-center gap-9">
                     {links.map((link) => (
                         <Link
                             key={link.href}
@@ -64,7 +64,7 @@ export default function Navbar() {
                 </nav>
 
                 <button
-                    className="md:hidden flex flex-col gap-1.5 cursor-pointer"
+                    className="lg:hidden flex flex-col gap-1.5 cursor-pointer"
                     onClick={() => setOpen(!open)}
                     aria-label="Menu"
                 >
@@ -75,7 +75,7 @@ export default function Navbar() {
             </div>
 
             {open && (
-                <div className="md:hidden bg-black/95 backdrop-blur-md border-t border-gold/10">
+                <div className="lg:hidden bg-black/95 backdrop-blur-md border-t border-gold/10">
                     {links.map((link) => (
                         <Link
                             key={link.href}

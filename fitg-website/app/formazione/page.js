@@ -1,31 +1,11 @@
 import Image from 'next/image'
 import SectionLabel from '@/components/SectionLabel'
 import { Dumbbell, Target, Heart, Brain, CheckCircle } from 'lucide-react'
+import AreeAllenamento from '@/components/AreeAllenamento'
+import IntroFormazione from '@/components/IntroFormazione'
 
 export const metadata = { title: 'Formazione — FITG' }
 
-const areeAllenamento = [
-    {
-        icon: Dumbbell,
-        titolo: 'FORZA E RESISTENZA',
-        desc: 'Allenamento di forza e resistenza funzionale finalizzato allo sviluppo della capacità di esprimere forza, potenza e resistenza sotto sforzo prolungato. Utilizza attrezzature specifiche come kettlebell, sandbag, Bulgarian bag, wall ball e altri strumenti del functional training, combinando movimenti multiarticolari, trasporto di carichi, sollevamenti e esercizi dinamici che coinvolgono tutto il corpo. Questo tipo di allenamento sviluppa la resistenza fisica e mentale necessaria per mantenere controllo, efficienza e prestazione anche in condizioni di elevata fatica.',
-    },
-    {
-        icon: Heart,
-        titolo: 'CARDIO E MOBILITÀ',
-        desc: 'Allenamento dedicato alla capacità di muoversi rapidamente ed efficacemente in ambienti complessi. Attraverso corsa, superamento di muri, strisciamenti, passaggi tecnici e prove di equilibrio, vengono sviluppate resistenza cardiovascolare, mobilità, coordinazione e consapevolezza del corpo, competenze fondamentali per mantenere prestazione e controllo durante l\'intera competizione.',
-    },
-    {
-        icon: Target,
-        titolo: 'TIRO',
-        desc: 'Il tiro tattico con pistola e fucile non è una semplice disciplina di tiro dinamico: è una combinazione di precisione, gestione dello stress fisico, rapidità nelle transizioni tra armi e capacità atletica. Gli atleti devono eseguire esercizi fisici impegnativi e subito dopo colpire bersagli con elevata precisione, spesso con frequenza cardiaca molto alta. Il fucile viene utilizzato soprattutto per bersagli da media e lunga distanza, comunemente tra 50 e 400 metri. La pistola viene generalmente impiegata su bersagli più vicini, spesso tra 10 e 25 metri.',
-    },
-    {
-        icon: Brain,
-        titolo: 'MINDSET',
-        desc: 'L\'aspetto psicologico in una competizione di Tactical Games è spesso tanto importante quanto la preparazione fisica e tecnica. La sfida psicologica principale non è "restare calmi", ma mantenere precisione, lucidità e disciplina tecnica mentre il corpo è in una condizione di forte stress fisiologico. Spesso la differenza tra due atleti fisicamente simili emerge proprio dalla capacità di controllare attenzione, emozioni e processo decisionale negli ultimi secondi prima di premere il grilletto.',
-    },
-]
 
 const consigliAllenamento = [
     'Allenati al tiro DOPO lo sforzo fisico — in gara non spari mai riposato',
@@ -45,61 +25,10 @@ const aree = [
 export default function FormazionePage() {
     return (
         <>
-            {/* HERO */}
-            <section className="relative overflow-hidden h-[260px] md:h-[360px]">
-                <Image src="/images/image3.jpeg" alt="Formazione" fill className="object-cover brightness-[0.3]" />
-                <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/90" />
-                <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent" />
-                <div className="absolute inset-0 flex flex-col justify-end px-5 md:px-16 pb-10 md:pb-14">
-                    <SectionLabel>Formazione</SectionLabel>
-                    <h1 className="font-oswald font-bold text-[32px] md:text-[52px] leading-tight">
-                        <span className="text-white">Formazione e </span>
-                        <span className="text-gold">Preparazione Atletica</span>
-                    </h1>
-                    <p className="font-inter text-[13px] md:text-[15px] text-[#ccc] mt-3 max-w-xl">
-                        Piani di allenamento e aree attrezzate per prepararti al meglio.
-                    </p>
-                </div>
-            </section>
 
-            {/* INTRO */}
-            <section className="bg-[#1A1A1A] px-5 md:px-16 py-12 md:py-16 border-b border-gold/20">
-                <div className="max-w-3xl">
-                    <p className="font-inter text-[14px] md:text-[15px] text-[#ccc] leading-relaxed">
-                        Testo di introduzione sulla formazione e preparazione atletica.
-                    </p>
-                    <p className="font-inter text-[14px] md:text-[15px] text-[#ccc] leading-relaxed mt-4">
-                        Eventuale secondo paragrafo o immagini introduttive.
-                    </p>
-                </div>
-            </section>
+            <IntroFormazione />
 
-            {/* AREE DI ALLENAMENTO */}
-            <section className="bg-[#111] px-5 md:px-16 py-12 md:py-16">
-                <h2 className="font-oswald font-bold text-[24px] md:text-[32px] mb-2">
-                    <span className="text-white">AREE DI </span>
-                    <span className="text-gold">ALLENAMENTO</span>
-                </h2>
-                <p className="font-inter text-[13px] text-[#999] mb-8">
-                    Quattro pilastri della preparazione per i Tactical Games
-                </p>
-                <div className="flex flex-col gap-4 max-w-3xl">
-                    {areeAllenamento.map((area, i) => {
-                        const Icon = area.icon
-                        return (
-                            <div key={i} className="bg-[#1A1A1A] border border-gold/10 p-6 md:p-8">
-                                <div className="flex items-center gap-4 mb-4">
-                                    <Icon size={24} className="text-gold shrink-0" strokeWidth={1.5} />
-                                    <div className="font-oswald font-bold text-white text-[17px] md:text-[19px] tracking-wide">
-                                        {area.titolo}
-                                    </div>
-                                </div>
-                                <p className="font-inter text-[13px] md:text-[14px] text-[#ccc] leading-relaxed">{area.desc}</p>
-                            </div>
-                        )
-                    })}
-                </div>
-            </section>
+            <AreeAllenamento />
 
             {/* CONSIGLI */}
             <section className="bg-[#1A1A1A] px-5 md:px-16 py-12 md:py-16 border-t border-gold/20">
