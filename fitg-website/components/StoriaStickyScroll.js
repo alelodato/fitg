@@ -13,13 +13,13 @@ const storiaSteps = [
   {
     num: '02',
     titolo: 'Forza, Resistenza e Precisione',
-    img: '/image3.jpeg',
+    img: '/image17.webp',
     testo: 'Ogni evento combina esercizi di fitness funzionale con sfide di tiro di precisione. I concorrenti si muovono attraverso percorsi che mettono alla prova forza, resistenza e abilità nel tiro, trasportando equipaggiamento pesante, superando ostacoli e ingaggiando bersagli sotto pressione temporale, dove l\'affaticamento fisico si unisce all\'esigenza di precisione.',
   },
   {
     num: '03',
     titolo: 'Premiare gli atleti più completi',
-    img: '/image0.jpeg',
+    img: '/image12.webp',
     testo: 'Il punteggio si basa sia sul tempo che sulla precisione, con penalità per i colpi mancati o gli errori procedurali. Diverse categorie garantiscono una competizione equa, dalle qualificazioni regionali ai campionati nazionali, tutti finalizzati a incoronare l\'atleta tattico più completo.',
   },
 ]
@@ -128,23 +128,23 @@ export default function StoriaStickyScroll() {
       </div>
 
       {/* MOBILE + TABLET — layout verticale impilato */}
-<div className="lg:hidden flex flex-col">
-  {storiaSteps.map((step, i) => (
-    <div key={i} className="border-t border-gold/10">
-      <div className="relative h-[280px] md:h-[400px] overflow-hidden">
-        <Image src={step.img} alt={step.titolo} fill className="object-cover brightness-[0.55]" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A] to-transparent" />
-        <div className="absolute bottom-4 left-5 md:left-10 font-oswald font-bold text-gold text-[12px] md:text-[14px] tracking-[3px]">
-          {step.num} / 03
-        </div>
+      <div className="lg:hidden flex flex-col">
+        {storiaSteps.map((step, i) => (
+          <div key={i} className="border-t border-gold/10">
+            <div className="relative h-[280px] md:h-[400px] overflow-hidden">
+              <Image src={step.img} alt={step.titolo} fill className="object-cover brightness-[0.55]" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A] to-transparent" />
+              <div className="absolute bottom-4 left-5 md:left-10 font-oswald font-bold text-gold text-[12px] md:text-[14px] tracking-[3px]">
+                {step.num} / 03
+              </div>
+            </div>
+            <div className="px-5 md:px-16 py-8 md:py-12 max-w-2xl md:mx-auto">
+              <h3 className="font-oswald font-bold text-white text-[22px] md:text-[28px] mb-4 leading-tight">{step.titolo}</h3>
+              <p className="font-inter text-[14px] md:text-[16px] text-[#ccc] leading-relaxed">{step.testo}</p>
+            </div>
+          </div>
+        ))}
       </div>
-      <div className="px-5 md:px-16 py-8 md:py-12 max-w-2xl md:mx-auto">
-        <h3 className="font-oswald font-bold text-white text-[22px] md:text-[28px] mb-4 leading-tight">{step.titolo}</h3>
-        <p className="font-inter text-[14px] md:text-[16px] text-[#ccc] leading-relaxed">{step.testo}</p>
-      </div>
-    </div>
-  ))}
-</div>
     </section>
   )
 }

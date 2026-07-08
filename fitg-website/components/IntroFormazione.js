@@ -57,7 +57,7 @@ export default function IntroFormazione() {
         <section className="bg-[#1A1A1A]">
             {/* APERTURA — foto + titolo + primo paragrafo */}
             <div className="relative overflow-hidden h-[85vh] md:h-[90vh]">
-                <Image src="/image3.jpeg" alt="Formazione" fill className="object-cover brightness-[0.4]" priority />
+                <Image src="/image9.webp" alt="Formazione" fill className="object-cover object-top brightness-[0.4]" priority />
                 <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/40 to-transparent" />
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#1A1A1A]" />
                 <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent" />
@@ -102,10 +102,10 @@ export default function IntroFormazione() {
                 {/* Img1 + Img2 */}
                 <FadeIn className="flex justify-center gap-5 md:gap-8 mb-12 md:mb-16">
                     <div className="relative w-[46%] md:w-[340px] h-[240px] md:h-[320px] overflow-hidden border border-gold/20 shadow-[0_20px_40px_-15px_rgba(0,0,0,0.6)]">
-                        <Image src="/image2.jpeg" alt="" fill className="object-cover brightness-[0.6]" />
+                        <Image src="/image10.webp" alt="" fill className="object-cover object-top brightness-[0.6]" />
                     </div>
                     <div className="relative w-[46%] md:w-[340px] h-[240px] md:h-[320px] overflow-hidden border border-gold/20 shadow-[0_20px_40px_-15px_rgba(0,0,0,0.6)] mt-8 md:mt-14">
-                        <Image src="/image0.jpeg" alt="" fill className="object-cover brightness-[0.6]" />
+                        <Image src="/image11.webp" alt="" fill className="object-cover object-top brightness-[0.6]" />
                     </div>
                 </FadeIn>
 
@@ -115,7 +115,7 @@ export default function IntroFormazione() {
                         {paragrafi[2]}
                     </p>
                     <div className="relative w-full h-[260px] md:h-[420px] overflow-hidden border border-gold/20 shadow-[0_20px_50px_-15px_rgba(0,0,0,0.6)]">
-                        <Image src="/image6.jpeg" alt="" fill className="object-cover object-center brightness-[0.55]" />
+                        <Image src="/image7.jpeg" alt="" fill className="object-cover object-center brightness-[0.55]" />
                         <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A]/40 to-transparent" />
                     </div>
                 </FadeIn>

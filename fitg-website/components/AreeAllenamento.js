@@ -46,7 +46,7 @@ export default function AreeAllenamento() {
                                 src={area.img}
                                 alt={area.titolo}
                                 fill
-                                className="object-cover object-center brightness-[0.6]"
+                                className="object-cover object-top brightness-[0.6]"
                             />
                             <div className={`absolute inset-0 hidden lg:block bg-gradient-to-r ${i % 2 === 0 ? 'from-transparent to-[#111]/60' : 'from-[#111]/60 to-transparent'}`} />
                         </div>
