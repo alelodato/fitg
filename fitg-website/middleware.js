@@ -3,8 +3,9 @@ import { NextResponse } from 'next/server'
 export function middleware(request) {
     const { pathname } = request.nextUrl
 
+    // Lascia sempre passare coming-soon, asset, api, e la verifica SSL
     if (
-        pathname.startsWith('/coming-soon') ||
+        pathname === '/coming-soon' ||
         pathname.startsWith('/_next') ||
         pathname.startsWith('/api') ||
         pathname.startsWith('/.well-known') ||

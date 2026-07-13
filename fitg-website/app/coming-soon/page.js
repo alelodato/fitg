@@ -12,7 +12,7 @@ export default function ComingSoonPage() {
                 alt="FITG Logo"
                 width={120}
                 height={120}
-                className="w-[90px] h-[90px] md:w-[120px] md:h-[120px] object-contain mb-8"
+                className="w-[90px] h-[90px] md:w-[120px] md:h-[180px] object-contain mb-8"
                 priority
             />
 
@@ -27,8 +27,15 @@ export default function ComingSoonPage() {
                 <span className="text-gold">Online</span>
             </h1>
 
-            <p className="font-inter text-[14px] md:text-[16px] text-[#999] max-w-md leading-relaxed">
+            <p className="font-inter text-[14px] md:text-[16px] text-[#999] max-w-md leading-relaxed mb-8">
                 Stiamo preparando il nuovo sito della FITG. Torna a trovarci a breve.
+            </p>
+
+            <p className="font-inter text-[12px] md:text-[13px] text-[#666] max-w-md leading-relaxed">
+                Nel frattempo puoi seguire i nostri profili social o contattarci all'indirizzo{' '}
+                <a href="mailto:info@federtacticalgames.it" className="text-gold hover:underline">
+                    info@federtacticalgames.it
+                </a>
             </p>
 
             <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent" />

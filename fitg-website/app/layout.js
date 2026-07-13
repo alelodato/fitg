@@ -1,32 +1,17 @@
-import { Oswald, Inter } from 'next/font/google'
 import './globals.css'
-import Navbar from '@/components/Navbar'
-import Footer from '@/components/Footer'
+import { Oswald, Inter } from 'next/font/google'
+import ConditionalChrome from '@/components/ConditionalChrome'
 
-const oswald = Oswald({
-  subsets: ['latin'],
-  variable: '--font-oswald',
-  weight: ['300', '400', '600', '700'],
-})
+const oswald = Oswald({ subsets: ['latin'], variable: '--font-oswald', weight: ['400', '500', '600', '700'] })
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-inter',
-  weight: ['400', '500', '600'],
-})
-
-export const metadata = {
-  title: 'FITG — Federazione Italiana Tactical Games',
-  description: 'La federazione ufficiale dei Tactical Games in Italia.',
-}
+export const metadata = { title: 'FITG' }
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="it" className={`${oswald.variable} ${inter.variable}`}>
-      <body className="bg-[#111111] text-white font-oswald">
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
+    <html lang="it">
+      <body className={`${oswald.variable} ${inter.variable} bg-[#111] text-white`}>
+        <ConditionalChrome>{children}</ConditionalChrome>
       </body>
     </html>
   )
