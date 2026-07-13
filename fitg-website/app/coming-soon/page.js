@@ -12,7 +12,7 @@ export default function ComingSoonPage() {
                 alt="FITG Logo"
                 width={120}
                 height={120}
-                className="w-[90px] h-[90px] md:w-[120px] md:h-[180px] object-contain mb-8"
+                className="w-[140px] h-[140px] md:w-[200px] md:h-[200px] object-contain mb-8"
                 priority
             />
 
