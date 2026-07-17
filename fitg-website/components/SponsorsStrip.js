@@ -15,6 +15,9 @@ const sponsors = [
     { nome: 'Shooter', img: '/shooter.png', href: 'https://shooterstore.it/' },
     { nome: 'Tacfit', img: '/tacfit.jpeg', href: 'https://tacfititalia.com/' },
     { nome: 'Unuci', img: '/unuci.gif', href: 'https://www.instagram.com/unuci.addestramento/' },
+    { nome: 'Sttu', img: '/sttu.png', href: '' },
+    { nome: 'Cts', img: '/cts.jpeg', href: '' },
+    { nome: 'Redpoint', img: '/redpoint.png', href: '' },
 ]
 
 export default function SponsorsStrip() {

@@ -1,9 +1,18 @@
 import { NextResponse } from 'next/server'
 
+const PRODUCTION_DOMAINS = ['federtacticalgames.it', 'www.federtacticalgames.it']
+
 export function middleware(request) {
     const { pathname } = request.nextUrl
+    const hostname = request.headers.get('host') || ''
 
-    // Lascia sempre passare coming-soon, asset, api, e la verifica SSL
+    // Applica il redirect coming-soon SOLO sul dominio reale
+    const isProductionDomain = PRODUCTION_DOMAINS.some((domain) => hostname.includes(domain))
+
+    if (!isProductionDomain) {
+        return NextResponse.next()
+    }
+
     if (
         pathname === '/coming-soon' ||
         pathname.startsWith('/_next') ||
