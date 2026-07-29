@@ -87,15 +87,49 @@ export default function Footer() {
                     <div>
                         <div className="text-[9px] tracking-[3px] text-white font-oswald mb-2">CONTATTI</div>
                         <div className="w-7 h-px bg-gold mb-4" />
-                        {[
-                            'info@federtacticalgames.it',
-                            '+39 000 000 0000',
-                            'Instagram',
-                            'Facebook',
-                            'YouTube',
-                        ].map((item) => (
-                            <div key={item} className="font-inter text-sm text-[#555] mb-2.5">{item}</div>
-                        ))}
+
+                        <a
+                            href="mailto:info@federtacticalgames.it"
+                            className="block font-inter text-sm text-[#555] mb-2.5 hover:text-gold transition-colors"
+                        >
+                            info@federtacticalgames.it
+                        </a>
+
+                        <a
+                            href="https://wa.me/393518303381"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="block font-inter text-sm text-[#555] mb-2.5 hover:text-gold transition-colors"
+                        >
+                            +39 351 830 3381 (WhatsApp)
+                        </a>
+
+                        <a
+                            href="https://www.instagram.com/feder.italiana.tactical.games?igsh=bzdxYm8zcG9kNHh4"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="block font-inter text-sm text-[#555] mb-2.5 hover:text-gold transition-colors"
+                        >
+                            Instagram
+                        </a>
+
+                        <a
+                            href="https://www.facebook.com/61588753523309/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="block font-inter text-sm text-[#555] mb-2.5 hover:text-gold transition-colors"
+                        >
+                            Facebook
+                        </a>
+
+                        <a
+                            href="URL_YOUTUBE_QUI"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="block font-inter text-sm text-[#555] mb-2.5 hover:text-gold transition-colors"
+                        >
+                            YouTube
+                        </a>
                     </div>
 
                 </div>

@@ -34,7 +34,7 @@ export default function HomePage() {
       {/* HERO */}
       <section className="relative overflow-hidden h-[520px] md:h-[680px]">
         <Image
-          src="/forza.jpeg"
+          src="/image12.webp"
           alt="Hero FITG"
           fill
           className="object-cover object-top brightness-[0.5]"
