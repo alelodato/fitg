@@ -40,7 +40,7 @@ export default function HomePage() {
           className="object-cover object-top brightness-[0.5]"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/50 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/65 via-black/50 to-transparent" />
         <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent" />
 
         <div className="absolute inset-0 flex items-center px-5 md:px-16">
