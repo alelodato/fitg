@@ -4,6 +4,7 @@ import SectionLabel from '@/components/SectionLabel'
 import SponsorsStrip from '@/components/SponsorsStrip'
 import StatsCounter from '@/components/StatsCounter'
 import FAQ from '@/components/FAQ'
+import { eventi } from './news/data'
 
 const sezioni = [
   {
@@ -19,21 +20,6 @@ const sezioni = [
     desc: 'Piani di allenamento, esercizi consigliati e aree attrezzate per prepararti al meglio. Fitness funzionale e tiro di precisione: due discipline, un unico obiettivo.',
     href: '/formazione',
     img: '/image3.jpeg',
-  },
-]
-
-const news = [
-  {
-    data: 'Giugno 2025',
-    titolo: 'Primo evento FITG: appuntamento a luglio',
-    estratto: 'La federazione annuncia il primo evento ufficiale della stagione. Percorso misto, tre divisioni disponibili e classifiche nazionali in palio.',
-    img: '/news-1.jpg',
-  },
-  {
-    data: 'Maggio 2025',
-    titolo: 'Nasce la FITG: la federazione ufficiale dei Tactical Games in Italia',
-    estratto: 'Con la fondazione della FITG, i Tactical Games in Italia hanno finalmente un organo ufficiale di riferimento.',
-    img: '/news-2.jpg',
   },
 ]
 
@@ -164,35 +150,41 @@ export default function HomePage() {
         ))}
       </section>
 
-      {/* NEWS PREVIEW */}
-      <section className="bg-[#1A1A1A] px-5 md:px-16 py-12 md:py-20 border-t border-gold/20">
-        <div className="flex justify-between items-end mb-6 md:mb-8">
-          <div>
-            <SectionLabel>Ultime News</SectionLabel>
-            <h2 className="font-oswald font-bold text-[24px] md:text-[36px] text-white">Rimani aggiornato</h2>
-          </div>
-          <Link href="/news" className="font-oswald text-[9px] tracking-[2px] text-gold flex items-center gap-2 hover:gap-3 transition-all">
-            TUTTE <span className="w-3.5 h-px bg-gold block" />
-          </Link>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
-          {news.map((n, i) => (
-            <Link key={i} href="/news" className="group bg-[#222] overflow-hidden block">
-              <div className="relative h-[150px] md:h-[200px] overflow-hidden">
-                <Image src={n.img} alt={n.titolo} fill className="object-cover brightness-50 group-hover:brightness-[0.6] group-hover:scale-105 transition-all duration-500" />
+      {/* PROSSIMO EVENTO */}
+      <section className="bg-[#111] px-5 md:px-16 py-12 md:py-20 border-t border-gold/20">
+        <SectionLabel>Calendario</SectionLabel>
+        <h2 className="font-oswald font-bold text-[24px] md:text-[36px] text-white mb-8 md:mb-10">Prossimo Evento</h2>
+
+        {eventi.map((e) => (
+          <Link key={e.id} href={`/eventi/${e.slug}`} className="group block bg-[#1A1A1A] overflow-hidden border-t-2 border-gold">
+            <div className="flex flex-col md:flex-row">
+              <div className="relative w-full md:w-[380px] shrink-0 aspect-[3/4] bg-black overflow-hidden">
+                <Image
+                  src={e.img}
+                  alt={e.titolo}
+                  fill
+                  className="object-contain group-hover:scale-[1.02] transition-all duration-500"
+                />
               </div>
-              <div className="h-0.5 bg-gold" />
-              <div className="p-4 md:p-5">
-                <div className="font-inter text-[8px] tracking-[2px] text-[#555] mb-2 uppercase">{n.data}</div>
-                <div className="font-oswald font-bold text-[15px] md:text-[18px] text-white mb-2 leading-tight">{n.titolo}</div>
-                <div className="font-inter text-[12px] text-[#ccc] leading-relaxed mb-3">{n.estratto}</div>
-                <div className="font-oswald text-[9px] tracking-[3px] text-gold flex items-center gap-1.5 group-hover:gap-3 transition-all">
-                  LEGGI <span className="w-3.5 h-px bg-gold block" />
+              <div className="w-full md:w-1/2 flex flex-col justify-center px-6 md:px-12 py-8 md:py-0">
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="font-oswald text-[8px] tracking-[2px] text-gold border border-gold/30 px-2 py-0.5">{e.tag}</span>
+                  <span className="font-inter text-[11px] text-[#555]">{e.data}</span>
+                </div>
+                <h3 className="font-oswald font-bold text-white text-[22px] md:text-[28px] mb-3 leading-tight">
+                  {e.titolo}
+                </h3>
+                <p className="font-inter text-[13px] text-[#999] mb-2">{e.luogo}</p>
+                <p className="font-inter text-[13px] md:text-[14px] text-[#ccc] leading-relaxed mb-6">
+                  {e.desc}
+                </p>
+                <div className="font-oswald text-[10px] tracking-[3px] text-gold flex items-center gap-2 group-hover:gap-4 transition-all w-fit">
+                  SCOPRI DI PIÙ <span className="w-5 h-px bg-gold block" />
                 </div>
               </div>
-            </Link>
-          ))}
-        </div>
+            </div>
+          </Link>
+        ))}
       </section>
 
       <SponsorsStrip />

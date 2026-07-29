@@ -82,8 +82,7 @@ export default function NewsPage() {
                 </div>
             </section>
 
-            {/* NEWS */}
-            <section className="bg-[#1A1A1A] px-5 md:px-16 py-12 md:py-20 border-t border-gold/20">
+            {/* NEWS <section className="bg-[#1A1A1A] px-5 md:px-16 py-12 md:py-20 border-t border-gold/20">
                 <SectionLabel>Ultime News</SectionLabel>
                 <h2 className="font-oswald font-bold text-[24px] md:text-[36px] mb-8 md:mb-10">
                     <span className="text-white">Comunicati </span>
@@ -120,10 +119,10 @@ export default function NewsPage() {
                         </article>
                     ))}
                 </div>
-            </section>
+            </section>*/}
 
-            {/* BLOG */}
-            <section className="bg-[#111] px-5 md:px-16 py-12 md:py-20 border-t border-gold/20">
+
+            {/* BLOG <section className="bg-[#111] px-5 md:px-16 py-12 md:py-20 border-t border-gold/20">
                 <SectionLabel>Blog</SectionLabel>
                 <h2 className="font-oswald font-bold text-[24px] md:text-[36px] mb-8 md:mb-10">
                     <span className="text-white">Approfondimenti </span>
@@ -159,7 +158,8 @@ export default function NewsPage() {
                         </article>
                     ))}
                 </div>
-            </section>
+            </section>*/}
+
         </>
     )
 }
