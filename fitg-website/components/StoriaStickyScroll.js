@@ -19,7 +19,7 @@ const storiaSteps = [
   {
     num: '03',
     titolo: 'Premiare gli atleti più completi',
-    img: '/image12.webp',
+    img: '/image14.webp',
     testo: 'Il punteggio si basa sia sul tempo che sulla precisione, con penalità per i colpi mancati o gli errori procedurali. Diverse categorie garantiscono una competizione equa, dalle qualificazioni regionali ai campionati nazionali, tutti finalizzati a incoronare l\'atleta tattico più completo.',
   },
 ]
@@ -129,21 +129,50 @@ export default function StoriaStickyScroll() {
 
       {/* MOBILE + TABLET — layout verticale impilato */}
       <div className="lg:hidden flex flex-col">
-        {storiaSteps.map((step, i) => (
-          <div key={i} className="border-t border-gold/10">
-            <div className="relative h-[280px] md:h-[400px] overflow-hidden">
-              <Image src={step.img} alt={step.titolo} fill className="object-cover brightness-[0.55]" />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A] to-transparent" />
-              <div className="absolute bottom-4 left-5 md:left-10 font-oswald font-bold text-gold text-[12px] md:text-[14px] tracking-[3px]">
-                {step.num} / 03
-              </div>
-            </div>
-            <div className="px-5 md:px-16 py-8 md:py-12 max-w-2xl md:mx-auto">
-              <h3 className="font-oswald font-bold text-white text-[22px] md:text-[28px] mb-4 leading-tight">{step.titolo}</h3>
-              <p className="font-inter text-[14px] md:text-[16px] text-[#ccc] leading-relaxed">{step.testo}</p>
+        {/* Card 1 — Cosa sono i Tactical Games */}
+        <div className="border-t border-gold/10">
+          <div className="relative h-[420px] md:h-[520px] overflow-hidden">
+            <Image src={storiaSteps[0].img} alt={storiaSteps[0].titolo} fill className="object-cover object-center brightness-[0.55]" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A] to-transparent" />
+            <div className="absolute bottom-4 left-5 md:left-10 font-oswald font-bold text-gold text-[12px] md:text-[14px] tracking-[3px]">
+              {storiaSteps[0].num} / 03
             </div>
           </div>
-        ))}
+          <div className="px-5 md:px-16 py-8 md:py-12 max-w-2xl md:mx-auto">
+            <h3 className="font-oswald font-bold text-white text-[22px] md:text-[28px] mb-4 leading-tight">{storiaSteps[0].titolo}</h3>
+            <p className="font-inter text-[14px] md:text-[16px] text-[#ccc] leading-relaxed">{storiaSteps[0].testo}</p>
+          </div>
+        </div>
+
+        {/* Card 2 — Forza, Resistenza e Precisione */}
+        <div className="border-t border-gold/10">
+          <div className="relative h-[420px] md:h-[520px] overflow-hidden">
+            <Image src={storiaSteps[1].img} alt={storiaSteps[1].titolo} fill className="object-cover object-center brightness-[0.55]" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A] to-transparent" />
+            <div className="absolute bottom-4 left-5 md:left-10 font-oswald font-bold text-gold text-[12px] md:text-[14px] tracking-[3px]">
+              {storiaSteps[1].num} / 03
+            </div>
+          </div>
+          <div className="px-5 md:px-16 py-8 md:py-12 max-w-2xl md:mx-auto">
+            <h3 className="font-oswald font-bold text-white text-[22px] md:text-[28px] mb-4 leading-tight">{storiaSteps[1].titolo}</h3>
+            <p className="font-inter text-[14px] md:text-[16px] text-[#ccc] leading-relaxed">{storiaSteps[1].testo}</p>
+          </div>
+        </div>
+
+        {/* Card 3 — Premiare gli atleti più completi (object-top) */}
+        <div className="border-t border-gold/10">
+          <div className="relative h-[420px] md:h-[520px] overflow-hidden">
+            <Image src={storiaSteps[2].img} alt={storiaSteps[2].titolo} fill className="object-cover object-top brightness-[0.55]" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A] to-transparent" />
+            <div className="absolute bottom-4 left-5 md:left-10 font-oswald font-bold text-gold text-[12px] md:text-[14px] tracking-[3px]">
+              {storiaSteps[2].num} / 03
+            </div>
+          </div>
+          <div className="px-5 md:px-16 py-8 md:py-12 max-w-2xl md:mx-auto">
+            <h3 className="font-oswald font-bold text-white text-[22px] md:text-[28px] mb-4 leading-tight">{storiaSteps[2].titolo}</h3>
+            <p className="font-inter text-[14px] md:text-[16px] text-[#ccc] leading-relaxed">{storiaSteps[2].testo}</p>
+          </div>
+        </div>
       </div>
     </section>
   )
