@@ -50,8 +50,8 @@ export default function FormazionePage() {
             <section className="bg-[#111] px-5 md:px-16 py-12 md:py-16 border-t border-gold/20">
                 <SectionLabel>Dove Allenarsi</SectionLabel>
                 <h2 className="font-oswald font-bold text-[24px] md:text-[32px] mb-8">
-                    <span className="text-white">Aree di </span>
-                    <span className="text-gold">Allenamento</span>
+                    <span className="text-white">Dove</span>
+                    <span className="text-gold">Allenarsi</span>
                 </h2>
                 <div className="flex flex-col md:flex-row gap-10 md:gap-16">
                     <div className="flex flex-col flex-1">

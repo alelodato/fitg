@@ -10,8 +10,8 @@ export default function NewsPage() {
         <>
             {/* PAGE HERO */}
             <section className="relative overflow-hidden h-[260px] md:h-[360px]">
-                <Image src="/images/news-hero.jpg" alt="News & Eventi" fill className="object-cover brightness-[0.3]" />
-                <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/90" />
+                <Image src="/image1.jpeg" alt="News & Eventi" fill className="object-cover object-top brightness-[0.3]" />
+                <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/60" />
                 <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent" />
                 <div className="absolute inset-0 flex flex-col justify-end px-5 md:px-16 pb-10 md:pb-14">
                     <SectionLabel>Aggiornamenti</SectionLabel>
