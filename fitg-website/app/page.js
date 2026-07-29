@@ -34,7 +34,7 @@ export default function HomePage() {
       {/* HERO */}
       <section className="relative overflow-hidden h-[520px] md:h-[680px]">
         <Image
-          src="/image12.webp"
+          src="/forza.jpeg"
           alt="Hero FITG"
           fill
           className="object-cover object-top brightness-[0.5]"
@@ -94,7 +94,7 @@ export default function HomePage() {
             </Link>
           </div>
           <div className="relative min-h-[220px] md:min-h-auto overflow-hidden">
-            <Image src="/image0.jpeg" alt="Chi Siamo" fill className="object-cover brightness-[0.5]" />
+            <Image src="/image12.jpeg" alt="Chi Siamo" fill className="object-cover brightness-[0.5]" />
             <div className="absolute inset-0 bg-black/30" />
             <div className="absolute left-0 top-0 bottom-0 w-1 bg-gold" />
             <div className="absolute inset-0 flex items-center justify-center">
