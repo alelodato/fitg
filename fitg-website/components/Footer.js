@@ -19,6 +19,9 @@ const sponsors = [
     { nome: 'Cts', img: '/cts.jpeg', href: 'https://www.ctspoligoni.it/' },
     { nome: 'Redpoint', img: '/redpoint.png', href: 'https://www.armeriaredpoint.com/' },
     { nome: 'Idfs', img: '/idfs.png', href: 'https://www.instagram.com/accademiaidfsera?igsh=MTFzdDk5cThjcTd5Yw==' },
+    { nome: '4D', img: '/4d.png', href: 'https://www.instagram.com/4defence.plus?igsh=NDM1cmlyMnVyaXR0' },
+    { nome: 'Tactical Games', img: '/tgames.png', href: 'https://thetacticalgames.eu/' },
+    { nome: 'Tactical Games Europe', img: '/tgames-eu.png', href: 'https://thetacticalgames.com/' },
 ]
 
 export default function Footer() {

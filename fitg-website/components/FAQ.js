@@ -5,28 +5,24 @@ import SectionLabel from './SectionLabel'
 
 const faqs = [
     {
-        domanda: 'Domanda frequente n°1',
-        risposta: 'Testo risposta da inserire.',
+        domanda: 'Chi può competere nei Tactical Games?',
+        risposta: 'Chiunque abbia voglia di provare ad affrontare un triathlon, composto da queste tre discipline combinate: tiro (es. tiro dinamico/tattico), allenamento funzionale (es. CrossFit o Hyrox) e superamento ostacoli (es. Spartan Race).',
     },
     {
-        domanda: 'Domanda frequente n°2',
-        risposta: 'Testo risposta da inserire.',
+        domanda: 'Quale equipaggiamento mi occorre?',
+        risposta: 'L\'equipaggiamento può variare in base al tipo di gara, ma fondamentalmente occorre una pistola (porto d\'armi)* e un fucile (tipo AR o AK) con accessori (fondina, caricatori, cuffie, ecc.), e abbigliamento tattico ma comodo. *Nelle gare con repliche non occorre il porto d\'armi.',
     },
     {
-        domanda: 'Domanda frequente n°3',
-        risposta: 'Testo risposta da inserire.',
+        domanda: 'Il porto d\'armi è obbligatorio?',
+        risposta: 'Sì, in tutte le gare con armi da fuoco, mentre con le repliche airsoft non occorre.',
     },
     {
-        domanda: 'Domanda frequente n°4',
-        risposta: 'Testo risposta da inserire.',
+        domanda: 'C\'è un minimo di età?',
+        risposta: 'Nelle categorie con armi da fuoco, il minimo è 18 anni, mentre in quelle con repliche airsoft dipende dal tipo di competizione — ci sono anche gare per ragazzi molto giovani.',
     },
     {
-        domanda: 'Domanda frequente n°5',
-        risposta: 'Testo risposta da inserire.',
-    },
-    {
-        domanda: 'Domanda frequente n°6',
-        risposta: 'Testo risposta da inserire.',
+        domanda: 'Si può accedere ai corsi di formazione senza il porto d\'armi?',
+        risposta: 'Sì, l\'allenamento funzionale e il superamento ostacoli sarà affiancato al tiro con repliche airsoft.',
     },
 ]
 
