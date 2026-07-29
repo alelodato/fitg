@@ -73,7 +73,7 @@ export default function StoriaStickyScroll() {
     <section className="bg-[#1A1A1A]">
       {/* APERTURA — si fonde con la sezione, niente bordo netto */}
       <div className="relative overflow-hidden h-[70vh] md:h-[80vh]">
-        <Image src="/image6.jpeg" alt="Tactical Games" fill className="object-cover brightness-[0.4]" priority />
+        <Image src="/image11.webp" alt="Tactical Games" fill className="object-cover brightness-[0.4]" priority />
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/40 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#1A1A1A]" />
         <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent" />
