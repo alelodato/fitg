@@ -6,21 +6,21 @@ import Image from 'next/image'
 const storiaSteps = [
   {
     num: '01',
-    titolo: 'Cosa sono i Tactical Games?',
+    titolo: 'Cosa sono i Tacticon?',
     img: '/image2.jpeg',
-    testo: 'Benvenuti ai Tactical Games, dove l\'emozione della competizione incontra l\'esigenza di precisione tattica. Dal personale militare e dalle forze dell\'ordine ai tiratori sportivi e ai civili, i nostri eventi rappresentano il banco di prova definitivo. Qui, individui provenienti da diversi ambiti si incontrano per competere con l\'élite, scoprendo i propri limiti sotto l\'intensa pressione che si respira solo nelle nostre arene.',
+    testo: 'La nostra disciplina nasce dall\'incontro tra militari, operatori della sicurezza e sportivi che, dopo anni di pratica sul campo, hanno deciso di dar vita a una disciplina capace di mettere alla prova l\'atleta a 360 gradi: percorsi con ostacoli da superare di corsa, prove di forza e resistenza attraverso il trasporto di pesi e carichi, e — lungo il tracciato e in prossimità del traguardo — momenti di tiro tattico/operativo, dove precisione, tecnica e sangue freddo diventano decisivi nel colpire bersagli con armi corte e lunghe da diverse posizioni.',
   },
   {
     num: '02',
-    titolo: 'Forza, Resistenza e Precisione',
+    titolo: 'Una Disciplina Diffusa nel Mondo',
     img: '/image17.webp',
-    testo: 'Ogni evento combina esercizi di fitness funzionale con sfide di tiro di precisione. I concorrenti si muovono attraverso percorsi che mettono alla prova forza, resistenza e abilità nel tiro, trasportando equipaggiamento pesante, superando ostacoli e ingaggiando bersagli sotto pressione temporale, dove l\'affaticamento fisico si unisce all\'esigenza di precisione.',
+    testo: 'Competizioni di questo tipo sono ormai diffuse in tutto il mondo. Le nostre si distinguono per l\'attenzione particolare al mindset: la selezione dei bersagli e l\'esecuzione delle procedure vengono valutate anche sotto pressione, perché prima ancora della preparazione fisica conta la capacità di mantenere lucidità mentale.',
   },
   {
     num: '03',
-    titolo: 'Premiare gli atleti più completi',
+    titolo: 'Il Nostro Staff Tecnico',
     img: '/image14.webp',
-    testo: 'Il punteggio si basa sia sul tempo che sulla precisione, con penalità per i colpi mancati o gli errori procedurali. Diverse categorie garantiscono una competizione equa, dalle qualificazioni regionali ai campionati nazionali, tutti finalizzati a incoronare l\'atleta tattico più completo.',
+    testo: 'Il nostro staff tecnico è composto prevalentemente da operatori della sicurezza, pubblica e privata, militari e atleti di sport di endurance.',
   },
 ]
 
@@ -73,14 +73,14 @@ export default function StoriaStickyScroll() {
     <section className="bg-[#1A1A1A]">
       {/* APERTURA — si fonde con la sezione, niente bordo netto */}
       <div className="relative overflow-hidden h-[70vh] md:h-[80vh]">
-        <Image src="/image11.webp" alt="Tactical Games" fill className="object-cover brightness-[0.4]" priority />
+        <Image src="/image11.webp" alt="Tactical Contest" fill className="object-cover brightness-[0.4]" priority />
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/40 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#1A1A1A]" />
         <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent" />
 
         <div className="absolute inset-0 flex flex-col justify-center px-5 md:px-16">
           <p className="font-oswald font-bold text-[26px] md:text-[42px] leading-[1.15] text-white max-w-[320px] md:max-w-2xl">
-            Forza, precisione e tattica si incontrano in un'<span className="text-gold">unica disciplina</span>. Scopri tutto quello che c'è da sapere sui Tactical Games.
+            Forza, precisione e tattica si incontrano in un'<span className="text-gold">unica disciplina</span>. Scopri tutto quello che c'è da sapere sui Tactical Contest.
           </p>
         </div>
 
@@ -129,7 +129,7 @@ export default function StoriaStickyScroll() {
 
       {/* MOBILE + TABLET — layout verticale impilato */}
       <div className="lg:hidden flex flex-col">
-        {/* Card 1 — Cosa sono i Tactical Games */}
+        {/* Card 1 */}
         <div className="border-t border-gold/10">
           <div className="relative h-[420px] md:h-[520px] overflow-hidden">
             <Image src={storiaSteps[0].img} alt={storiaSteps[0].titolo} fill className="object-cover object-center brightness-[0.55]" />
@@ -144,7 +144,7 @@ export default function StoriaStickyScroll() {
           </div>
         </div>
 
-        {/* Card 2 — Forza, Resistenza e Precisione */}
+        {/* Card 2 */}
         <div className="border-t border-gold/10">
           <div className="relative h-[420px] md:h-[520px] overflow-hidden">
             <Image src={storiaSteps[1].img} alt={storiaSteps[1].titolo} fill className="object-cover object-center brightness-[0.55]" />
@@ -159,7 +159,7 @@ export default function StoriaStickyScroll() {
           </div>
         </div>
 
-        {/* Card 3 — Premiare gli atleti più completi (object-top) */}
+        {/* Card 3 — object-top */}
         <div className="border-t border-gold/10">
           <div className="relative h-[420px] md:h-[520px] overflow-hidden">
             <Image src={storiaSteps[2].img} alt={storiaSteps[2].titolo} fill className="object-cover object-top brightness-[0.55]" />

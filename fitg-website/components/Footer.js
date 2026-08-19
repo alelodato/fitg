@@ -35,18 +35,18 @@ export default function Footer() {
                         <div className="flex items-center gap-3 mb-4">
                             <Image
                                 src="/fitg-logo2.png"
-                                alt="FITG Logo"
+                                alt="FITC Logo"
                                 width={44}
                                 height={44}
                                 className="object-contain"
                             />
                             <div>
-                                <div className="font-oswald font-bold tracking-[2px] text-gold text-sm">FITG</div>
-                                <div className="font-inter text-[7px] tracking-widest text-[#555]">FEDERAZIONE ITALIANA TACTICAL GAMES</div>
+                                <div className="font-oswald font-bold tracking-[2px] text-gold text-sm">FITC</div>
+                                <div className="font-inter text-[7px] tracking-widest text-[#555]">FEDERAZIONE ITALIANA TACTICAL CONTEST</div>
                             </div>
                         </div>
                         <p className="font-inter text-sm text-[#555] leading-relaxed">
-                            Sport, disciplina e precisione. La federazione ufficiale dei Tactical Games in Italia.
+                            Sport, disciplina e precisione. La federazione ufficiale dei Tactical Contest in Italia.
                         </p>
                     </div>
 
@@ -56,9 +56,9 @@ export default function Footer() {
                         <div className="w-7 h-px bg-gold mb-4" />
                         {[
                             { label: 'Home', href: '/' },
-                            { label: 'Tactical Games', href: '/regole' },
+                            { label: 'Tactical Contest', href: '/regole' },
+                            { label: 'Categorie', href: '/categorie' },
                             { label: 'Formazione', href: '/formazione' },
-                            { label: 'Blog & News', href: '/news' },
                             { label: 'Contatti', href: '/contatti' },
                         ].map((l) => (
                             <Link key={l.href} href={l.href} className="block font-inter text-sm text-[#555] mb-2.5 hover:text-gold transition-colors">
@@ -89,10 +89,10 @@ export default function Footer() {
                         <div className="w-7 h-px bg-gold mb-4" />
 
                         <a
-                            href="mailto:info@federtacticalgames.it"
+                            href="mailto:info@federazioneitalianatacticon.it"
                             className="block font-inter text-sm text-[#555] mb-2.5 hover:text-gold transition-colors"
                         >
-                            info@federtacticalgames.it
+                            info@federazioneitalianatacticon.it
                         </a>
 
                         <a
@@ -155,7 +155,7 @@ export default function Footer() {
 
                 <div className="border-t border-[#222] pt-4 flex flex-col md:flex-row justify-between gap-2">
                     <span className="font-inter text-[10px] text-[#444]">
-                        &copy; 2026 FITG &middot; Federazione Italiana Tactical Games. Tutti i diritti riservati.
+                        &copy; 2026 FITC &middot; Federazione Italiana Tactical Contest. Tutti i diritti riservati.
                     </span>
                     <span className="font-inter text-[10px] text-[#444]">P.IVA 00000000000</span>
                 </div>

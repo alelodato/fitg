@@ -7,9 +7,9 @@ import Image from 'next/image'
 
 const links = [
     { href: '/', label: 'Home' },
-    { href: '/regole', label: 'Tactical Games' },
+    { href: '/regole', label: 'Tactical Contest' },
+    { href: '/categorie', label: 'Categorie' },
     { href: '/formazione', label: 'Formazione' },
-    { href: '/news', label: 'Blog & News' },
     { href: '/contatti', label: 'Contatti' },
 ]
 
@@ -35,15 +35,15 @@ export default function Navbar() {
                 <Link href="/" className="flex items-center py-2 gap-3">
                     <Image
                         src="/fitg-logo2.png"
-                        alt="FITG Logo"
+                        alt="FITC Logo"
                         width={80}
                         height={80}
                         className="w-[60px] h-[60px] md:w-[80px] md:h-[80px] object-contain"
                     />
                     <div>
-                        <div className="text-gold font-oswald font-bold tracking-widest text-lg md:text-xl leading-none">FITG</div>
+                        <div className="text-gold font-oswald font-bold tracking-widest text-lg md:text-xl leading-none">FITC</div>
                         <div className="text-[#999] font-inter text-[9px] md:text-[10px] lg:text-[13px] tracking-widest leading-none mt-0.5">
-                            FEDERAZIONE ITALIANA TACTICAL GAMES
+                            FEDERAZIONE ITALIANA TACTICAL CONTEST
                         </div>
                     </div>
                 </Link>

@@ -5,7 +5,7 @@ import SectionLabel from './SectionLabel'
 
 const faqs = [
     {
-        domanda: 'Chi può competere nei Tactical Games?',
+        domanda: 'Chi può competere nei Tactical Contest?',
         risposta: 'Chiunque abbia voglia di provare ad affrontare un triathlon, composto da queste tre discipline combinate: tiro (es. tiro dinamico/tattico), allenamento funzionale (es. CrossFit o Hyrox) e superamento ostacoli (es. Spartan Race).',
     },
     {

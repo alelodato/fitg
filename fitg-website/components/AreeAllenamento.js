@@ -4,24 +4,24 @@ import Image from 'next/image'
 
 const aree = [
     {
-        titolo: 'FORZA E RESISTENZA',
+        titolo: 'RESISTENZA',
         img: '/forza.jpeg',
         desc: 'Allenamento di forza e resistenza funzionale finalizzato allo sviluppo della capacità di esprimere forza, potenza e resistenza sotto sforzo prolungato. Utilizza attrezzature specifiche come kettlebell, sandbag, Bulgarian bag, wall ball e altri strumenti del functional training, combinando movimenti multiarticolari, trasporto di carichi, sollevamenti e esercizi dinamici che coinvolgono tutto il corpo. Questo tipo di allenamento sviluppa la resistenza fisica e mentale necessaria per mantenere controllo, efficienza e prestazione anche in condizioni di elevata fatica.',
     },
     {
-        titolo: 'CARDIO E MOBILITÀ',
+        titolo: 'CARDIO',
         img: '/cardio.jpeg',
-        desc: 'Allenamento dedicato alla capacità di muoversi rapidamente ed efficacemente in ambienti complessi. Attraverso corsa, superamento di muri, strisciamenti, passaggi tecnici e prove di equilibrio, vengono sviluppate resistenza cardiovascolare, mobilità, coordinazione e consapevolezza del corpo, competenze fondamentali per mantenere prestazione e controllo durante l\'intera competizione.',
+        desc: 'Allenamento dedicato alla capacità di muoversi rapidamente ed efficacemente in ambienti complessi. Attraverso corsa, superamento di ostacoli, passaggi tecnici e prove di equilibrio, vengono sviluppate resistenza cardiovascolare, mobilità, coordinazione e consapevolezza del corpo, competenze fondamentali per mantenere prestazione e controllo durante l\'intera attività.',
     },
     {
         titolo: 'TIRO',
         img: '/tiro.jpeg',
-        desc: 'Il tiro tattico con pistola e fucile non è una semplice disciplina di tiro dinamico: è una combinazione di precisione, gestione dello stress fisico, rapidità nelle transizioni tra armi e capacità atletica. Gli atleti devono eseguire esercizi fisici impegnativi e subito dopo colpire bersagli con elevata precisione, spesso con frequenza cardiaca molto alta. Il fucile viene utilizzato soprattutto per bersagli da media e lunga distanza, comunemente tra 50 e 400 metri. La pistola viene generalmente impiegata su bersagli più vicini, spesso tra 10 e 25 metri.',
+        desc: 'Il tiro tattico con pistola e fucile non è una semplice disciplina di tiro dinamico: è una combinazione di precisione, gestione dello stress fisico, rapidità nelle transizioni tra armi e capacità atletica. Gli atleti devono eseguire esercizi fisici impegnativi e subito dopo colpire bersagli con elevata precisione, spesso con frequenza cardiaca molto alta. Il fucile viene utilizzato soprattutto per bersagli da media e lunga distanza. Si trovano comunemente bersagli a partire dai 10 metri per i fucili tipo shotgun, fino ai 300 metri per piattaforme AR e AK, con alcune prove che possono spingersi oltre. La pistola viene generalmente impiegata su bersagli più vicini, spesso tra 1 e 25 metri.',
     },
     {
         titolo: 'MINDSET',
         img: '/mindset.jpeg',
-        desc: 'L\'aspetto psicologico in una competizione di Tactical Games è spesso tanto importante quanto la preparazione fisica e tecnica. La sfida psicologica principale non è "restare calmi", ma mantenere precisione, lucidità e disciplina tecnica mentre il corpo è in una condizione di forte stress fisiologico. Spesso la differenza tra due atleti fisicamente simili emerge proprio dalla capacità di controllare attenzione, emozioni e processo decisionale negli ultimi secondi prima di premere il grilletto.',
+        desc: 'L\'aspetto psicologico in una competizione di Tacticon è spesso tanto importante quanto la preparazione fisica e tecnica. La particolarità di questa disciplina è che combina uno sforzo fisico intenso con la necessità di mantenere precisione nel tiro sotto stress. La sfida psicologica principale non è "restare calmi", ma mantenere precisione, lucidità e disciplina tecnica mentre il corpo è in una condizione di forte stress fisiologico. Spesso la differenza tra due atleti fisicamente simili emerge proprio dalla capacità di controllare attenzione, emozioni e processo decisionale negli ultimi secondi prima di premere il grilletto.',
     },
 ]
 
@@ -34,7 +34,7 @@ export default function AreeAllenamento() {
                     <span className="text-gold">ALLENAMENTO</span>
                 </h2>
                 <p className="font-inter text-[13px] text-[#999]">
-                    I quattro pilastri della preparazione per i Tactical Games
+                    I quattro pilastri della preparazione per i Tactical Contest
                 </p>
             </div>
 

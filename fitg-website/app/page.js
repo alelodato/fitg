@@ -4,14 +4,13 @@ import SectionLabel from '@/components/SectionLabel'
 import SponsorsStrip from '@/components/SponsorsStrip'
 import StatsCounter from '@/components/StatsCounter'
 import FAQ from '@/components/FAQ'
-import { eventi } from './news/data'
 import { Mail } from 'lucide-react'
 
 const sezioni = [
   {
-    label: 'REGOLE',
-    title: 'Regolamento ufficiale dei Tactical Games',
-    desc: 'Consulta il regolamento completo delle competizioni FITG. Categorie, prove, sistemi di punteggio e norme di sicurezza: tutto quello che devi sapere per partecipare.',
+    label: 'CONTEST',
+    title: 'Regolamento ufficiale dei Tacticon',
+    desc: 'Consulta il regolamento completo delle competizioni FITC. Categorie, prove, sistemi di punteggio e norme di sicurezza: tutto quello che devi sapere per partecipare.',
     href: '/regole#rules',
     img: '/image2.jpeg',
   },
@@ -25,7 +24,7 @@ const sezioni = [
 ]
 
 export const metadata = {
-  title: 'Home — FITG',
+  title: 'Home — FITC',
 }
 
 export default function HomePage() {
@@ -35,7 +34,7 @@ export default function HomePage() {
       <section className="relative overflow-hidden h-[520px] md:h-[680px]">
         <Image
           src="/forza.jpeg"
-          alt="Hero FITG"
+          alt="Hero FITC"
           fill
           className="object-cover object-top brightness-[0.5]"
           priority
@@ -51,12 +50,12 @@ export default function HomePage() {
               <h1 className="font-oswald font-bold leading-[1.05] tracking-wide">
                 <span className="block text-[38px] md:text-[62px] text-white">FEDERAZIONE</span>
                 <span className="block text-[38px] md:text-[62px] text-gold">ITALIANA</span>
-                <span className="block text-[38px] md:text-[62px] text-white">TACTICAL GAMES</span>
+                <span className="block text-[38px] md:text-[62px] text-white">TACTICON</span>
               </h1>
               <div className="w-48 h-0.5 bg-gradient-to-r from-gold to-transparent my-4 md:my-5" />
               <p className="font-inter text-[13px] md:text-[15px] text-[#ccc] leading-relaxed max-w-[480px]">
                 Sport, disciplina e precisione.<br />
-                La federazione ufficiale dei Tactical Games in Italia.
+                La federazione ufficiale dei Tactical Contest in Italia.
               </p>
               <div className="flex flex-col md:flex-row gap-3 mt-7">
                 <Link href="/regole" className="bg-gold text-black font-oswald font-bold text-[11px] tracking-[3px] px-8 py-3.5 text-center hover:bg-gold-light transition-colors">
@@ -81,13 +80,12 @@ export default function HomePage() {
             <SectionLabel>Chi Siamo</SectionLabel>
             <h2 className="font-oswald font-bold text-[26px] md:text-[38px] leading-[1.1] mb-4">
               <span className="text-white">La Federazione Italiana </span>
-              <span className="text-gold">Tactical Games</span>
+              <span className="text-gold">Tactical Contest</span>
             </h2>
             <div className="w-12 h-0.5 bg-gold mb-5" />
             <div className="font-inter text-[13px] md:text-[15px] text-[#ccc] leading-relaxed">
-              <p>La FITG nasce per promuovere e regolamentare i Tactical Games in Italia: i Tactical Games sono competizioni sportive multidisciplinari che uniscono fitness estremo, prove di abilità e tiro tattico/ dinamico con armi da fuoco (o repliche nel caso del softair).
-                Il loro scopo è testare la capacità del partecipante di mantenere lucidità, precisione e controllo sotto un forte sforzo fisico.</p>
-              <p className="mt-4">Una disciplina aperta a tutti i livelli, con divisioni per uomini e donne, atleti esperti e neofiti. La FITG coordina gli eventi nazionali, forma gli istruttori e promuove una cultura sportiva basata su sicurezza, fair play e crescita continua.</p>
+              <p>La FITC nasce per promuovere e regolamentare i Tactical Contest: i Tacticon sono competizioni sportive multidisciplinari che uniscono fitness estremo, prove di abilità e tiro tattico/dinamico con armi da fuoco (o repliche nel caso del softair). Il loro scopo è testare la capacità del partecipante di mantenere lucidità, precisione e controllo sotto un forte sforzo fisico.</p>
+              <p className="mt-4">La FITC coordina gli eventi regionali e nazionali, forma gli istruttori e promuove una cultura sportiva basata su sicurezza, fair play e crescita continua.</p>
             </div>
             <Link href="/regole" className="mt-6 font-oswald text-[10px] tracking-[3px] text-gold flex items-center gap-2.5 hover:gap-4 transition-all w-fit">
               SCOPRI DI PIÙ <span className="w-5 h-px bg-gold block" />
@@ -100,7 +98,7 @@ export default function HomePage() {
             <div className="absolute inset-0 flex items-center justify-center">
               <Image
                 src="/fitg-logo2.png"
-                alt="FITG Logo"
+                alt="FITC Logo"
                 width={160}
                 height={160}
                 className="object-contain opacity-90"
@@ -151,43 +149,6 @@ export default function HomePage() {
         ))}
       </section>
 
-      {/* PROSSIMO EVENTO */}
-      <section className="bg-[#111] px-5 md:px-16 py-12 md:py-20 border-t border-gold/20">
-        <SectionLabel>Calendario</SectionLabel>
-        <h2 className="font-oswald font-bold text-[24px] md:text-[36px] text-white mb-8 md:mb-10">Prossimo Evento</h2>
-
-        {eventi.map((e) => (
-          <Link key={e.id} href={`/eventi/${e.slug}`} className="group block bg-[#1A1A1A] overflow-hidden border-t-2 border-gold">
-            <div className="flex flex-col md:flex-row">
-              <div className="relative w-full md:w-[380px] shrink-0 aspect-[3/4] bg-black overflow-hidden">
-                <Image
-                  src={e.img}
-                  alt={e.titolo}
-                  fill
-                  className="object-contain group-hover:scale-[1.02] transition-all duration-500"
-                />
-              </div>
-              <div className="w-full md:w-1/2 flex flex-col justify-center px-6 md:px-12 py-8 md:py-0">
-                <div className="flex items-center gap-3 mb-4">
-                  <span className="font-oswald text-[8px] tracking-[2px] text-gold border border-gold/30 px-2 py-0.5">{e.tag}</span>
-                  <span className="font-inter text-[11px] text-[#555]">{e.data}</span>
-                </div>
-                <h3 className="font-oswald font-bold text-white text-[22px] md:text-[28px] mb-3 leading-tight">
-                  {e.titolo}
-                </h3>
-                <p className="font-inter text-[13px] text-[#999] mb-2">{e.luogo}</p>
-                <p className="font-inter text-[13px] md:text-[14px] text-[#ccc] leading-relaxed mb-6">
-                  {e.desc}
-                </p>
-                <div className="font-oswald text-[10px] tracking-[3px] text-gold flex items-center gap-2 group-hover:gap-4 transition-all w-fit">
-                  SCOPRI DI PIÙ <span className="w-5 h-px bg-gold block" />
-                </div>
-              </div>
-            </div>
-          </Link>
-        ))}
-      </section>
-
       <SponsorsStrip />
       <FAQ id="faq" />
 
@@ -208,12 +169,12 @@ export default function HomePage() {
             </p>
             <div className="mt-8 flex flex-col gap-3">
               <a
-                href="mailto:info@federtacticalgames.it"
+                href="mailto:info@federazioneitalianatacticon.it"
                 className="flex items-center gap-3 group w-fit"
               >
                 <Mail size={16} className="text-gold shrink-0" strokeWidth={1.5} />
                 <span className="font-inter text-[13px] text-[#ccc] group-hover:text-gold transition-colors">
-                  info@federtacticalgames.it
+                  info@federazioneitalianatacticon.it
                 </span>
               </a>
               <a
@@ -245,8 +206,8 @@ export default function HomePage() {
             className="flex flex-col gap-4"
           >
             <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_KEY" />
-            <input type="hidden" name="subject" value="Nuovo messaggio da FITG website" />
-            <input type="hidden" name="redirect" value="https://federtacticalgames.it" />
+            <input type="hidden" name="subject" value="Nuovo messaggio da FITC website" />
+            <input type="hidden" name="redirect" value="https://federazioneitalianatacticon.it" />
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
