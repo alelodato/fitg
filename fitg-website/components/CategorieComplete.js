@@ -3,33 +3,33 @@ import Image from 'next/image'
 const categorie = [
     {
         nome: 'Divisione Élite',
-        img: '/elite.webp',
+        img: '/elite.jpg',
         desc: 'La divisione Élite è dedicata agli atleti più esperti e preparati. Le prove fisiche e gli stage di tiro richiedono elevate capacità atletiche, velocità di esecuzione e massima precisione. È la categoria che esprime al massimo lo spirito dei Tacticon, dove ogni errore o perdita di concentrazione può fare la differenza sul risultato finale.',
     },
     {
         nome: 'Divisione Tattica',
-        img: '/tattica.webp',
+        img: '/tattica.jpg',
         desc: 'La divisione Tattica mantiene la stessa struttura di gara dei Tacticon, ma con particolare attenzione all\'utilizzo dell\'equipaggiamento operativo. Gli atleti affrontano le prove indossando dotazioni specifiche che aumentano il livello di realismo e l\'impegno fisico richiesto. È ideale per chi desidera vivere un\'esperienza più vicina agli scenari tattici reali.',
     },
     {
         nome: 'Divisione Standard',
-        img: '/standard.webp',
+        img: '/standard.jpg',
         desc: 'La divisione Standard rappresenta il punto di ingresso più accessibile ai Tacticon. Mantiene l\'alternanza tra esercizi fisici e prove di tiro, ma con requisiti tecnici e di equipaggiamento più semplici rispetto alle categorie avanzate. È pensata per permettere a nuovi partecipanti e sportivi provenienti da altre discipline di avvicinarsi gradualmente alla competizione.',
     },
     {
         nome: 'TDM',
         sottotitolo: 'Tactical Decision Maker',
-        img: '/image14.webp',
+        img: '/tdm.jpg',
         desc: 'La TDM (Tactical Decision Maker) è una divisione di tiro tattico progettata per mettere alla prova, in condizioni di stress psicofisico, la capacità del concorrente di combinare preparazione atletica, precisione, rapidità e capacità decisionale. L\'atleta non deve limitarsi a colpire i bersagli nel minor tempo possibile, ma deve essere in grado di osservare, riconoscere, valutare e decidere correttamente prima di agire.',
     },
     {
         nome: 'Divisione a Squadre',
-        img: '/squadre.webp',
+        img: '/squadre.jpg',
         desc: 'La divisione a Squadre trasferisce tutte le sfide dei Tacticon in una dimensione collettiva. I partecipanti collaborano per affrontare le prove, dividere gli sforzi e gestire insieme le strategie di gara. Oltre alle capacità fisiche e tecniche individuali, diventano fondamentali comunicazione, coordinazione e spirito di squadra.',
     },
     {
         nome: 'Divisione Air Soft',
-        img: '/airsoft.webp',
+        img: '/airsoft.jpg',
         desc: 'La divisione Air Soft ripropone il format dei Tacticon utilizzando repliche da softair al posto delle armi da fuoco. I partecipanti affrontano le stesse tipologie di prove fisiche e di tiro, sviluppando precisione, controllo e capacità decisionale sotto stress in un contesto più accessibile e adatto a strutture dedicate a questa disciplina.',
     },
 ]

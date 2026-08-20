@@ -7,19 +7,19 @@ const storiaSteps = [
   {
     num: '01',
     titolo: 'Cosa sono i Tacticon?',
-    img: '/image2.jpeg',
+    img: '/storiasticky1.JPG',
     testo: 'La nostra disciplina nasce dall\'incontro tra militari, operatori della sicurezza e sportivi che, dopo anni di pratica sul campo, hanno deciso di dar vita a una disciplina capace di mettere alla prova l\'atleta a 360 gradi: percorsi con ostacoli da superare di corsa, prove di forza e resistenza attraverso il trasporto di pesi e carichi, e — lungo il tracciato e in prossimità del traguardo — momenti di tiro tattico/operativo, dove precisione, tecnica e sangue freddo diventano decisivi nel colpire bersagli con armi corte e lunghe da diverse posizioni.',
   },
   {
     num: '02',
     titolo: 'Una Disciplina Diffusa nel Mondo',
-    img: '/image17.webp',
+    img: '/storiasticky2.JPG',
     testo: 'Competizioni di questo tipo sono ormai diffuse in tutto il mondo. Le nostre si distinguono per l\'attenzione particolare al mindset: la selezione dei bersagli e l\'esecuzione delle procedure vengono valutate anche sotto pressione, perché prima ancora della preparazione fisica conta la capacità di mantenere lucidità mentale.',
   },
   {
     num: '03',
     titolo: 'Il Nostro Staff Tecnico',
-    img: '/image14.webp',
+    img: '/storiasticky3.JPG',
     testo: 'Il nostro staff tecnico è composto prevalentemente da operatori della sicurezza, pubblica e privata, militari e atleti di sport di endurance.',
   },
 ]

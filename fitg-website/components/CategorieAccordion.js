@@ -8,32 +8,32 @@ import SectionLabel from './SectionLabel'
 const categorie = [
     {
         nome: 'Divisione Élite',
-        img: '/elite.webp',
+        img: '/elite.jpg',
         breve: 'Per gli atleti più esperti e preparati, dove ogni errore può fare la differenza.',
     },
     {
         nome: 'Divisione Tattica',
-        img: '/tattica.webp',
+        img: '/tattica.jpg',
         breve: 'Stessa struttura di gara, con attenzione all\'equipaggiamento operativo.',
     },
     {
         nome: 'Divisione Standard',
-        img: '/standard.webp',
+        img: '/standard.jpg',
         breve: 'Il punto di ingresso più accessibile per chi si avvicina alla disciplina.',
     },
     {
         nome: 'TDM',
-        img: '/image14.webp',
+        img: '/tdm.jpg',
         breve: 'Tactical Decision Maker: precisione, rapidità e capacità decisionale sotto stress.',
     },
     {
         nome: 'Divisione a Squadre',
-        img: '/squadre.webp',
+        img: '/squadre.jpg',
         breve: 'Le sfide del Tacticon affrontate insieme, in una dimensione collettiva.',
     },
     {
         nome: 'Divisione Air Soft',
-        img: '/airsoft.webp',
+        img: '/airsoft.jpg',
         breve: 'Lo stesso format, con repliche softair al posto delle armi da fuoco.',
     },
 ]
