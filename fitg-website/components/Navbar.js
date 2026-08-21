@@ -8,8 +8,8 @@ import Image from 'next/image'
 const links = [
     { href: '/', label: 'Home' },
     { href: '/regole', label: 'Tactical Contest' },
-    { href: '/categorie', label: 'Categorie' },
     { href: '/formazione', label: 'Formazione' },
+    { href: '/categorie', label: 'Aree Di Allenamento' },
     { href: '/contatti', label: 'Contatti' },
 ]
 
@@ -42,7 +42,7 @@ export default function Navbar() {
                     />
                     <div>
                         <div className="text-gold font-oswald font-bold tracking-widest text-lg md:text-xl leading-none">FITC</div>
-                        <div className="text-[#999] font-inter text-[9px] md:text-[10px] lg:text-[13px] tracking-widest leading-none mt-0.5">
+                        <div className="text-[#999] font-inter text-[9px] md:text-[10px] lg:text-[11.5px] tracking-widest leading-none mt-0.5">
                             FEDERAZIONE ITALIANA TACTICAL CONTEST
                         </div>
                     </div>
@@ -53,7 +53,7 @@ export default function Navbar() {
                         <Link
                             key={link.href}
                             href={link.href}
-                            className={`font-oswald text-[15px] tracking-[2px] uppercase transition-colors duration-200 pb-0.5 ${pathname === link.href
+                            className={`font-oswald text-[13px] tracking-[2px] uppercase transition-colors duration-200 pb-0.5 ${pathname === link.href
                                 ? 'text-gold border-b border-gold'
                                 : 'text-[#ddd] hover:text-gold'
                                 }`}

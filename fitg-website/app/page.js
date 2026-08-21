@@ -55,7 +55,7 @@ export default function HomePage() {
               <div className="w-48 h-0.5 bg-gradient-to-r from-gold to-transparent my-4 md:my-5" />
               <p className="font-inter text-[13px] md:text-[15px] text-[#ccc] leading-relaxed max-w-[480px]">
                 Sport, disciplina e precisione.<br />
-                La federazione ufficiale dei Tactical Contest in Italia.
+                La federazione ufficiale dei Tactical Contest.
               </p>
               <div className="flex flex-col md:flex-row gap-3 mt-7">
                 <Link href="/regole" className="bg-gold text-black font-oswald font-bold text-[11px] tracking-[3px] px-8 py-3.5 text-center hover:bg-gold-light transition-colors">
@@ -80,7 +80,7 @@ export default function HomePage() {
             <SectionLabel>Chi Siamo</SectionLabel>
             <h2 className="font-oswald font-bold text-[26px] md:text-[38px] leading-[1.1] mb-4">
               <span className="text-white">La Federazione Italiana </span>
-              <span className="text-gold">Tactical Contest</span>
+              <span className="text-gold">Tacticon</span>
             </h2>
             <div className="w-12 h-0.5 bg-gold mb-5" />
             <div className="font-inter text-[13px] md:text-[15px] text-[#ccc] leading-relaxed">

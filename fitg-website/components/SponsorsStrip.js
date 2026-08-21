@@ -6,22 +6,18 @@ import Image from 'next/image'
 const sponsors = [
     { nome: 'Tmt', img: '/tmt.png', href: 'https://www.tmt-academy.com/' },
     { nome: 'Dsa', img: '/dsa-nobg.png', href: 'https://www.dsa-delta.it/' },
-    { nome: 'GW', img: '/gw.png', href: 'https://gunsweek.com/en' },
-    { nome: 'Kali Kalasag', img: '/kali.png', href: 'https://kalikalasag.com' },
     { nome: 'Military', img: '/military.png', href: 'https://www.instagram.com/military.camp.experience?igsh=cXFta2txNTBxOXd3' },
     { nome: 'Red Gym', img: '/rgym.png', href: 'https://redgym.it' },
     { nome: 'Ruggiero', img: '/ruggiero.jpeg', href: 'https://www.ruggieroarmi.com' },
-    { nome: 'Sabatti', img: '/sabatti.jpeg', href: 'https://sabatti.it' },
     { nome: 'Shooter', img: '/shooter.png', href: 'https://shooterstore.it/' },
     { nome: 'Tacfit', img: '/tacfit.jpeg', href: 'https://tacfititalia.com/' },
     { nome: 'Unuci', img: '/unuci.gif', href: 'https://www.instagram.com/unuci.addestramento/' },
     { nome: 'Sttu', img: '/sttu.png', href: 'https://www.facebook.com/STTUSchoolTraining/' },
     { nome: 'Cts', img: '/cts.jpeg', href: 'https://www.ctspoligoni.it/' },
-    { nome: 'Redpoint', img: '/redpoint.png', href: 'https://www.armeriaredpoint.com/' },
     { nome: 'Idfs', img: '/idfs.png', href: 'https://www.instagram.com/accademiaidfsera?igsh=MTFzdDk5cThjcTd5Yw==' },
     { nome: '4D', img: '/4d.png', href: 'https://www.instagram.com/4defence.plus?igsh=NDM1cmlyMnVyaXR0' },
-    { nome: 'Tactical Games', img: '/tgames.png', href: 'https://thetacticalgames.eu/' },
-    { nome: 'Tactical Games Europe', img: '/tgames-eu.png', href: 'https://thetacticalgames.com/' },
+    { nome: 'WowSoftair', img: '/wow.png', href: 'https://www.wowsoftair.com/' },
+    { nome: 'La Fortezza', img: '/fortezza.png', href: 'https://www.instagram.com/lafortezzaasd?igsh=NjhnaW4xZXB2dGpz&utm_source=ig_contact_invite' },
 ]
 
 export default function SponsorsStrip() {

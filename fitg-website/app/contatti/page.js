@@ -2,7 +2,7 @@ import Image from 'next/image'
 import SectionLabel from '@/components/SectionLabel'
 import { Mail } from 'lucide-react'
 
-export const metadata = { title: 'Contatti — FITG' }
+export const metadata = { title: 'Contatti — FITC' }
 
 export default function ContattiPage() {
     return (
@@ -45,7 +45,7 @@ export default function ContattiPage() {
                             >
                                 <Mail size={16} className="text-gold shrink-0" strokeWidth={1.5} />
                                 <span className="font-inter text-[13px] text-[#ccc] group-hover:text-gold transition-colors">
-                                    info@federtacticalgames.it
+                                    info@federazioneitalianatacticon.it
                                 </span>
                             </a>
                             <a
@@ -140,9 +140,9 @@ export default function ContattiPage() {
                 <h2 className="font-oswald font-bold text-[24px] md:text-[32px] mb-8">Seguici sui social</h2>
                 <div className="flex flex-col md:flex-row gap-4">
                     {[
-                        { nome: 'Instagram', handle: '@fitg', href: 'https://www.instagram.com/feder.italiana.tactical.games?igsh=bzdxYm8zcG9kNHh4' },
-                        { nome: 'Facebook', handle: 'FITG', href: 'https://www.facebook.com/61588753523309/' },
-                        { nome: 'YouTube', handle: 'FITG', href: '#' },
+                        { nome: 'Instagram', handle: '@fitc', href: 'https://www.facebook.com/share/1E4unK8m5T/' },
+                        { nome: 'Facebook', handle: 'FITC', href: 'https://www.facebook.com/share/1E4unK8m5T/' },
+                        { nome: 'YouTube', handle: 'FITC', href: '#' },
                     ].map((s) => (
                         <a key={s.nome} href={s.href} className="group flex items-center gap-4 bg-[#1A1A1A] border border-gold/20 hover:border-gold px-6 py-4 transition-colors flex-1">
                             <div className="font-oswald font-bold text-gold text-[13px] tracking-[2px]">{s.nome}</div>
