@@ -12,14 +12,14 @@ const sezioni = [
     title: 'Regolamento ufficiale dei Tacticon',
     desc: 'Consulta il regolamento completo delle competizioni FITC. Categorie, prove, sistemi di punteggio e norme di sicurezza: tutto quello che devi sapere per partecipare.',
     href: '/regole#rules',
-    img: '/home3.JPG',
+    img: '/home3.jpg',
   },
   {
     label: 'FORMAZIONE',
     title: 'Formazione e preparazione atletica',
     desc: 'Piani di allenamento, esercizi consigliati e aree attrezzate per prepararti al meglio. Fitness funzionale e tiro di precisione: due discipline, un unico obiettivo.',
     href: '/formazione',
-    img: '/home4.JPG',
+    img: '/home4.jpg',
   },
 ]
 
@@ -33,7 +33,7 @@ export default function HomePage() {
       {/* HERO */}
       <section className="relative overflow-hidden h-[520px] md:h-[680px]">
         <Image
-          src="/home1.JPG"
+          src="/home1.jpg"
           alt="Hero FITC"
           fill
           className="object-cover object-top brightness-[0.5]"
@@ -92,7 +92,7 @@ export default function HomePage() {
             </Link>
           </div>
           <div className="relative min-h-[220px] md:min-h-auto overflow-hidden">
-            <Image src="/home2.JPG" alt="Chi Siamo" fill className="object-cover object-top brightness-[0.5]" />
+            <Image src="/home2.jpg" alt="Chi Siamo" fill className="object-cover object-top brightness-[0.5]" />
             <div className="absolute inset-0 bg-black/30" />
             <div className="absolute left-0 top-0 bottom-0 w-1 bg-gold" />
             <div className="absolute inset-0 flex items-center justify-center">

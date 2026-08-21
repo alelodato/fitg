@@ -93,7 +93,7 @@ export default function IntroFormazione() {
             <div className="px-5 md:px-16 py-14 md:py-24">
 
                 <div className="relative w-full h-[260px] md:h-[420px] overflow-hidden border border-gold/20 shadow-[0_20px_50px_-15px_rgba(0,0,0,0.6)] mb-12 md:mb-16">
-                    <Image src="/formazione4.JPG" alt="" fill className="object-cover object-center brightness-[0.55]" />
+                    <Image src="/formazione4.jpg" alt="" fill className="object-cover object-center brightness-[0.55]" />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A]/40 to-transparent" />
                 </div>
 
@@ -110,7 +110,7 @@ export default function IntroFormazione() {
                         <Image src="/formazione2.jpg" alt="" fill className="object-cover object-top brightness-[0.6]" />
                     </div>
                     <div className="relative w-[46%] md:w-[340px] h-[240px] md:h-[320px] overflow-hidden border border-gold/20 shadow-[0_20px_40px_-15px_rgba(0,0,0,0.6)] mt-8 md:mt-14">
-                        <Image src="/formazione3.JPG" alt="" fill className="object-cover object-top brightness-[0.6]" />
+                        <Image src="/formazione3.jpg" alt="" fill className="object-cover object-top brightness-[0.6]" />
                     </div>
                 </FadeIn>
 

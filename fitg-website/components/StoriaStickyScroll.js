@@ -7,13 +7,13 @@ const storiaSteps = [
   {
     num: '01',
     titolo: 'Cosa sono i Tacticon?',
-    img: '/tact2.JPG',
+    img: '/tact2.jpg',
     testo: 'La nostra disciplina nasce dall\'incontro tra militari, operatori della sicurezza e sportivi che, dopo anni di pratica sul campo, hanno deciso di dar vita a una disciplina capace di mettere alla prova l\'atleta a 360 gradi: percorsi con ostacoli da superare di corsa, prove di forza e resistenza attraverso il trasporto di pesi e carichi, e — lungo il tracciato e in prossimità del traguardo — momenti di tiro tattico/operativo, dove precisione, tecnica e sangue freddo diventano decisivi nel colpire bersagli con armi corte e lunghe da diverse posizioni.',
   },
   {
     num: '02',
     titolo: 'Una Disciplina Diffusa nel Mondo',
-    img: '/tact3.JPG',
+    img: '/tact3.jpg',
     testo: 'Competizioni di questo tipo sono ormai diffuse in tutto il mondo. Le nostre si distinguono per l\'attenzione particolare al mindset: la selezione dei bersagli e l\'esecuzione delle procedure vengono valutate anche sotto pressione, perché prima ancora della preparazione fisica conta la capacità di mantenere lucidità mentale.\'Il nostro staff tecnico è composto prevalentemente da operatori della sicurezza, pubblica e privata, militari e atleti di sport di endurance.',
   },
 ]
@@ -67,7 +67,7 @@ export default function StoriaStickyScroll() {
     <section className="bg-[#1A1A1A]">
       {/* APERTURA — si fonde con la sezione, niente bordo netto */}
       <div className="relative overflow-hidden h-[70vh] md:h-[80vh]">
-        <Image src="/tact1.JPG" alt="Tactical Contest" fill className="object-cover brightness-[0.4]" priority />
+        <Image src="/tact1.jpg" alt="Tactical Contest" fill className="object-cover brightness-[0.4]" priority />
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/40 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#1A1A1A]" />
         <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent" />
