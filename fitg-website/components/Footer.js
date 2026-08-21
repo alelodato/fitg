@@ -53,8 +53,8 @@ export default function Footer() {
                         {[
                             { label: 'Home', href: '/' },
                             { label: 'Tactical Contest', href: '/regole' },
-                            { label: 'Categorie', href: '/categorie' },
                             { label: 'Formazione', href: '/formazione' },
+                            { label: 'Aree Di Allenamento', href: '/categorie' },
                             { label: 'Contatti', href: '/contatti' },
                         ].map((l) => (
                             <Link key={l.href} href={l.href} className="block font-inter text-sm text-[#555] mb-2.5 hover:text-gold transition-colors">
