@@ -205,8 +205,8 @@ export default function HomePage() {
             method="POST"
             className="flex flex-col gap-4"
           >
-            <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_KEY" />
-            <input type="hidden" name="subject" value="Nuovo messaggio da FITC website" />
+            <input type="hidden" name="access_key" value={process.env.NEXT_PUBLIC_WEB3FORMS_KEY} />
+            <input type="hidden" name="subject" value="Nuovo messaggio da sito web" />
             <input type="hidden" name="redirect" value="https://federazioneitalianatacticon.it" />
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
