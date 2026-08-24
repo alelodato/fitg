@@ -1,15 +1,7 @@
 import AreeAllenamento from '@/components/AreeAllenamento'
+import ConsigliAllenamento from '@/components/ConsigliAllenamento'
 import { CheckCircle } from 'lucide-react'
 import SectionLabel from '@/components/SectionLabel'
-
-const consigliAllenamento = [
-    'Allenati al tiro DOPO lo sforzo fisico — in gara non spari mai riposato',
-    'Pratica le transizioni fucile e pistola in gilet tattico',
-    'Lavora su farmer\'s carry e overhead carry con peso da gara',
-    'Corri in gilet tattico — minimo 400m senza fermarti',
-    'Pratica il tiro da posizioni non standard (barricata, ginocchio, prono)',
-    'Conosci il tuo equipaggiamento — caricamento, scaricamento e risoluzione malfunzionamenti sotto pressione',
-]
 
 const aree = [
     { nome: 'Area 1', luogo: 'Da definire', desc: 'Descrizione area di allenamento da inserire.' },
@@ -22,21 +14,7 @@ export default function AreeDiAllenamentoPage() {
         <>
             < AreeAllenamento />
 
-            {/* CONSIGLI */}
-            <section className="bg-[#1A1A1A] px-5 md:px-16 py-12 md:py-16 border-t border-gold/20">
-                <h2 className="font-oswald font-bold text-[24px] md:text-[32px] mb-8">
-                    <span className="text-white">CONSIGLI DI </span>
-                    <span className="text-gold">ALLENAMENTO</span>
-                </h2>
-                <div className="flex flex-col gap-3 max-w-2xl">
-                    {consigliAllenamento.map((item, i) => (
-                        <div key={i} className="flex items-start gap-4 bg-[#222] px-5 py-4 border border-gold/10">
-                            <CheckCircle size={18} className="text-gold shrink-0 mt-0.5" strokeWidth={1.5} />
-                            <span className="font-inter text-[13px] md:text-[14px] text-[#ccc] leading-relaxed">{item}</span>
-                        </div>
-                    ))}
-                </div>
-            </section>
+            <ConsigliAllenamento />
 
             {/* AREE FISICHE */}
             <section className="bg-[#111] px-5 md:px-16 py-12 md:py-16 border-t border-gold/20">
