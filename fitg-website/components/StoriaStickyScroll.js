@@ -8,7 +8,7 @@ const storiaSteps = [
     num: '01',
     titolo: 'Cosa sono i Tacticon?',
     img: '/tact2.jpg',
-    testo: 'La nostra disciplina nasce dall\'incontro tra militari, operatori della sicurezza e sportivi che, dopo anni di pratica sul campo, hanno deciso di dar vita a una disciplina capace di mettere alla prova l\'atleta a 360 gradi: percorsi con ostacoli da superare di corsa, prove di forza e resistenza attraverso il trasporto di pesi e carichi, e — lungo il tracciato e in prossimità del traguardo — momenti di tiro tattico/operativo, dove precisione, tecnica e sangue freddo diventano decisivi nel colpire bersagli con armi corte e lunghe da diverse posizioni.',
+    testo: 'La nostra disciplina nasce dall\'incontro tra militari, operatori della sicurezza e sportivi che, dopo anni di pratica sul campo, hanno deciso di dar vita a una disciplina capace di mettere alla prova l\'atleta a 360 gradi: percorsi con ostacoli da superare di corsa, prove di forza e resistenza attraverso il trasporto di pesi e carichi, e lungo il tracciato e in prossimità del traguardo momenti di tiro tattico/operativo, dove precisione, tecnica e sangue freddo diventano decisivi nel colpire bersagli con armi corte e lunghe da diverse posizioni.',
   },
   {
     num: '02',
