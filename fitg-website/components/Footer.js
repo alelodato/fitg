@@ -42,7 +42,7 @@ export default function Footer() {
                             </div>
                         </div>
                         <p className="font-inter text-sm text-[#555] leading-relaxed">
-                            Sport, disciplina e precisione. La federazione ufficiale dei Tactical Contest in Italia.
+                            Sport, disciplina e precisione. La federazione ufficiale dei Tactical Contest.
                         </p>
                     </div>
 
@@ -152,7 +152,6 @@ export default function Footer() {
                     <span className="font-inter text-[10px] text-[#444]">
                         &copy; 2026 FITC &middot; Federazione Italiana Tactical Contest. Tutti i diritti riservati.
                     </span>
-                    <span className="font-inter text-[10px] text-[#444]">P.IVA 00000000000</span>
                 </div>
             </div>
         </footer>

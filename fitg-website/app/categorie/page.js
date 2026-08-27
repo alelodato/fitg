@@ -24,17 +24,17 @@ export default function AreeDiAllenamentoPage() {
                     <span className="text-gold">Allenarsi</span>
                 </h2>
                 <div className="flex flex-col md:flex-row gap-10 md:gap-16">
-                    <div className="flex flex-col flex-1">
-                        {aree.map((a, i) => (
-                            <div key={i} className="flex flex-col md:flex-row md:items-center gap-4 md:gap-10 py-6 border-b border-gold/10">
-                                <div className="shrink-0">
-                                    <div className="font-oswald font-bold text-gold text-[16px] md:text-[18px]">{a.nome}</div>
-                                    <div className="font-inter text-[11px] text-[#555] tracking-wide mt-0.5">{a.luogo}</div>
-                                </div>
-                                <div className="hidden md:block w-px self-stretch bg-gold/20" />
-                                <p className="font-inter text-[13px] text-[#ccc] leading-relaxed">{a.desc}</p>
-                            </div>
-                        ))}
+                    <div className="flex flex-col flex-1 justify-center items-start">
+                        <div className="flex items-center gap-2.5 mb-5">
+                            <div className="w-5 h-px bg-gold" />
+                            <span className="text-[9px] tracking-[3px] text-gold font-oswald uppercase">In arrivo</span>
+                        </div>
+                        <h3 className="font-oswald font-bold text-white text-[26px] md:text-[32px] mb-4 leading-tight">
+                            Coming Soon
+                        </h3>
+                        <p className="font-inter text-[13px] md:text-[14px] text-[#ccc] leading-relaxed max-w-md">
+                            Stiamo definendo le aree di allenamento ufficiali convenzionate con la federazione. Torna presto per scoprire dove allenarti in sicurezza per i Tactical Contest.
+                        </p>
                     </div>
 
                     <div className="w-full md:w-[420px] lg:w-[500px] shrink-0">
@@ -47,7 +47,7 @@ export default function AreeDiAllenamentoPage() {
                                 allowFullScreen=""
                                 loading="lazy"
                                 referrerPolicy="no-referrer-when-downgrade"
-                                title="Aree di allenamento FITG"
+                                title="Aree di allenamento FITC"
                             />
                         </div>
                     </div>
