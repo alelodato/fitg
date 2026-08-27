@@ -13,7 +13,7 @@ const sponsors = [
     { nome: 'Tacfit', img: '/tacfit.jpeg', href: 'https://tacfititalia.com/' },
     { nome: 'Unuci', img: '/unuci.gif', href: 'https://www.instagram.com/unuci.addestramento/' },
     { nome: 'Sttu', img: '/sttu.png', href: 'https://www.facebook.com/STTUSchoolTraining/' },
-    { nome: 'Cts', img: '/cts.jpeg', href: 'https://www.ctspoligoni.it/' },
+    { nome: 'Cts', img: '/cts.png', href: 'https://www.ctspoligoni.it/' },
     { nome: 'Idfs', img: '/idfs.png', href: 'https://www.instagram.com/accademiaidfsera?igsh=MTFzdDk5cThjcTd5Yw==' },
     { nome: '4D', img: '/4d.png', href: 'https://www.instagram.com/4defence.plus?igsh=NDM1cmlyMnVyaXR0' },
     { nome: 'WowSoftair', img: '/wow.png', href: 'https://www.wowsoftair.com/' },

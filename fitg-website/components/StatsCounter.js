@@ -6,7 +6,7 @@ const stats = [
     { valore: 12, suffisso: '+', label: 'Eventi organizzati' },
     { valore: 350, suffisso: '+', label: 'Atleti tesserati' },
     { valore: 12, suffisso: '', label: 'Regioni coinvolte' },
-    { valore: 6, suffisso: '', label: 'Divisioni competitive' },
+    { valore: 7, suffisso: '', label: 'Divisioni competitive' },
 ]
 
 function Counter({ valore, suffisso, label, avvia }) {
