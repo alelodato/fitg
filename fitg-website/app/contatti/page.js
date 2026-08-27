@@ -8,7 +8,6 @@ export default function ContattiPage() {
     return (
         <>
             <section className="relative overflow-hidden h-[260px] md:h-[360px]">
-                <Image src="/images/contatti-hero.jpg" alt="Contatti" fill className="object-cover brightness-[0.3]" />
                 <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/90" />
                 <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent" />
                 <div className="absolute inset-0 flex flex-col justify-end px-5 md:px-16 pb-10 md:pb-14">
@@ -78,7 +77,7 @@ export default function ContattiPage() {
                     >
                         <input type="hidden" name="access_key" value={process.env.NEXT_PUBLIC_WEB3FORMS_KEY} />
                         <input type="hidden" name="subject" value="Nuovo messaggio da sito web" />
-                        <input type="hidden" name="redirect" value="https://federazioneitalianatacticon.it" />
+                        <input type="hidden" name="redirect" value="https://federazioneitalianatacticon.it/grazie" />
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <div>
@@ -140,7 +139,7 @@ export default function ContattiPage() {
                 <h2 className="font-oswald font-bold text-[24px] md:text-[32px] mb-8">Seguici sui social</h2>
                 <div className="flex flex-col md:flex-row gap-4">
                     {[
-                        { nome: 'Instagram', handle: '@fitc', href: 'https://www.facebook.com/share/1E4unK8m5T/' },
+                        { nome: 'Instagram', handle: '@fitc', href: 'https://www.instagram.com/federazioneitalianatacticon?igsi=b2N0ZWhod3RibDky' },
                         { nome: 'Facebook', handle: 'FITC', href: 'https://www.facebook.com/share/1E4unK8m5T/' },
                         { nome: 'YouTube', handle: 'FITC', href: '#' },
                     ].map((s) => (

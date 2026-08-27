@@ -69,8 +69,8 @@ export default function Footer() {
                         <div className="w-7 h-px bg-gold mb-4" />
                         {[
                             { label: 'FAQ', href: '/#faq' },
-                            { label: 'Sicurezza', href: '/sicurezza' },
                             { label: 'Contatti', href: '/contatti' },
+                            { label: 'Privacy', href: '/privacy' },
                         ].map((l) => (
                             <Link key={l.label} href={l.href} className="block font-inter text-sm text-[#555] mb-2.5 hover:text-gold transition-colors">
                                 {l.label}
@@ -100,7 +100,7 @@ export default function Footer() {
                         </a>
 
                         <a
-                            href="https://www.instagram.com/feder.italiana.tactical.games?igsh=bzdxYm8zcG9kNHh4"
+                            href="https://www.instagram.com/federazioneitalianatacticon?igsi=b2N0ZWhod3RibDky"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="block font-inter text-sm text-[#555] mb-2.5 hover:text-gold transition-colors"
