@@ -93,13 +93,13 @@ export default function StoriaStickyScroll() {
               data-index={i}
               className="min-h-screen flex flex-col justify-center px-16 py-16 border-t border-gold/10"
             >
-              <div className={`font-oswald font-bold text-[13px] tracking-[4px] mb-4 transition-colors duration-500 ${active === i ? 'text-gold' : 'text-[#444]'}`}>
+              <div className={`font-oswald font-bold text-[13px] xl:text-[15px] 2xl:text-[17px] tracking-[4px] mb-4 transition-colors duration-500 ${active === i ? 'text-gold' : 'text-[#444]'}`}>
                 {step.num}
               </div>
-              <h3 className={`font-oswald font-bold text-[30px] mb-5 leading-tight transition-colors duration-500 ${active === i ? 'text-white' : 'text-[#555]'}`}>
+              <h3 className={`font-oswald font-bold text-[30px] xl:text-[36px] 2xl:text-[42px] mb-5 leading-tight transition-colors duration-500 ${active === i ? 'text-white' : 'text-[#555]'}`}>
                 {step.titolo}
               </h3>
-              <p className={`font-inter text-[16px] leading-relaxed transition-colors duration-500 ${active === i ? 'text-[#ccc]' : 'text-[#444]'}`}>
+              <p className={`font-inter text-[16px] xl:text-[18px] 2xl:text-[20px] leading-relaxed transition-colors duration-500 ${active === i ? 'text-[#ccc]' : 'text-[#444]'}`}>
                 {step.testo}
               </p>
             </div>

@@ -18,6 +18,7 @@ const sponsors = [
     { nome: '4D', img: '/4d.png', href: 'https://www.instagram.com/4defence.plus?igsh=NDM1cmlyMnVyaXR0' },
     { nome: 'WowSoftair', img: '/wow.png', href: 'https://www.wowsoftair.com/' },
     { nome: 'La Fortezza', img: '/fortezza.png', href: 'https://www.instagram.com/lafortezzaasd?igsh=NjhnaW4xZXB2dGpz&utm_source=ig_contact_invite' },
+    { nome: 'Tactical Contest', img: '/contest.png', href: 'https://www.instagram.com/tacticalcontest?utm_source=qr&igsi=djA5NXNmbXgybnlv' },
 ]
 
 export default function Footer() {

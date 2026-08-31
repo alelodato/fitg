@@ -56,7 +56,7 @@ export default function IntroFormazione() {
         <section className="bg-[#1A1A1A]">
             {/* APERTURA — foto + titolo + primo paragrafo */}
             <div className="relative overflow-hidden h-[85vh] md:h-[90vh]">
-                <Image src="/formazione1.jpg" alt="Formazione" fill className="object-cover object-top brightness-[0.4]" priority />
+                <Image src="/formazione1.jpg" alt="Formazione" fill className="object-cover brightness-[0.4]" priority />
                 <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/40 to-transparent" />
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#1A1A1A]" />
                 <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent" />
