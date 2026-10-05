@@ -19,6 +19,10 @@ const sponsors = [
     { nome: 'WowSoftair', img: '/wow.png', href: 'https://www.wowsoftair.com/' },
     { nome: 'La Fortezza', img: '/fortezza.png', href: 'https://www.instagram.com/lafortezzaasd?igsh=NjhnaW4xZXB2dGpz&utm_source=ig_contact_invite' },
     { nome: 'Tactical Contest', img: '/contest.png', href: 'https://www.instagram.com/tacticalcontest?utm_source=qr&igsi=djA5NXNmbXgybnlv' },
+    { nome: 'Mnf', img: '/mnf.png', href: 'https://www.instagram.com/mnf_nebbia_team?stkn=YWs1MW50cHhjNDNq' },
+    { nome: 'Brx', img: '/drx.jpeg', href: 'https://www.brixiadefensepoligono.com/' },
+    { nome: 'Sportline', img: '/sportline.jpeg', href: 'https://www.sportline-italia.it/' },
+    { nome: 'Cirdu', img: '/cirdu.jpeg', href: '' },
 ]
 
 export default function SponsorsStrip() {
