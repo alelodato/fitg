@@ -22,7 +22,7 @@ const sponsors = [
     { nome: 'Mnf', img: '/mnf.png', href: 'https://www.instagram.com/mnf_nebbia_team?stkn=YWs1MW50cHhjNDNq' },
     { nome: 'Brx', img: '/drx.jpeg', href: 'https://www.brixiadefensepoligono.com/' },
     { nome: 'Sportline', img: '/sportline.jpeg', href: 'https://www.sportline-italia.it/' },
-    { nome: 'Cirdu', img: '/cirdu.jpeg', href: '' },
+    { nome: 'Cirdu', img: '/cirdu.jpeg', href: 'https://www.facebook.com/share/18S8kNqSWL/' },
 ]
 
 export default function SponsorsStrip() {
