@@ -7,7 +7,7 @@ import SectionLabel from './SectionLabel'
 const categorie = [
     {
         nome: 'Divisione Élite',
-        img: '/elite.jpg',
+        img: '/elite.webp',
         desc: 'La divisione Élite è dedicata agli atleti più esperti e preparati. Le prove fisiche e gli stage di tiro richiedono elevate capacità atletiche, velocità di esecuzione e massima precisione. È la categoria che esprime al massimo lo spirito dei Tacticon, dove ogni errore o perdita di concentrazione può fare la differenza sul risultato finale.',
     },
     {
@@ -17,7 +17,7 @@ const categorie = [
     },
     {
         nome: 'Divisione Standard',
-        img: '/standard.jpg',
+        img: '/standard.webp',
         desc: 'La divisione Standard rappresenta il punto di ingresso più accessibile ai Tacticon. Mantiene l\'alternanza tra esercizi fisici e prove di tiro, ma con requisiti tecnici e di equipaggiamento più semplici rispetto alle categorie avanzate. È pensata per permettere a nuovi partecipanti e sportivi provenienti da altre discipline di avvicinarsi gradualmente alla competizione.',
     },
     {
@@ -29,17 +29,17 @@ const categorie = [
     {
         nome: 'Tactical Race',
         sottotitolo: 'T-Race',
-        img: '/tactical-race.jpeg',
+        img: '/tactical-race.webp',
         desc: 'La Tactical Race (T-Race) è una divisione che ricrea, in chiave competitiva, scenari operativi ispirati al mondo militare e delle forze di polizia. Durante la gara, l\'atleta si trova ad affrontare un percorso strutturato in cui deve portare a termine mansioni tattiche specifiche, alternando prove di forza fisica e di velocità con fasi di ingaggio su bersagli (sagome) discriminanti, ovvero bersagli che richiedono all\'atleta di distinguere correttamente tra obiettivi validi e non validi, secondo le regole stabilite dal protocollo di gara.',
     },
     {
         nome: 'Divisione a Squadre',
-        img: '/squadre.jpg',
+        img: '/squadre.webp',
         desc: 'La divisione a Squadre trasferisce tutte le sfide dei Tacticon in una dimensione collettiva. I partecipanti collaborano per affrontare le prove, dividere gli sforzi e gestire insieme le strategie di gara. Oltre alle capacità fisiche e tecniche individuali, diventano fondamentali comunicazione, coordinazione e spirito di squadra.',
     },
     {
         nome: 'Divisione Air Soft',
-        img: '/airsoft.jpg',
+        img: '/airsoft.webp',
         desc: 'La divisione Air Soft ripropone il format dei Tacticon utilizzando repliche da softair al posto delle armi da fuoco. I partecipanti affrontano le stesse tipologie di prove fisiche e di tiro, sviluppando precisione, controllo e capacità decisionale sotto stress in un contesto più accessibile e adatto a strutture dedicate a questa disciplina.',
     },
 ]
